@@ -1,11 +1,11 @@
 let hltb = require('howlongtobeat');
 let hltbService = new hltb.HowLongToBeatService();
-const ObjectsToCsv = require('objects-to-csv')
+const ObjectsToCsv = require('objects-to-csv');
 
 class GameInfo {
     constructor(name, timeToBeat) {
-      this.name = name;
-      this.timeToBeat = timeToBeat;
+        this.name = name;
+        this.timeToBeat = timeToBeat;
     }
 }
 
@@ -27,10 +27,15 @@ listGamesNames += "The Flame in the Flood|The Gardens Between|The Jackbox Party 
 //let listGames = "The Surge 2|Levelhead|Red Dead Redemption 2";
 let inputGames = listGamesNames.split("|");
 
+let numberOfCalls = 0;
+let numberOfReceptions = 0;
+let numberOfErrors = 0;
+let gHaveRetried = false;
+
 function sortList(listGamesInfo) {
-    return listGamesInfo.sort((a, b) =>  {
-        if (a.timeToBeat < b.timeToBeat) { return 1;}
-        else if (a.timeToBeat > b.timeToBeat){ return -1; }
+    return listGamesInfo.sort((a, b) => {
+        if (a.timeToBeat < b.timeToBeat) { return 1; }
+        else if (a.timeToBeat > b.timeToBeat) { return -1; }
         return (a.name > b.name);
     });
 }
@@ -41,7 +46,7 @@ function extractGamesWithoutInfo(listGames) {
     for (let i = 0; i < listGames.length; ++i) {
         const gameInfo = listGames[i];
         const hasInfo = gameInfo.timeToBeat !== null;
-        //console.log("· " + gameInfo.name + " ==>\t\t\t\t " + (hasInfo ? gameInfo.timeToBeat : "No results found"));
+        console.log("· " + gameInfo.name + " ==>\t\t\t\t " + (hasInfo ? gameInfo.timeToBeat : "No results found"));
         if (!hasInfo) {
             listWithoutInfo.push(gameInfo);
         }
@@ -49,65 +54,151 @@ function extractGamesWithoutInfo(listGames) {
     return listWithoutInfo;
 }
 
+function removeSpecialCharacters(gameName) {
+    let curatedName = gameName;
+    listSpecialCharacters = ["™", "®", "(PC)", "Xbox One", "for Windows 10", "Win10", "(Game Preview)"];
+    listSpecialCharacters.forEach((specialCharacter) => {
+        curatedName = curatedName.replace(specialCharacter, "");
+    });
+    return curatedName;
+}
+
+function removeSuffixParts(gameName) {
+    let curatedName = gameName;
+    listSpecialCharacters = [":", "-"];
+    listSpecialCharacters.forEach((specialCharacter) => {
+        const indexOfSeparator = curatedName.indexOf(specialCharacter);
+        if (indexOfSeparator > -1) {
+            curatedName = curatedName.substring(0, indexOfSeparator);
+        }
+    });
+    if (curatedName === "") {
+        console.log("After removing suffix parts, the name would be empty. Reseting. So you should check this: " + gameName);
+        curatedName = gameName;
+    }
+    return curatedName;
+}
+
+function removeDotsInTheEndOfString(gameName) {
+    return gameName.replace(/\.+$/, "");
+}
+
+function curateRetryName(originalName) {
+    let retryNewName = originalName;
+    retryNewName = retryNewName.trimEnd();
+    retryNewName = removeSpecialCharacters(retryNewName);
+    retryNewName = removeSuffixParts(retryNewName);
+    retryNewName = removeDotsInTheEndOfString(retryNewName);
+    return retryNewName;
+}
+
 async function retryGamesWithoutInfo(listGamesWithoutInfo) {
     console.log("Retrying games without info yet: " + listGamesWithoutInfo.length);
     for (let i = 0; i < listGamesWithoutInfo.length; ++i) {
-        let newTryName = listGamesWithoutInfo[i].name;
-        const indexOfSeparator = newTryName.indexOf(':');
-        if (indexOfSeparator > -1) {
-            newTryName = newTryName.substring(0, indexOfSeparator);
-            //console.log("-Retrying ---->" + newTryName);
-            callHLTBService(newTryName);
+        const originalName = listGamesWithoutInfo[i].name;
+        let retryNewName = curateRetryName(originalName);
+        if (originalName !== retryNewName) {
+            callHLTBService(retryNewName, originalName);
         } else {
-            console.log("Game without info:" + newTryName);
+            console.log("This game name cannot be curated: " + retryNewName);
+        }
+    }
+    gHaveRetried = true;
+}
+
+async function callHLTBService(gameNameToSearch, originalName) {
+    numberOfCalls++;
+    hltbService.search(gameNameToSearch).then(result => {
+        numberOfReceptions++;
+        addGameInfoFromResults(gameNameToSearch, result, originalName);
+    })
+    .catch(error => {
+        numberOfErrors++;
+        console.log(error);
+    });
+}
+
+function getIndexOfGameInList(gameName) {
+    for (let i = 0; i < listGamesInfo.length; ++i) {
+        if (listGamesInfo[i].name === gameName) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function getIndexOfGameInList(gameName) {
+    for (let i = 0; i < listGamesInfo.length; ++i) {
+        if (listGamesInfo[i].name === gameName) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+async function addGameInfoFromResults(gameName, result, originalName) {
+    let receivedInfoFromGame = extractResults(result);
+    let gameInfo = new GameInfo(gameName, receivedInfoFromGame);
+    if (originalName === "") {
+        //listGamesInfo.push(gameInfo);
+        if (getIndexOfGameInList(gameName) === -1) {
+            listGamesInfo.push(gameInfo);
+        } else {
+            console.log("DUPLICATED: " + gameName);
+        }
+    } else {
+        let index = getIndexOfGameInList(originalName);
+        if (index > 0) {
+            listGamesInfo[index].timeToBeat = receivedInfoFromGame;
         }
     }
 }
 
-async function callHLTBService(gameName) {
-    //inputGames.forEach(function(game) {
-        hltbService.search(gameName).then(result => {
-            addGameInfoFromResults(gameName, result);
-        })
-        .catch( error => {
-            console.log(error);
-            checkIfAllReceived();//Just in case
-        });
-    //}
-}
-
-function checkIfAllReceived() {
-    if (listGamesInfo.length === inputGames.length) {
-        listGamesInfo = sortList(listGamesInfo);
-        let listGamesWithoutInfo = extractGamesWithoutInfo(listGamesInfo);
-        retryGamesWithoutInfo(listGamesWithoutInfo, listGamesInfo);
-        writeCSVResults(listGamesInfo);
-    }
-}
-
-async function addGameInfoFromResults(gameName, result) {
-    let receivedInfoFromGame = extractResults(result);
-    let gameInfo = new GameInfo(gameName, receivedInfoFromGame);
-    listGamesInfo.push(gameInfo);
-
-    checkIfAllReceived();
+const listEmojisSecondsTime = ["🕛","🕐","🕑","🕒","🕓","🕔","🕕","🕖","🕗","🕘","🕙","🕚"];
+function getEmojiForSecond(numberOfSeconds) {
+    return listEmojisSecondsTime[numberOfSeconds % 12];
 }
 
 let listGamesInfo = [];
-inputGames.forEach(function(gameName) {
-    callHLTBService(gameName);
-    /*hltbService.search(gameName).then(result => {
-        addGameInfoFromResults(gameName, result, listGamesInfo);
-    })
-    .catch( error => {
-        console.log(error);
-        checkIfAllReceived();//Just in case
-    });*/
+inputGames.forEach(function (gameName) {
+    callHLTBService(gameName, "");
 });
+
+const MAX_TIME_RUNNING = 30;
+let secondsTranscurred = 0;
+let intervalId = setInterval(mainLoop, 1000);
+let done = false;
+function mainLoop() {
+    console.log(getEmojiForSecond(secondsTranscurred) + " Seconds: " + secondsTranscurred);
+    console.log("\tNumber of calls: " + numberOfCalls);
+    console.log("\tNumber of receptions: " + numberOfReceptions);
+    if (numberOfCalls === numberOfReceptions + numberOfErrors) {
+        listGamesInfo = sortList(listGamesInfo);
+        if (!gHaveRetried) {
+            let listGamesWithoutInfo = extractGamesWithoutInfo(listGamesInfo);
+            retryGamesWithoutInfo(listGamesWithoutInfo);
+        } else {
+            writeCSVResults(listGamesInfo);
+            console.log("✅DONE! File written📝");
+            done = true;
+        }
+    }
+
+    ++secondsTranscurred;
+    if (secondsTranscurred === MAX_TIME_RUNNING) {
+        console.error("[ERROR] Aborting because max time exceeded");
+        clearInterval(intervalId);
+    }
+    if (done) {
+        clearInterval(intervalId);
+    }
+}
+
+
 
 //////// Script for getting data in: https://www.xbox.com/en-US/xbox-game-pass/games#
 /*
-    let listOutput = []; 
+    let listOutput = [];
     let listGames = document.getElementsByClassName("c-heading x1GameName");
     for (let i = 0; i < listGames.length; ++i){
             let name = listGames[i].innerText;
