@@ -2,7 +2,7 @@
 Crossing data from [Xbox Game Pass](https://www.xbox.com/es-ES/xbox-game-pass/games) and [HowLongToBeat](https://www.howlongtobeat.com)
 
 ## Getting data
-![demo]()
+![demo](https://raw.githubusercontent.com/Xatpy/HowLongToBeatGamePass/master/assets/gettingData.gif)
 
 ### Prerequisites
 - `Node`
