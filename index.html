@@ -25,6 +25,7 @@
 
     #divTableResults {
         background-color: #F2F2F2;
+        margin: 5%;
     }
 </style>
 
@@ -53,7 +54,6 @@
                     .append("td")
                     //.text(function(d) { debugger;return d; });
                     .text(function(d, i) {
-                        debugger
                         if (i != 4 || d === "imageUrl") {
                             return d;
                         }
@@ -61,7 +61,7 @@
                     .each(function(d, i) {
                         if (i == 4 && d !== "imageUrl") {
                             var imgData = [];
-                            debugger
+
                             imgData.push(d);
                             d3.select(this).selectAll("img")
                                     .data(imgData)
