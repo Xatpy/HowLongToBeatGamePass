@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>How long to beat Xbox Game Pass</title>
+  <meta name="description" content="How long to beat Xbox Game Pass">
+  <meta name="author" content="Xatpy">
+
+  <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+  <link rel="shortcut icon" href="xbox.ico" />
+
+<style>
+    body {
+      background-color: rgba(0, 0, 0, 0.7);
+      font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+        background-color:#333;
+        color: #107C10;
+    }
+
+    #divTableResults {
+        background-color: #F2F2F2;
+    }
+</style>
+
+</head>
+
+<body>
+    <h1>How long to beat Xbox Game Pass</h1>
+
+    <div id="divTableResults">
+
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+        function createD3Table() {
+            d3.text("list.csv", function(response) {
+            var parsedCSV = d3.csv.parseRows(response);
+
+            var container = d3.select("#divTableResults")
+                .append("table")
+                .selectAll("tr")
+                    .data(parsedCSV).enter()
+                    .append("tr")
+                .selectAll("td")
+                    .data(function(d) { return d; }).enter()
+                    .append("td")
+                    //.text(function(d) { debugger;return d; });
+                    .text(function(d, i) {
+                        debugger
+                        if (i != 4 || d === "imageUrl") {
+                            return d;
+                        }
+                    })
+                    .each(function(d, i) {
+                        if (i == 4 && d !== "imageUrl") {
+                            var imgData = [];
+                            debugger
+                            imgData.push(d);
+                            d3.select(this).selectAll("img")
+                                    .data(imgData)
+                            .enter()
+                            .append("img") // doesn't append an <img> anywhere
+                            .attr("src", d)
+                            .attr("height", "40px")
+                            .attr("width", "30px");
+                        }
+                    })
+            });
+        }
+
+        window.onload = function() {
+            createD3Table();
+        };
+    </script>
+</body>
+</html>
