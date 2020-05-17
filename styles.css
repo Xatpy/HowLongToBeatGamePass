@@ -1,0 +1,15 @@
+body {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
+
+h1 {
+    background-color:#333;
+    color: #107C10;
+}
+
+#divTableResults {
+    background-color: #F2F2F2;
+    margin: 5%;
+}

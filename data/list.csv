@@ -1,6 +1,6 @@
 name,gameplayMain,gameplayMainExtra,gameplayCompletionist,imageUrl
 ARK Survival Evolved,123,209,179,https://howlongtobeat.com/games/ARK_Survival_Evolved_header.jpg
-Minecraft,116,297,179,https://howlongtobeat.com/games/256px-Minecraft_1.1_Title.png
+Minecraft,116,286,150,https://howlongtobeat.com/games/256px-Minecraft_1.1_Title.png
 Black Desert,72,0,0,https://howlongtobeat.com/games/Black_Desert_Online.jpg
 DayZ,65.5,6,86,https://howlongtobeat.com/games/DayZ_Standalone_Logo.jpg
 My Time At Portia,64,89,146,https://howlongtobeat.com/games/52787_My_Time_At_Portia.jpg
@@ -17,7 +17,6 @@ Age of Empires II Definitive Edition,35.5,100,210,https://howlongtobeat.com/game
 MISTOVER,33.5,37.5,85,https://howlongtobeat.com/games/71153_MISTOVER.jpg
 Phoenix Point,32,75.5,0,https://howlongtobeat.com/games/53702_Phoenix_Point.jpg
 CrossCode,31.5,50,79,https://howlongtobeat.com/games/crosscode_indie.png
-Yakuza 0,31,65.5,137,https://howlongtobeat.com/games/43056_Yakuza_0.jpg
 Battle Chasers Nightwar,28.5,42,61.5,https://howlongtobeat.com/games/Battle_Chasers_Nightwar_download.jpg
 Fallout New Vegas,27.5,60.5,130,https://howlongtobeat.com/games/Fallout_New_Vegas.jpg
 Subnautica,27,44,56.5,https://howlongtobeat.com/games/Subnautica_header.jpg
@@ -36,8 +35,7 @@ Viva Piata,19,32,51,https://howlongtobeat.com/games/250px-Viva_pinyata.jpg
 Enter the Gungeon,18.5,44.5,159,https://howlongtobeat.com/games/35549_Enter_the_Gungeon.jpg
 Surviving Mars,18.5,39,127,https://howlongtobeat.com/games/45951_Surviving_Mars.jpg
 Astroneer,18.5,32,50,https://howlongtobeat.com/games/42182_Astroneer.jpg
-Alien Isolation,18.5,23,33,https://howlongtobeat.com/games/Alien_Isolation.jpg
-Rise of Nations Extended Edition,18,39,62.5,https://howlongtobeat.com/games/RiseofNationsExtendedEdition_292x136.jpg
+Alien Isolation,18.5,23,32.5,https://howlongtobeat.com/games/Alien_Isolation.jpg
 Yakuza Kiwami,18,32.5,81.5,https://howlongtobeat.com/games/39484_Ryu_ga_Gotoku_Kiwami.jpg
 The Long Dark,17.5,44,149,https://howlongtobeat.com/games/The_Long_Dark_header.jpg
 Grid 2,17.5,20.5,28.5,https://howlongtobeat.com/games/250px-Grid_2_box_artwork.png
@@ -65,7 +63,7 @@ Ori and the Will of the Wisps,11,14.5,17,https://howlongtobeat.com/games/46428_O
 BanjoKazooie,11,14.5,15,https://howlongtobeat.com/games/250px-BanjoKazooieCover500px.jpg
 Slay the Spire,10.5,40.5,228,https://howlongtobeat.com/games/51390_Slay_the_Spire.jpg
 The Banner Saga,10.5,14,26,https://howlongtobeat.com/games/The_Banner_Saga.jpg
-Gears 5,10.5,14,18,https://howlongtobeat.com/games/57422_Gears_5.jpg
+Gears 5,10.5,13.5,18,https://howlongtobeat.com/games/57422_Gears_5.jpg
 For The King,10,26,57,https://howlongtobeat.com/games/45024_For_The_King.jpg
 Frostpunk,10,20.5,41.5,https://howlongtobeat.com/games/41585_Frostpunk.jpg
 Sunset Overdrive,10,18.5,34,https://howlongtobeat.com/games/Sunset_Overdrive_cover.jpg
@@ -86,7 +84,7 @@ Gears of War Ultimate Edition,9,11.5,17,https://howlongtobeat.com/games/Gears_of
 Gears of War 4,9,11.5,14,https://howlongtobeat.com/games/Gears_of_War_4.jpg
 Unavowed,9,10.5,16,https://howlongtobeat.com/games/54219_Unavowed.jpg
 Wandersong,9,10.5,11,https://howlongtobeat.com/games/61375_Wandersong.jpg
-Ori and the Blind Forest Definitive Edition,8.5,11,11.5,https://howlongtobeat.com/games/36755_Ori_and_the_Blind_Forest_Definitive_Edition.jpg
+Ori and the Blind Forest Definitive Edition,8.5,10.5,11.5,https://howlongtobeat.com/games/36755_Ori_and_the_Blind_Forest_Definitive_Edition.jpg
 Stranger Things 3 The Game,8.5,9.5,14,https://howlongtobeat.com/games/68766_Stranger_Things_3_The_Game.png
 Halo Wars 2,8,13.5,22.5,https://howlongtobeat.com/games/37985_Halo_Wars_2.jpg
 Halo 5 Guardians,8,12,24.5,https://howlongtobeat.com/games/Halo_5_Guardians.png
@@ -160,46 +158,48 @@ Bleeding Edge,0,0,6.5,https://howlongtobeat.com/games/68093_Bleeding_Edge.jpg
 Secret Neighbor,0,0,3,https://howlongtobeat.com/games/69815_Secret_Neighbor.jpg
 IDARB,0,0,2.5,https://howlongtobeat.com/games/IDARB.jpg
 The Jackbox Party Pack 3,0,0,2.5,https://howlongtobeat.com/games/40718_The_Jackbox_Party_Pack_3.jpg
+Frostpunk: Console Edition,,,,
+F1® 2018,,,,
+EVERSPACE™,,,,
+Europa Universalis IV - Microsoft Store Edition,,,,
+Deliver Us The Moon.,,,,
 A Plague Tale: Innocence - Windows 10,,,,
 ACE COMBAT™ 7: SKIES UNKNOWN,,,,
-Bad North: Jotunn Edition,,,,
-Dead by Daylight: Special Edition,,,,
-Europa Universalis IV - Microsoft Store Edition,,,,
-EVERSPACE™,,,,
-Deliver Us The Moon.,,,,
-The LEGO® NINJAGO® Movie Video Game,,,,
-Gears Tactics - Windows 10,,,,
-F1® 2018,,,,
-Frostpunk: Console Edition,,,,
-Fuzion Frenzy®,,,,
 Fishing Sim World®: Pro Tour,,,,
+Fuzion Frenzy®,,,,
+Bad North: Jotunn Edition,,,,
 Forza Horizon 4 Standard Edition,,,,
-Rocket League®,,,,
-Halo Wars: Definitive Edition (PC),,,,
-GoNNER - BLüEBERRY EDiTION,,,,
-Halo Wars 2: Standard Edition,,,,
-The Lord of the Rings: Adventure Card Game - Definitive Edition,,,,
-Pikuniku Win10,,,,
-Levelhead,0,0,0,https://howlongtobeat.com/games/76093_Levelhead.jpg
+Dead by Daylight: Special Edition,,,,
+Wasteland 2: Director's Cut for Windows 10,,,,
 NieR:Automata™ BECOME AS GODS Edition,,,,
 Hearts of Iron IV: Cadet Edition,,,,
+Gears Tactics - Windows 10,,,,
+Halo Wars: Definitive Edition (PC),,,,
+Halo Wars 2: Standard Edition,,,,
 Middle-earth™: Shadow of War™,,,,
-The Walking Dead: Season Two,,,,
-The Walking Dead: A New Frontier - The Complete Season (Episodes 1-5),,,,
-Rush: A DisneyPixar Adventure,,,,
+GoNNER - BLüEBERRY EDiTION,,,,
+Levelhead,0,0,0,https://howlongtobeat.com/games/76093_Levelhead.jpg
 The Surge 2 - Windows 10,,,,
+Pikuniku Win10,,,,
+The Walking Dead: A New Frontier - The Complete Season (Episodes 1-5),,,,
+Rocket League®,,,,
 Pillars of Eternity: Hero Edition,,,,
+Rise of Nations: Extended Edition,,,,
+The Walking Dead: Season Two,,,,
 Stellaris: Console Edition,,,,
-Train Sim World® 2020,,,,
-"The Walking Dead: Michonne - Ep. 3, What We Deserve",,,,
+Rush: A DisneyPixar Adventure,,,,
 "The Walking Dead: Michonne - Ep. 2, Give No Shelter",,,,
-The Walking Dead: Michonne - The Complete Season,,,,
 Totally Accurate Battle Simulator (Game Preview),,,,
+"The Walking Dead: Michonne - Ep. 3, What We Deserve",,,,
+The LEGO® NINJAGO® Movie Video Game,,,,
+The Lord of the Rings: Adventure Card Game - Definitive Edition,,,,
+The Walking Dead: Michonne - The Complete Season,,,,
+Train Sim World® 2020,,,,
 Two Point Hospital™,,,,
 Viva Piñata: TIP,,,,
 WORLD OF HORROR (Game Preview),,,,
-Wasteland 2: Director's Cut for Windows 10,,,,
 Wasteland 3 (PC),,,,
 Wasteland 3 (Xbox One),,,,
 Wolfenstein® II: The New Colossus™,,,,
+Yakuza 0,,,,
 Yakuza Kiwami for Windows 10,,,,

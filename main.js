@@ -24,7 +24,7 @@ function extractResults(results) {
 async function writeCSVResults(list) {
     console.log("📝 Dumping results to a CSV file: " + list.length);
     const csv = new ObjectsToCsv(list);
-    await csv.toDisk('./list.csv')
+    await csv.toDisk('./data/list.csv')
 }
 
 // Sorting by: 1st gameplay main, 2nd extra, 3rd completionist; and after that, by name.
