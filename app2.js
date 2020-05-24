@@ -6,14 +6,15 @@ const INDEX_URL_IMAGE = 4;
 
 // Removing the list of games where we don't have time information
 function cleanIncompleteData(data) {
-    let gamesWithInfo = data;
+    let gamesWithInfo = [];
     for (let i = 0; i < data.length; ++i) {
-        if (Number(data[INDEX_MAIN]) > 0 || Number(data[INDEX_MAIN_EXTRA]) > 0 || Number(data[INDEX_COMPLETIONIST]) > 0 ) {
+        if (Number(data[i][INDEX_MAIN]) > 0 || Number(data[i][INDEX_MAIN_EXTRA]) > 0 || Number(data[i][INDEX_COMPLETIONIST]) > 0 ) {
             gamesWithInfo.push(data[i]);
         } else {
             console.log("Game without info: " + data[i]);
         }
     }
+    debugger
     return gamesWithInfo;
 }
 
@@ -62,6 +63,7 @@ function createD3Table() {
     d3.text("./data/list.csv", function(response) {
         var data = d3.csv.parseRows(response);
         data.shift(); // Remove first row
+        debugger
         data = cleanIncompleteData(data);
 
         // draw table body with rows
