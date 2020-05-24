@@ -13,3 +13,12 @@ h1 {
     background-color: #F2F2F2;
     margin: 5%;
 }
+
+.tableHeader {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.FilterableTable {
+    background-color: #b5b5b594;
+}
