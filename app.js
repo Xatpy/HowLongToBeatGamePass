@@ -24,9 +24,11 @@ function createD3Table() {
     // draw the table   
     d3.select("body").append("div")
     .attr("id", "container")
+    .attr("class", "container");
 
     d3.select("#container").append("div")
-    .attr("id", "FilterableTable");
+    .attr("id", "FilterableTable")
+    .attr("class", "u-full-width");
 
     d3.select("#FilterableTable").append("div")
         .attr("class", "SearchBar")
