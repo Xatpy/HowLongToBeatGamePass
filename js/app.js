@@ -22,7 +22,7 @@ function createD3Table() {
     var clicks = [0,0,0,0];
 
     // draw the table   
-    d3.select("body").append("div")
+    d3.select("#contentBody").append("div")
     .attr("id", "container")
     .attr("class", "container");
 
