@@ -3,6 +3,7 @@ const INDEX_MAIN = 1;
 const INDEX_MAIN_EXTRA = 2;
 const INDEX_COMPLETIONIST = 3;
 const INDEX_URL_IMAGE = 4;
+const INDEX_ID = 5;
 
 // Removing the list of games where we don't have time information
 function cleanIncompleteData(data) {
@@ -15,6 +16,15 @@ function cleanIncompleteData(data) {
         }
     }
     return gamesWithInfo;
+}
+
+function searchId(data, name) {
+    for (let i = 0; i < data.length; ++i) {
+        if (data[i][INDEX_NAME] === name) {
+            return data[i][INDEX_ID];
+        }
+    }
+    return -1;
 }
 
 function createD3Table() {
@@ -79,7 +89,7 @@ function createD3Table() {
         // enter the rows
         rows.enter()
             .append("tr")
-            .attr("class", "cell")
+            .attr("class", "cell");
 
         // enter td's in each row
         row_entries = rows.selectAll("td")
@@ -112,7 +122,19 @@ function createD3Table() {
         row_entries_no_anchor = row_entries.filter(function(d) {
             return (/https?:\/\//.test(d) == false)
         })
-        row_entries_no_anchor.text(function(d) { return d; })
+
+        row_entries_no_anchor.each(function(d, i) {
+            if (i === 0) {
+                let idGame = searchId(data, d);
+                d3.select(this)
+                .append("a")
+                .attr("href", "https://howlongtobeat.com/game?id=" + idGame)
+                .attr("target", "_blank")
+                .text(function(d) {return d});
+            } else {
+                d3.select(this).text(function(d) {return d;});
+            }
+        });
 
     // draw row entries with anchor
         row_entries_with_anchor = row_entries.filter(function(d) {
@@ -275,7 +297,18 @@ function createD3Table() {
             row_entries_no_anchor = row_entries.filter(function(d) {
                 return (/https?:\/\//.test(d) == false)
             })
-            row_entries_no_anchor.text(function(d) { return d; })
+            row_entries_no_anchor.each(function(d, i) {
+                if (i === 0) {
+                    let idGame = searchId(data, d);
+                    d3.select(this)
+                    .append("a")
+                    .attr("href", "https://howlongtobeat.com/game?id=" + idGame)
+                    .attr("target", "_blank")
+                    .text(function(d) {return d});
+                } else {
+                    d3.select(this).text(function(d) {return d;});
+                }
+            });
 
             // draw row entries with anchor
             row_entries_with_anchor = row_entries.filter(function(d) {

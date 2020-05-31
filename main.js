@@ -3,12 +3,13 @@ let hltbService = new hltb.HowLongToBeatService();
 const ObjectsToCsv = require('objects-to-csv');
 
 class GameInfo {
-    constructor(name, gameplayMain, gameplayMainExtra, gameplayCompletionist, imageUrl) {
+    constructor(name, gameplayMain, gameplayMainExtra, gameplayCompletionist, imageUrl, id) {
         this.name = name;
         this.gameplayMain = gameplayMain;
         this.gameplayMainExtra = gameplayMainExtra;
         this.gameplayCompletionist = gameplayCompletionist;
         this.imageUrl = imageUrl;
+        this.id = id;
     }
 }
 
@@ -16,7 +17,7 @@ function extractResults(results) {
     if (results !== undefined && results.length > 0) {
         const first = results[0]; //Assuming the first option is the one that we'relooking for, more coincidence
         return new GameInfo(first.name, first.gameplayMain, first.gameplayMainExtra,
-            first.gameplayCompletionist, first.imageUrl);;
+            first.gameplayCompletionist, first.imageUrl, first.id);;
     }
     return null;
 }
@@ -142,7 +143,7 @@ function getIndexOfGameInList(gameName) {
 async function addGameInfoFromResults(gameName, result, originalName) {
     let gameInfo = extractResults(result);
     if (gameInfo === null) {
-        gameInfo = new GameInfo(gameName, null, null, null, null);
+        gameInfo = new GameInfo(gameName, null, null, null, null, null);
     }
     //let gameInfo = new GameInfo(gameName, receivedInfoFromGame);
     if (originalName === "") {

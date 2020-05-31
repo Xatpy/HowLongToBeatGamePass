@@ -16,6 +16,10 @@ td {
     vertical-align: middle;
 }
 
+a {
+    color: black;
+}
+
 .header {
     background-color:#333;
 }
