@@ -79,6 +79,7 @@ function createD3Table() {
         // enter the rows
         rows.enter()
             .append("tr")
+            .attr("class", "cell")
 
         // enter td's in each row
         row_entries = rows.selectAll("td")
@@ -101,8 +102,9 @@ function createD3Table() {
                 .enter()
                 .append("img") // doesn't append an <img> anywhere
                 .attr("src", d)
-                .attr("height", "40px")
-                .attr("width", "30px");
+                .attr("class", "zoom")
+                .attr("height", "80px")
+                .attr("width", "60px");
             }
         })
 

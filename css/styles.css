@@ -11,6 +11,11 @@ h1 {
     padding: 10px;
 }
 
+td {
+    text-align: center; 
+    vertical-align: middle;
+}
+
 .header {
     background-color:#333;
 }
@@ -54,4 +59,20 @@ h1 {
     position: relative;
     left: 2%;
     margin-bottom: 20px;
+}
+
+.cell {
+    text-align: center;
+}
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+    padding-right: 15px;
+}
+
+.zoom:hover {
+    -ms-transform: scale(5.5); /* IE 9 */
+    -webkit-transform: scale(5.5); /* Safari 3-8 */
+    transform: scale(1.5); 
 }
