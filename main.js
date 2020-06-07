@@ -1,6 +1,7 @@
 let hltb = require('howlongtobeat');
 let hltbService = new hltb.HowLongToBeatService();
 const ObjectsToCsv = require('objects-to-csv');
+const fs = require('fs')
 
 class GameInfo {
     constructor(name, gameplayMain, gameplayMainExtra, gameplayCompletionist, imageUrl, id) {
@@ -22,10 +23,23 @@ function extractResults(results) {
     return null;
 }
 
+async function checkFileToWrite() {
+    if (fs.existsSync(OUTPUT_PATH)) {
+        //file exists
+        let datetime = new Date();
+        datetime = datetime.toISOString().slice(0,10);
+        let backupFile = './data/' + datetime + '.csv';
+        fs.copyFile(OUTPUT_PATH, backupFile, (err) => {
+            if (err) throw err;
+        });
+    }
+}
+
 async function writeCSVResults(list) {
     console.log("📝 Dumping results to a CSV file: " + list.length);
-    const csv = new ObjectsToCsv(list);
-    await csv.toDisk('./data/list.csv')
+    let csv = new ObjectsToCsv(list);
+    checkFileToWrite();
+    await csv.toDisk(OUTPUT_PATH);
 }
 
 // Sorting by: 1st gameplay main, 2nd extra, 3rd completionist; and after that, by name.
@@ -184,6 +198,8 @@ const MAX_TIME_RUNNING = 30;
 let secondsTranscurred = 0;
 let intervalId = setInterval(mainLoop, 1000);
 let done = false;
+
+const OUTPUT_PATH = './data/list.csv';
 
 //----------------- Program ----------------
 console.log("👾 Getting games info 🎮");
