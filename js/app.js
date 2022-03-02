@@ -107,6 +107,7 @@ function createD3Table() {
         .each(function(d, i) {
             if (i > 0 && i % 4 === 0) {
                 var imgData = [];
+                d = "https://howlongtobeat.com" + d;
                 imgData.push(d);
                 d3.select(this).selectAll("img").data(imgData)
                 .enter()
@@ -283,6 +284,7 @@ function createD3Table() {
                 .each(function(d, i) {
                     if (i > 0 && i % 4 === 0) {
                         var imgData = [];
+                        d = "https://howlongtobeat.com/" + d;
                         imgData.push(d);
                         d3.select(this).selectAll("img").data(imgData)
                         .enter()
