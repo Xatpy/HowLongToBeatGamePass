@@ -37,9 +37,12 @@ async function checkFileToWrite() {
 
 async function writeCSVResults(list) {
     console.log("📝 Dumping results to a CSV file: " + list.length);
+    console.log(list)
     let csv = new ObjectsToCsv(list);
     checkFileToWrite();
     await csv.toDisk(OUTPUT_DATA_FILE);
+    console.log("✅ DONE! File written: ", OUTPUT_DATA_FILE);
+
 }
 
 // Sorting by: 1st gameplay main, 2nd extra, 3rd completionist; and after that, by name.
@@ -71,7 +74,7 @@ function extractGamesWithoutInfo(listGames) {
 
 function removeSpecialCharacters(gameName) {
     let curatedName = gameName;
-    listSpecialCharacters = ["™", "®", "#", "(PC)", "Xbox One", "for Windows 10", "Win10", "(Game Preview)", "Standard Edition"];
+    listSpecialCharacters = ["™", "®", "#", "(PC)", "Xbox One", "for Windows 10", "Win10", "(Game Preview)", "Game Preview", "Standard Edition"];
     listSpecialCharacters.forEach((specialCharacter) => {
         curatedName = curatedName.replace(specialCharacter, "");
     });
@@ -121,15 +124,23 @@ async function retryGamesWithoutInfo(listGamesWithoutInfo) {
     gHaveRetried = true;
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function callHLTBService(gameNameToSearch, originalName) {
     numberOfCalls++;
+    //await sleep(500);
+    console.log(`Calling HBTP ${gameNameToSearch}`);
+    //await sleep(500);
     hltbService.search(gameNameToSearch).then(result => {
             numberOfReceptions++;
+            //console.log("Resut" , result);
             addGameInfoFromResults(gameNameToSearch, result, originalName);
     })
     .catch(error => {
         numberOfErrors++;
-        console.log(error);
+        console.log(gameNameToSearch, "---> ",error);
     });
 }
 
@@ -183,8 +194,10 @@ function getEmojiForSecond(numberOfSeconds) {
 //----------------- Variables ----------------
 
 let listGamesInfo = [];
-let listGamesNames = "Call of the Sea|Tetris® Effect: Connected|NHL® 94 REWIND|Monster Sanctuary|Planet Coaster: Console Edition|PHOGS!|Unto The End|Gears Tactics|Haven|Control|DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition|Yes, Your Grace|Slime Rancher|FINAL FANTASY VIII Remastered|STAR WARS Jedi: Fallen Order™|ARK: Survival Evolved Explorer's Edition|Star Renegades|River City Girls|A Plague Tale: Innocence|A Way Out|ACE COMBAT™ 7: SKIES UNKNOWN|Age of Wonders: Planetfall|Alan Wake|Alice: Madness Returns|Alien: Isolation|Alvastia Chronicles|Anthem™|Army of Two™|ASTRONEER|Banjo Kazooie: N n B|Banjo-Kazooie|Banjo-Tooie|Batman™: Arkham Knight|Battle Chasers: Nightwar|Battlefield 1943™|Battlefield 3™|Battlefield 4|Battlefield Bad Company 2|Battlefield: Bad Company|Battlefield™ 1|Battlefield™ Hardline|Battlefield™ V|Battletoads|Bejeweled 2|Bejeweled 3|Black Desert|BLACK™|Blair Witch|Bleeding Edge|Bloodstained: Ritual of the Night|Bridge Constructor Portal|Brütal Legend|Burnout™ Paradise Remastered|Carrion|Carto|Celeste|Children of Morta|Cities: Skylines - Xbox One Edition|ClusterTruck|Costume Quest 2|Crackdown 3|Cricket 19|CrossCode|Crysis|Crysis 2|Crysis® 3|Dante's Inferno™|Darksiders Genesis|Day of the Tentacle Remastered|DayZ|de Blob|Dead by Daylight: Special Edition|Dead Cells|Dead Space™|Dead Space™ 2|Dead Space™ 3|Dead Space™ Ignition|Death Squared|Deep Rock Galactic|Deliver Us The Moon|Descenders|Destiny 2|Destiny 2: Forsaken|Destiny 2: Shadowkeep|DiRT 4|Dishonored 2|Disneyland Adventures|Don't Starve: Giant Edition|DOOM Eternal Standard Edition|Double Dragon Neon|Double Kick Heroes|Dragon Age: Origins|Dragon Age™ 2|Dragon Age™: Inquisition|Drake Hollow|Dungeon of the Endless|EA SPORTS™ FIFA 16|EA SPORTS™ FIFA 17|EA SPORTS™ FIFA 20|EA SPORTS™ NHL® 18|EA SPORTS™ NHL® 19|EA SPORTS™ Rory McIlroy PGA TOUR®|EA SPORTS™ UFC®|EA SPORTS™ UFC® 2|EA SPORTS™ UFC® 3|Eastshade|eFootball PES 2020 STANDARD EDITION|Enter The Gungeon|F1® 2019|Fable Anniversary|Fable II|Fable III|Fallout 76|Fallout: New Vegas|Farming Simulator 17|Fe|Feeding Frenzy|Feeding Frenzy 2|FIFA 15|FIFA 18|FIFA 19|FIGHT NIGHT CHAMPION|FINAL FANTASY IX|FINAL FANTASY VII|FINAL FANTASY XV ROYAL EDITION|Fishing Sim World®: Pro Tour|Five Nights at Freddy's|Five Nights at Freddy's 2|Five Nights at Freddy's 3|Five Nights at Freddy's 4|Five Nights at Freddy's: Original Series|For The King|Forager|Forza Horizon 4 Standard Edition|Forza Motorsport 7 Standard Edition|Fractured Minds|Frostpunk: Console Edition|Full Throttle Remastered|Fuzion Frenzy®|Gato Roboto|Gears 5|Gears 5 Ultimate Edition|Gears of War|Gears of War 2|Gears of War 3|Gears of War 4|Gears of War: Judgment|Gears of War: Ultimate Edition|Goat Simulator|Golf With Your Friends|GONNER2|Grim Fandango Remastered|Grounded - Game Preview|Guacamelee! 2|Halo 5: Guardians|Halo Wars 2: Standard Edition|Halo Wars: Definitive Edition|Halo: Spartan Assault|Halo: The Master Chief Collection|Heavy Weapon|Hellblade: Senua's Sacrifice|Hello Neighbor|Hollow Knight: Voidheart Edition|Hotshot Racing|Human Fall Flat|HyperDot|Hypnospace Outlaw|Ikenfell|Indivisible|It Lurks Below|Jetpac Refuelled|Journey to the Savage Planet|Joy Ride Turbo|Kameo|Katana Zero XB1|Killer Instinct: Definitive Edition|KINGDOM HEARTS - HD 1.5+2.5 ReMIX -|KINGDOM HEARTS Ⅲ|KINGDOM HEARTS HD 2.8 Final Chapter Prologue|Knights and Bikes|Kona|Levelhead|Lonely Mountains: Downhill|Madden NFL 15|Madden NFL 16|Madden NFL 17|Madden NFL 18|Madden NFL 19|Madden NFL 20|Madden NFL 25|MARVEL VS. CAPCOM: INFINITE|Mass Effect|Mass Effect 2|Mass Effect™ 3|Mass Effect™: Andromeda|Max: The Curse of Brotherhood|Medal of Honor Airborne|Middle-earth™: Shadow of War™|Minecraft|Minecraft Dungeons|";
-listGamesNames += "Mirror's Edge™|Mirror's Edge™ Catalyst|Momodora: Reverie Under the Moonlight|MONSTER HUNTER: WORLD™|Moonlighter|Mortal Kombat X|Mount & Blade: Warband|Moving Out|MudRunner|My Friend Pedro|My Time At Portia|NARUTO TO BORUTO: SHINOBI STRIKER|NBA LIVE 18: The One Edition|NBA LIVE 19|Need for Speed Rivals|Need for Speed™|Need for Speed™ Heat|Need for Speed™ Payback|Neon Abyss|New Super Lucky's Tale|NHL® 20|NieR:Automata™ BECOME AS GODS Edition|Night Call|Night in the Woods|NINJA GAIDEN II|No Man's Sky|Nowhere Prophet|Observation|Ori and the Blind Forest: Definitive Edition|Ori and the Will of the Wisps|Outer Wilds|Overcooked! 2|Oxenfree|Pandemic: The Board Game|Pathologic 2|PAYDAY 2: CRIMEWAVE EDITION|Peggle|Peggle 2|Perfect Dark|Perfect Dark Zero|Pikuniku|Pillars of Eternity: Complete Edition|Plants vs. Zombies|Plants vs. Zombies Garden Warfare|Plants vs. Zombies: Battle for Neighborville™|Plants vs. Zombies™ Garden Warfare 2|PLAYERUNKNOWN'S BATTLEGROUNDS|Power Rangers: Battle for the Grid|Quantum Break|RAGE 2|Rare Replay|ReCore|Remnant: From the Ashes|RESIDENT EVIL 7 biohazard|Rocket Arena|Rush: A DisneyPixar Adventure|Ryse: Son of Rome|ScourgeBringer|ScreamRide|Sea of Solitude|Sea of Thieves|Sea Salt|Secret Neighbor|Shadow Warrior 2|Shadows of the Damned|Skate 3|Slay The Spire|Sniper Elite 4|SOULCALIBUR VI|Spiritfarer®|SSX|STAR WARS™ Battlefront™|STAR WARS™ Battlefront™ II|State of Decay 2: Juggernaut Edition|State of Decay: Year-One|Stellaris: Console Edition|Stranger Things 3: The Game|Streets of Rage 4|Streets of Rogue|Subnautica|Sunset Overdrive|Super Lucky's Tale|Supraland|Surviving Mars|SWORD ART ONLINE: FATAL BULLET|Tales of Vesperia™: Definitive Edition|TEKKEN 7|Tell Me Why: Chapters 1-3|Terraria|The Bard's Tale ARPG : Remastered and Resnarkled|The Bard's Tale IV: Director's Cut|The Bard's Tale Trilogy|The Dark Crystal: Age of Resistance Tactics|The Dark Pictures Anthology: Man Of Medan|The Elder Scrolls® Online|The Gardens Between|The Jackbox Party Pack 4|The Long Dark|The Messenger|The Outer Worlds|The Sims™ 4|The Surge 2|The Touryst|The Turing Test|The Walking Dead: A New Frontier - The Complete Season (Episodes 1-5)|The Walking Dead: Michonne - Ep. 2, Give No Shelter|The Walking Dead: Michonne - Ep. 3, What We Deserve|The Walking Dead: Michonne - The Complete Season|The Walking Dead: Season Two|The Walking Dead: The Complete First Season|The Witcher 3: Wild Hunt|theHunter: Call of the Wild|Thronebreaker: The Witcher Tales|Ticket to Ride|Titanfall|Titanfall® 2|Tom Clancy's Rainbow Six® Siege Deluxe Edition|Totally Accurate Battle Simulator (Game Preview)|Totally Reliable Delivery Service|Touhou Luna Nights|Trailmakers|Train Sim World® 2020|Two Point Hospital™|UnderMine|Unravel|Unravel Two|Unruly Heroes|Untitled Goose Game|Vambrace: Cold Soul|Viva Piñata|Viva Piñata: TIP|Void Bastards|Wargroove|Warhammer: Vermintide 2|Wasteland 2: Director's Cut|Wasteland 3 (Xbox One)|Wasteland Remastered|We Happy Few|West of Dead|What Remains of Edith Finch|Wizard of Legend|Wolfenstein: Youngblood|World War Z|Worms W.M.D|Xeno Crisis|Yakuza 0|Yakuza Kiwami|Yakuza Kiwami 2|Zoo Tycoon: Ultimate Animal Collection|Zuma|Zuma's Revenge!"
+let listGamesNames = "Skul: The Hero Slayer|FAR: Changing Tides|Telling Lies|Infernax|CrossfireX: Operation Catalyst|Hollow Knight: Voidheart Edition|Dreamscaper|Besiege Console (Game Preview)|Super Mega Baseball 3|Madden NFL 22 Xbox One|Madden NFL 22 Xbox Series X|S|Edge of Eternity|The Last Kids on Earth and the Staff of Doom|Contrast|ARK: Ultimate Survivor Edition|A Plague Tale: Innocence|A Way Out|AI: THE SOMNIUM FILES|Alan Wake's American Nightmare ®|Alice: Madness Returns|Alien: Isolation|Aliens: Fireteam Elite|Among Us|Anthem™|ANVIL : Vault Breaker (Game Preview)|Aragami 2|Archvale|Army of Two™|art of rally|Astria Ascending|ASTRONEER|Atomicrops|Back 4 Blood|Backbone|Banjo Kazooie: N n B|Banjo-Kazooie|Banjo-Tooie|Bassmaster® Fishing 2022|Batman™: Arkham Knight|Battlefield 1943™|Battlefield 3™|Battlefield 4|Battlefield Bad Company 2|Battlefield: Bad Company|Battlefield™ 1 Revolution|Battlefield™ Hardline|Battlefield™ V|Battletoads|Before We Leave|Bejeweled 2|Bejeweled 3|Ben 10: Power Trip|Black Desert|BLACK™|Bleeding Edge|BLiNX: The Time Sweeper|Bloodroots|Boyfriend Dungeon|Breathedge|Bridge Constructor Portal|Broken Age|Brütal Legend|Bug Fables: The Everlasting Sapling|Burnout™ Paradise Remastered|Carrion|Children of Morta|Cities: Skylines - Xbox One Edition|ClusterTruck|Conan Exiles|Costume Quest 2|Crackdown 3|Craftopia|Cricket 19|Crimson Skies®: High Road to Revenge™|Cris Tales|Crown Trick|Crysis|Crysis 2|Crysis® 3|Curse of the Dead Gods|Dandy Ace|Danganronpa: Trigger Happy Havoc Anniversary Edition|Dante's Inferno™|Dark Alliance|Darkest Dungeon®|Day of the Tentacle Remastered|DayZ|Dead by Daylight|Dead Cells|Dead Space™|Dead Space™ 2|Dead Space™ 3|Dead Space™ Ignition|Death's Door [Xbox]|DEEEER Simulator: Your Average Everyday Deer Game|Deep Rock Galactic|Descenders|Destroy All Humans!|Dicey Dungeons|DiRT 4|DIRT 5|Dirt Rally|DiRT Rally 2.0|Dishonored 2|Dishonored® Definitive Edition|Dishonored®: Death of the Outsider™|Disneyland Adventures|Dodgeball Academia|Donut County|DOOM|DOOM (1993)|DOOM 3|DOOM 64|DOOM Eternal Standard Edition|DOOM II (Classic)|Double Dragon Neon|Dragon Age: Origins|Dragon Age™ 2|Dragon Age™: Inquisition|DRAGON BALL FIGHTERZ|DRAGON QUEST BUILDERS 2|DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition|EA SPORTS™ FIFA 20|EA SPORTS™ Rory McIlroy PGA TOUR®|EA SPORTS™ UFC® 3|Echo Generation|Elite Dangerous Standard Edition|Embr|Empire of Sin|Enter The Gungeon|Evil Genius 2: World Domination|Exo One|F1 2020|F1® 2019|Fable Anniversary|Fable II|Fable III|Fae Tactics|Fallout 3|Fallout 4|Fallout 76|Fallout: New Vegas|Farming Simulator 19|Fe|Feeding Frenzy|Feeding Frenzy 2|FIFA 21 Standard Edition Xbox One & Xbox Series X|S|FIFA 21 Xbox One|FIFA 21 Xbox Series X|S|FIGHT NIGHT CHAMPION|FINAL FANTASY X/X-2 HD Remaster|FINAL FANTASY XIII|FINAL FANTASY XIII-2|Firewatch|Flynn: Son of Crimson|Football Manager 2022 Xbox Edition|FOR HONOR™ Standard Edition|Forager|Forza Horizon 4 Standard Edition|Forza Horizon 5 Standard Edition|Frostpunk: Console Edition|Full Throttle Remastered|Fuzion Frenzy®|Gang Beasts|Gears 5 Game of the Year Edition|Gears of War|Gears of War 2|Gears of War 3|Gears of War 4|Gears of War: Judgment|Gears of War: Ultimate Edition|Gears Tactics|Generation Zero®|Genesis Noir|Goat Simulator|Going Under|Golf With Your Friends|Gorogoa|Grand Theft Auto: San Andreas – The Definitive Edition|GreedFall|GRID|Grim Fandango Remastered|Grounded - Game Preview|Hades|Halo 5: Guardians|Halo Infinite|Halo Infinite (Campaign)|Halo Wars 2|Halo Wars 2: Standard Edition|Halo Wars: Definitive Edition|Halo: Spartan Assault|Halo: The Master Chief Collection|Heavy Weapon|Hellblade: Senua's Sacrifice|HITMAN Trilogy|Human Fall Flat|I Am Fish|Immortal Realms: Vampire Wars|Injustice™ 2|Into the Pit|";
+listGamesNames += "It Takes Two - Digital Version|Jetpac Refuelled|Joy Ride Turbo|Jurassic World Evolution|Just Cause 4: Reloaded|Kameo|Katamari Damacy REROLL|Kill It With Fire|Killer Instinct: Definitive Edition|Knockout City™|Lake|Last Stop|Lawn Mowing Simulator|Lemnis Gate|Lethal League Blaze|Library Of Ruina|LIMBO|Lonely Mountains: Downhill|Lost Words: Beyond the Page|LUMINES REMASTERED|Madden NFL 20|Madden NFL 21 Xbox One|Madden NFL 21 Xbox Series X|S|Maneater|Marvel's Avengers|Mass Effect|Mass Effect 2|Mass Effect™ 3|Mass Effect™ Legendary Edition|Mass Effect™: Andromeda|Max: The Curse of Brotherhood|MechWarrior 5: Mercenaries|Medal of Honor Airborne|Microsoft Flight Simulator: Standard Game of the Year Edition|Middle-earth™: Shadow of War™|Mighty Goose|Mind Scanners|Minecraft|Minecraft Dungeons|Mirror's Edge™|Mirror's Edge™ Catalyst|MLB® The Show™ 21 Xbox One|MLB® The Show™ 21 Xbox Series X | S|Monster Sanctuary|Monster Train|Moonglow Bay|Moonlighter|Mortal Kombat 11|Mortal Shell: Enhanced Edition|MotoGP™20|My Friend Pedro|My Time At Portia|Myst|Narita Boy|NBA LIVE 19|Need for Speed Rivals|Need for Speed™|Need for Speed™ Heat|Need for Speed™ Hot Pursuit Remastered|Need for Speed™ Payback|Neon Abyss|Neoverse|New Super Lucky's Tale|Next Space Rebels|NHL® 20|NHL® 21|NHL® 94 REWIND|NieR:Automata™ BECOME AS GODS Edition|No Man's Sky|Nobody Saves the World|Nongunz: Doppelganger Edition|Nuclear Throne|Oblivion|OCTOPATH TRAVELER|Olija|Omno|ONE PIECE: PIRATE WARRIORS 4|One Step From Eden|Ori and the Blind Forest: Definitive Edition|Ori and the Will of the Wisps|Outer Wilds|Outlast 2|OUTRIDERS|Overcooked! 2|PAW Patrol Mighty Pups Save Adventure Bay|PAYDAY 2: CRIMEWAVE EDITION|Peggle|Peggle 2|Perfect Dark|Perfect Dark Zero|Phoenix Point|PHOGS!|Pikuniku|Pillars of Eternity II: Deadfire - Ultimate Edition|Pillars of Eternity: Complete Edition|Plants vs. Zombies|Plants vs. Zombies Garden Warfare|Plants vs. Zombies: Battle for Neighborville™|Plants vs. Zombies™ Garden Warfare 2|Power Rangers: Battle for the Grid|Prey|Project Wingman|Psychonauts|Psychonauts 2|Pupperazzi|Quake|Quantum Break|Race with Ryan|RAGE|RAGE 2|Rain on Your Parade|Raji: An Ancient Epiс|Rare Replay|Recompile|Record of Lodoss War-Deedlit in Wonder Labyrinth-|ReCore|Remnant: From the Ashes|RESIDENT EVIL 7 biohazard|Ring of Pain|Rocket Arena|Rubber Bandits|Rush: A DisneyPixar Adventure|Ryse: Legendary Edition|Sable|SCARLET NEXUS|ScreamRide|Sea of Solitude|Sea of Thieves|Second Extinction™ (Game Preview)|Secret Neighbor|Serious Sam 4|Shadow Warrior 2|Signs of the Sojourner|Skate 3|skate.|SkateBIRD|Slay The Spire|Slime Rancher|Sniper Elite 4|SnowRunner|Space Warlord Organ Trading Simulator|Spelunky 2|Spiritfarer®: Farewell Edition|SSX|STAR WARS Jedi: Fallen Order™|STAR WARS™ Battlefront™|STAR WARS™ Battlefront™ II|STAR WARS™: Squadrons|Stardew Valley|State of Decay 2: Juggernaut Edition|State of Decay: Year-One|STEEP|Stellaris: Console Edition|Streets of Rage 4|Subnautica|Subnautica: Below Zero|Sunset Overdrive|Super Lucky's Tale|SUPERHOT: MIND CONTROL DELETE|Superliminal|Supraland|Surgeon Simulator 2|Taiko no Tatsujin: The Drum Master!|Tell Me Why: Chapters 1-3|Terraria|Tetris® Effect: Connected|The Anacrusis (Game Preview)|The Artful Escape|The Ascent|The Bard's Tale ARPG : Remastered and Resnarkled|The Bard's Tale IV: Director's Cut|The Bard's Tale Trilogy|The Catch: Carp & Coarse Fishing|The Elder Scrolls III: Morrowind|The Elder Scrolls V: Skyrim Special Edition|The Elder Scrolls® Online|The Evil Within|The Evil Within® 2|The Forgotten City|The Good Life|The Gunk|The Long Dark|The Outer Worlds|The Pedestrian|The Procession to Calvary|The Riftbreaker|The Sims™ 4|The Surge 2|The Walking Dead: A New Frontier - The Complete Season (Episodes 1-5)|The Walking Dead: Michonne - Ep. 2, Give No Shelter|The Walking Dead: Michonne - Ep. 3, What We Deserve|The Walking Dead: Michonne - The Complete Season|The Walking Dead: Season Two|The Walking Dead: The Complete First Season|The Wild at Heart|The Yakuza Remastered Collection|theHunter: Call of the Wild|Titanfall® 2|Tom Clancy’s Rainbow Six® Extraction|Tom Clancy's Rainbow Six® Siege Deluxe Edition|"
+listGamesNames += "Torchlight III|Totally Accurate Battle Simulator|Totally Reliable Delivery Service|Townscaper|Trailmakers|Train Sim World® 2|TRANSFORMERS: BATTLEGROUNDS|Tropico 6|Twelve Minutes|Two Point Hospital™|UFC® 4|Undertale|Undungeon|Unpacking|Unravel|Unravel Two|UNSIGHTED|Visage|Viva Piñata|Viva Piñata: TIP|Warhammer 40,000: Battlesector|Wasteland 2: Director's Cut|Wasteland 3|Wasteland Remastered|We Happy Few|What Remains of Edith Finch|Windjammers 2|Wolfenstein: The New Order|Wolfenstein: The Old Blood|Wolfenstein: Youngblood|Wolfenstein® II: The New Colossus™|World War Z|Worms Rumble|Worms W.M.D|Wreckfest|Yakuza 3 Remastered|Yakuza 4 Remastered|Yakuza 5 Remastered|Yakuza 6: The Song of Life|Yakuza: Like a Dragon|Yes, Your Grace|Zombie Army 4: Dead War|Zoo Tycoon: Ultimate Animal Collection|Zuma|Zuma's Revenge!"
+
 //let listGames = "The Surge 2|Levelhead|Red Dead Redemption 2";
 let inputGamesNames = listGamesNames.split("|");
 inputGamesNames = Array.from(new Set(inputGamesNames))
@@ -194,18 +207,45 @@ let numberOfReceptions = 0;
 let numberOfErrors = 0;
 let gHaveRetried = false;
 
-const MAX_TIME_RUNNING = 30;
+const MAX_TIME_RUNNING = 300;
 let secondsTranscurred = 0;
-let intervalId = setInterval(mainLoop, 1000);
+let intervalId = setInterval(mainLoop, 10000);
 let done = false;
 
 const OUTPUT_DATA_FILE = './data/list.csv';
 
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+async function foo() {
+    for (let i = 0; i < inputGamesNames.length; ++i) {
+        let gameName = inputGamesNames[i];
+        //console.log("bbb ", gameName);
+        gameName = cleanGameName(gameName)
+        await delay(250) 
+        callHLTBService(gameName, "");
+    }
+    /*inputGamesNames.forEach(function (gameName) {
+        console.log("bbb ", gameName);
+        gameName = cleanGameName(gameName)
+        await delay(1000) 
+        callHLTBService(gameName, "");
+    });*/
+}
+foo();
+
 //----------------- Program ----------------
 console.log("👾 Getting games info 🎮");
-inputGamesNames.forEach(function (gameName) {
+/*inputGamesNames.forEach(function (gameName) {
+    gameName = cleanGameName(gameName)
+    //await delay(1000) 
     callHLTBService(gameName, "");
-});
+});*/
+
+function cleanGameName(gameName) {
+    const charactersToRemove = ['™', '®', "- Game Preview", "Standard Edition", "Game of the Year Edition"];
+    charactersToRemove.forEach(c => gameName = gameName.replace(c, ''));
+    return gameName;
+}
 
 function mainLoop() {
     let message = getEmojiForSecond(secondsTranscurred) + " Seconds: " + secondsTranscurred;
@@ -219,7 +259,6 @@ function mainLoop() {
             retryGamesWithoutInfo(listGamesWithoutInfo);
         } else {
             writeCSVResults(listGamesInfo);
-            console.log("✅ DONE! File written");
             done = true;
         }
     }

@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "howlongtobeat": "^1.2.1",
+    "howlongtobeat": "^1.5.0",
     "objects-to-csv": "^1.3.6"
   }
 }

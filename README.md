@@ -16,7 +16,7 @@ npm install
 ```
 
 #### Usage
-- `node main.js`
+- `node --experimental-repl-await main.js`
 
 ### Frontend
 - [D3.js](https://d3js.org/)
