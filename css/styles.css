@@ -1,82 +1,207 @@
+:root {
+  --bg: #f5f0e8;
+  --panel: rgba(255, 251, 245, 0.92);
+  --panel-strong: #fffdf8;
+  --ink: #181612;
+  --muted: #63594c;
+  --accent: #0f6d2f;
+  --accent-soft: #dceccf;
+  --line: rgba(24, 22, 18, 0.12);
+  --shadow: 0 24px 80px rgba(52, 42, 28, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: rgba(0, 0, 0, 0.5);
-    /*font-family: Helvetica Neue,Helvetica,Arial,sans-serif;*/
-    font-family: 'Lato', sans-serif;
-    text-align: center;
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(15, 109, 47, 0.14), transparent 32%),
+    radial-gradient(circle at top right, rgba(211, 169, 78, 0.18), transparent 24%),
+    linear-gradient(180deg, #f7f2ea 0%, #eee4d4 100%);
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero-copy,
+.hero-card,
+.toolbar,
+.table-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.hero-copy {
+  padding: 36px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 h1 {
-    color: #107C10;
-    font-weight: bold;
-    padding: 10px;
+  margin: 0;
+  font-size: clamp(3.6rem, 5vw, 5.8rem);
+  line-height: 0.94;
 }
 
+.hero-text {
+  margin: 22px 0 0;
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 1.8rem;
+}
+
+.hero-card {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  background: linear-gradient(180deg, var(--panel-strong), #f1f7eb);
+}
+
+.metric,
+.summary-card {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.metric-label,
+.summary-label,
+.subtle,
+.search-panel span {
+  display: block;
+  color: var(--muted);
+  font-size: 1.3rem;
+}
+
+.metric strong,
+.summary-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 2.4rem;
+}
+
+.toolbar {
+  margin-top: 24px;
+  padding: 24px;
+}
+
+.search-panel input {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 1.7rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.table-panel {
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  margin: 0;
+}
+
+thead {
+  background: #f1eadf;
+}
+
+th,
 td {
-    text-align: center; 
-    vertical-align: middle;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+th button {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.game-cell {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.cover {
+  width: 52px;
+  min-width: 52px;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #d8d0c4;
 }
 
 a {
-    color: black;
+  color: var(--accent);
+  text-decoration: none;
 }
 
-.header {
-    background-color:#333;
+a:hover {
+  text-decoration: underline;
 }
 
-.footer {
-    padding: 10px;
-    text-align: right;
-    background-color: #333;
-    margin-top: 20px;
-    color: white;
-}
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 
-.headerImg {
-    height: 1em;
-}
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
 
-#divTableResults {
-    background-color: #F2F2F2;
-    margin: 5%;
-}
+  th,
+  td {
+    padding: 14px 12px;
+    font-size: 1.4rem;
+  }
 
-.tableHeader {
-    cursor: pointer;
-    border: 2px solid black;
-    background-color: rgba(162, 184, 163, 0.733);
-    text-align: center;
-}
-
-.FilterableTable {
-    background-color: #b5b5b594;
-    margin: 0 auto;
-}
-
-.SearchBar { 
-    display: inline; 
-    position: relative;
-    left: 1%;
-}
-  
-.SearchBar input {
-    position: relative;
-    left: 2%;
-    margin-bottom: 20px;
-}
-
-.cell {
-    text-align: center;
-}
-
-.zoom {
-    transition: transform .2s;
-    margin: 0 auto;
-    padding-right: 15px;
-}
-
-.zoom:hover {
-    -ms-transform: scale(5.5); /* IE 9 */
-    -webkit-transform: scale(5.5); /* Safari 3-8 */
-    transform: scale(1.5); 
+  .hero-copy,
+  .hero-card,
+  .toolbar {
+    padding: 20px;
+  }
 }

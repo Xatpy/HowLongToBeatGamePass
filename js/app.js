@@ -1,337 +1,193 @@
-const INDEX_NAME = 0;
-const INDEX_MAIN = 1;
-const INDEX_MAIN_EXTRA = 2;
-const INDEX_COMPLETIONIST = 3;
-const INDEX_URL_IMAGE = 4;
-const INDEX_ID = 5;
+const DATA_FILE = "./data/list.csv";
+const METADATA_FILE = "./data/metadata.json";
 
-// Removing the list of games where we don't have time information
-function cleanIncompleteData(data) {
-    let gamesWithInfo = [];
-    for (let i = 0; i < data.length; ++i) {
-        if (Number(data[i][INDEX_MAIN]) > 0 || Number(data[i][INDEX_MAIN_EXTRA]) > 0 || Number(data[i][INDEX_COMPLETIONIST]) > 0 ) {
-            gamesWithInfo.push(data[i]);
-        } else {
-            console.log("Game without info: " + data[i]);
-        }
+const state = {
+  rows: [],
+  query: "",
+  sortBy: "gameplayMain",
+  sortDirection: "desc",
+  metadata: null,
+};
+
+function parseCsvLine(line) {
+  const values = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let index = 0; index < line.length; index += 1) {
+    const character = line[index];
+
+    if (character === '"') {
+      if (inQuotes && line[index + 1] === '"') {
+        current += '"';
+        index += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
     }
-    return gamesWithInfo;
+
+    if (character === "," && !inQuotes) {
+      values.push(current);
+      current = "";
+      continue;
+    }
+
+    current += character;
+  }
+
+  values.push(current);
+  return values;
 }
 
-function searchId(data, name) {
-    for (let i = 0; i < data.length; ++i) {
-        if (data[i][INDEX_NAME] === name) {
-            return data[i][INDEX_ID];
-        }
-    }
-    return -1;
-}
+function parseCsv(text) {
+  const [headerLine, ...lines] = text.trim().split(/\r?\n/);
+  const headers = parseCsvLine(headerLine);
 
-function createD3Table() {
-    var column_names = ["Name","Main","Main Extra","Completionist","Cover"];
-    var clicks = [0,0,0,0];
-
-    // draw the table   
-    d3.select("#contentBody").append("div")
-    .attr("id", "container")
-    .attr("class", "container");
-
-    d3.select("#container").append("div")
-    .attr("id", "FilterableTable")
-    .attr("class", "u-full-width");
-
-    d3.select("#FilterableTable").append("div")
-        .attr("class", "SearchBar")
-        .append("p")
-        .attr("class", "SearchBar")
-        .text("Search By Title:");
-
-    d3.select(".SearchBar")
-        .append("input")
-        .attr("class", "SearchBar")
-        .attr("id", "search")
-        .attr("type", "text")
-        .attr("placeholder", "Search...");
-
-    var table = d3.select("#FilterableTable")
-                  .append("table")
-                  .attr("class", "FilterableTable");
-
-    table.append("thead")
-          .append("tr"); 
-
-    var headers = table.select("tr")
-                    .selectAll("th")
-                    .data(column_names)
-                    .enter()
-                    .append("th")
-                    .attr("class", "tableHeader")
-                    .text(function(d) { return d; }
-    );
-
-    var rows, row_entries, row_entries_no_anchor, row_entries_with_anchor;
-
-    d3.text("./data/list.csv", function(response) {
-        var data = d3.csv.parseRows(response);
-        data.shift(); // Remove first row
-        data = cleanIncompleteData(data);
-
-        // draw table body with rows
-        table.append("tbody")
-
-        // data bind
-        rows = table.select("tbody")
-            .selectAll("tr")
-            .data(data, function(d){ 
-                return d; 
-            })
-        
-        // enter the rows
-        rows.enter()
-            .append("tr")
-            .attr("class", "cell");
-
-        // enter td's in each row
-        row_entries = rows.selectAll("td")
-        .data(function(d, i) { 
-            var arr = [];
-            for (var k in d) {
-                if (d.hasOwnProperty(k)) {
-                    arr.push(d[k]);
-                }
-            }
-            return [arr[INDEX_NAME],arr[INDEX_MAIN],arr[INDEX_MAIN_EXTRA],arr[INDEX_COMPLETIONIST],arr[INDEX_URL_IMAGE]];
-        })
-        .enter()
-        .append("td") 
-        .each(function(d, i) {
-            if (i > 0 && i % 4 === 0) {
-                var imgData = [];
-                d = "https://howlongtobeat.com" + d;
-                imgData.push(d);
-                d3.select(this).selectAll("img").data(imgData)
-                .enter()
-                .append("img") // doesn't append an <img> anywhere
-                .attr("src", d)
-                .attr("class", "zoom")
-                .attr("height", "80px")
-                .attr("width", "60px");
-            }
-        })
-
-    // draw row entries with no anchor 
-        row_entries_no_anchor = row_entries.filter(function(d) {
-            return (/https?:\/\//.test(d) == false)
-        })
-
-        row_entries_no_anchor.each(function(d, i) {
-            if (i === 0) {
-                let idGame = searchId(data, d);
-                d3.select(this)
-                .append("a")
-                .attr("href", "https://howlongtobeat.com/game?id=" + idGame)
-                .attr("target", "_blank")
-                .text(function(d) {return d});
-            } else {
-                d3.select(this).text(function(d) {return d;});
-            }
-        });
-
-    // draw row entries with anchor
-        row_entries_with_anchor = row_entries.filter(function(d) {
-            return (/https?:\/\//.test(d) == true)  
-        })
-        row_entries_with_anchor
-            .append("a")
-            .attr("href", function(d) { return d; })
-            .attr("target", "_blank")
-            .text(function(d) { 
-                //return d; 
-                return null;
-            })
-
-
-        /**  sort functionality **/
-        headers
-        .on("click", function(d) {
-            let sortIndex = -1;
-            switch (d) {
-                case column_names[INDEX_NAME]:
-                    sortIndex = INDEX_NAME;
-                break;
-                case column_names[INDEX_MAIN]:
-                    sortIndex = INDEX_MAIN;
-                break;
-                case column_names[INDEX_MAIN_EXTRA]:
-                    sortIndex = INDEX_MAIN_EXTRA;
-                break;
-                case column_names[INDEX_COMPLETIONIST]:
-                    sortIndex = INDEX_COMPLETIONIST;
-                break;
-                case column_names[INDEX_URL_IMAGE]:
-                    sortIndex = INDEX_URL_IMAGE;
-                break;
-            }
-            if (sortIndex > -1) {
-                clicks[sortIndex] += 1;
-            }
-            
-        if (sortIndex === INDEX_NAME) {
-        // even number of clicks
-            if (clicks[sortIndex] % 2 == 0) {
-            // sort ascending: alphabetically
-                rows.sort(function(a,b) { 
-                    if (a[INDEX_NAME].toUpperCase() < b[INDEX_NAME].toUpperCase()) { 
-                        return -1; 
-                    } else if (a[INDEX_NAME].toUpperCase() > b[INDEX_NAME].toUpperCase()) { 
-                        return 1; 
-                    } else {
-                        return 0;
-                    }
-                });
-            // odd number of clicks  
-            } else if (clicks[sortIndex] % 2 != 0) { 
-            // sort descending: alphabetically
-                rows.sort(function(a,b) { 
-                if (a[INDEX_NAME].toUpperCase() < b[INDEX_NAME].toUpperCase()) { 
-                    return 1; 
-                } else if (a[INDEX_NAME].toUpperCase() > b[INDEX_NAME].toUpperCase()) { 
-                    return -1; 
-                } else {
-                    return 0;
-                }
-            });
-        }
-        } else if (sortIndex > INDEX_NAME && sortIndex < INDEX_URL_IMAGE) {
-            if (clicks[sortIndex] % 2 == 0) {
-                // sort ascending: numerically
-                rows.sort(function(a,b) { 
-                if (Number(a[sortIndex]) < Number(b[sortIndex])) { 
-                    return -1; 
-                } else if (Number(a[sortIndex]) > Number(b[sortIndex])) { 
-                    return 1; 
-                } else {
-                    return 0;
-                }
-                });
-            // odd number of clicks  
-            } else if (clicks[sortIndex] % 2 != 0) { 
-                // sort descending: numerically
-                rows.sort(function(a,b) { 
-                if (Number(a[sortIndex]) < Number(b[sortIndex])) { 
-                    return 1; 
-                } else if (Number(a[sortIndex]) > Number(b[sortIndex])) { 
-                    return -1; 
-                } else {
-                    return 0;
-                }
-                });
-            }
-        }
-        })
-
-        /**  search functionality **/
-        d3.select("#search")
-        .on("keyup", function() { // filter according to key pressed 
-            var searched_data = data,
-                text = this.value.trim();
-            
-            var searchResults = searched_data.map(function(r) {
-                var regex = new RegExp("^" + text + ".*", "i");
-                if (regex.test(r[INDEX_NAME])) { // if there are any results
-                    return regex.exec(r[INDEX_NAME])[0]; // return them to searchResults
-                } 
-            })
-            
-            // filter blank entries from searchResults
-            searchResults = searchResults.filter(function(r){ 
-            return r != undefined;
-            })
-            
-            // filter dataset with searchResults
-            searched_data = searchResults.map(function(r) {
-                return data.filter(function(p) {
-                    return p[INDEX_NAME].indexOf(r) != -1;
-                })
-            })
-
-            // flatten array 
-            searched_data = [].concat.apply([], searched_data)
-            
-            // data bind with new data
-            rows = table.select("tbody").selectAll("tr")
-            .data(searched_data, function(d){ 
-                return d;
-            })
-            
-            // enter the rows
-            rows.enter()
-            .append("tr");
-            
-            // enter td's in each row
-            row_entries = rows.selectAll("td")
-                .data(function(d) { 
-                    var arr = [];
-                    for (var k in d) {
-                        if (d.hasOwnProperty(k)) {
-                            arr.push(d[k]);
-                        }
-                    }
-                    return [arr[INDEX_NAME],arr[INDEX_MAIN],arr[INDEX_MAIN_EXTRA],arr[INDEX_COMPLETIONIST],arr[INDEX_URL_IMAGE]];
-                })
-                .enter()
-                .append("td")
-                .each(function(d, i) {
-                    if (i > 0 && i % 4 === 0) {
-                        var imgData = [];
-                        d = "https://howlongtobeat.com/" + d;
-                        imgData.push(d);
-                        d3.select(this).selectAll("img").data(imgData)
-                        .enter()
-                        .append("img") // doesn't append an <img> anywhere
-                        .attr("src", d)
-                        .attr("height", "40px")
-                        .attr("width", "30px");
-                    }
-                })
-
-            // draw row entries with no anchor 
-            row_entries_no_anchor = row_entries.filter(function(d) {
-                return (/https?:\/\//.test(d) == false)
-            })
-            row_entries_no_anchor.each(function(d, i) {
-                if (i === 0) {
-                    let idGame = searchId(data, d);
-                    d3.select(this)
-                    .append("a")
-                    .attr("href", "https://howlongtobeat.com/game?id=" + idGame)
-                    .attr("target", "_blank")
-                    .text(function(d) {return d});
-                } else {
-                    d3.select(this).text(function(d) {return d;});
-                }
-            });
-
-            // draw row entries with anchor
-            row_entries_with_anchor = row_entries.filter(function(d) {
-            return (/https?:\/\//.test(d) == true)  
-            })
-            row_entries_with_anchor
-            .append("a")
-            .attr("href", function(d) { return d; })
-            .attr("target", "_blank")
-            .text(function(d) { 
-                return null;
-                //return d;
-            })
-            
-            // exit
-            rows.exit().remove();
-        })
-
+  return lines
+    .filter(Boolean)
+    .map((line) => {
+      const values = parseCsvLine(line);
+      return headers.reduce((row, header, index) => {
+        row[header] = values[index] ?? "";
+        return row;
+      }, {});
     });
 }
 
-window.onload = function() {
-    createD3Table();
-};
+function normalize(text) {
+  return text.toLowerCase().trim();
+}
+
+function formatHours(value) {
+  const hours = Number(value || 0);
+  if (!hours) {
+    return "N/A";
+  }
+  return `${hours}h`;
+}
+
+function formatDate(value) {
+  if (!value) {
+    return "Unknown";
+  }
+
+  return new Intl.DateTimeFormat(undefined, {
+    dateStyle: "long",
+    timeStyle: "short",
+  }).format(new Date(value));
+}
+
+function getFilteredRows() {
+  const query = normalize(state.query);
+  const filtered = query
+    ? state.rows.filter((row) => normalize(row.name).includes(query))
+    : [...state.rows];
+
+  const direction = state.sortDirection === "asc" ? 1 : -1;
+  filtered.sort((left, right) => {
+    if (state.sortBy === "name") {
+      return left.name.localeCompare(right.name) * direction;
+    }
+
+    return (Number(left[state.sortBy] || 0) - Number(right[state.sortBy] || 0)) * direction;
+  });
+
+  return filtered;
+}
+
+function computeSummary(rows) {
+  const totalMain = rows.reduce((sum, row) => sum + Number(row.gameplayMain || 0), 0);
+  const maxMain = rows.reduce((max, row) => Math.max(max, Number(row.gameplayMain || 0)), 0);
+
+  return {
+    visibleCount: rows.length,
+    totalMain,
+    maxMain,
+  };
+}
+
+function sortIndicator(column) {
+  if (state.sortBy !== column) {
+    return "";
+  }
+  return state.sortDirection === "asc" ? " ↑" : " ↓";
+}
+
+function render() {
+  const rows = getFilteredRows();
+  const summary = computeSummary(rows);
+
+  document.getElementById("results-count").textContent = `${summary.visibleCount} games shown`;
+  document.getElementById("results-hours").textContent = `${Math.round(summary.totalMain)} total main-story hours`;
+  document.getElementById("results-max").textContent = `${summary.maxMain}h longest main story`;
+
+  document.getElementById("last-updated").textContent = formatDate(state.metadata?.generatedAt);
+  document.getElementById("catalog-count").textContent = String(state.metadata?.xboxCatalogCount ?? state.rows.length);
+  document.getElementById("matched-count").textContent = String(state.metadata?.matchedCount ?? state.rows.length);
+  document.getElementById("unmatched-count").textContent = String(state.metadata?.unmatchedCount ?? 0);
+
+  const tbody = document.getElementById("table-body");
+  tbody.innerHTML = rows
+    .map(
+      (row) => `
+        <tr>
+          <td class="game-cell">
+            <img class="cover" src="${row.imageUrl}" alt="${row.name} cover art" loading="lazy">
+            <div>
+              <a href="${row.xboxProductUrl || `https://howlongtobeat.com/game/${row.hltbId}`}" target="_blank" rel="noreferrer">${row.name}</a>
+              <div class="subtle">${row.hltbName || "Matched title unavailable"}</div>
+            </div>
+          </td>
+          <td>${formatHours(row.gameplayMain)}</td>
+          <td>${formatHours(row.gameplayMainExtra)}</td>
+          <td>${formatHours(row.gameplayCompletionist)}</td>
+          <td><a href="https://howlongtobeat.com/game/${row.hltbId}" target="_blank" rel="noreferrer">HLTB</a></td>
+        </tr>
+      `
+    )
+    .join("");
+
+  for (const button of document.querySelectorAll("[data-sort]")) {
+    const column = button.getAttribute("data-sort");
+    button.textContent = button.dataset.label + sortIndicator(column);
+  }
+}
+
+function setSort(column) {
+  if (state.sortBy === column) {
+    state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
+  } else {
+    state.sortBy = column;
+    state.sortDirection = column === "name" ? "asc" : "desc";
+  }
+
+  render();
+}
+
+async function load() {
+  const [csvResponse, metadataResponse] = await Promise.all([
+    fetch(DATA_FILE),
+    fetch(METADATA_FILE),
+  ]);
+
+  state.rows = parseCsv(await csvResponse.text());
+  state.metadata = await metadataResponse.json();
+
+  document.getElementById("search").addEventListener("input", (event) => {
+    state.query = event.target.value;
+    render();
+  });
+
+  for (const button of document.querySelectorAll("[data-sort]")) {
+    button.addEventListener("click", () => setSort(button.getAttribute("data-sort")));
+  }
+
+  render();
+}
+
+load().catch((error) => {
+  console.error(error);
+  document.getElementById("table-body").innerHTML =
+    '<tr><td colspan="5">Failed to load data. Run <code>npm run update-data</code> and refresh.</td></tr>';
+});

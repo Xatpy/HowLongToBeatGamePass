@@ -1,56 +1,84 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta name="robots" content="index, follow" />
   <meta charset="utf-8">
-  <meta name="description" content="How long to beat Xbox Game Pass. How many hours playing Xbox Game Pass. Time playing Xbox Game Pass.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse current Xbox Game Pass games by HowLongToBeat completion times.">
   <meta name="author" content="Xatpy">
-
-  <title>How long to beat Xbox Game Pass</title>
-
+  <title>How Long To Beat Game Pass</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon" href="assets/xbox.ico" />
-  <link rel="canonical" href="https://xatpy.github.io/HowLongToBeatGamePass/" />
-
-  <meta property="og:title" content="How long to beat Xbox Game Pass">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Number of hours playing needed to beat each Xbox Game Pass game">
-  <meta property="og:image" content="https://xatpy.github.io/HowLongToBeatGamePass/assets/thumbnail.png">
-  <meta property="og:url" content="https://xatpy.github.io/HowLongToBeatGamePass/">
-
-  <meta name="twitter:card" content="summary">
-  <meta property="twitter:image" content="https://xatpy.github.io/HowLongToBeatGamePass/assets/thumbnail.png">
-  <meta property="twitter:url" content="https://xatpy.github.io/HowLongToBeatGamePass/">
-  <meta property="twitter:title" content="How long to beat Xbox Game Pass">
-
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-
+  <link rel="shortcut icon" href="assets/xbox.ico">
 </head>
-
 <body>
-    <div class="header">
-      <h1><img src="./assets/logo.png" alt="Xbox Game Pass logo" class="headerImg">   How long to beat Xbox Game Pass</h1>
-    </div>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Xbox Game Pass x HowLongToBeat</p>
+        <h1>Current Game Pass games, ranked by how long they take to finish.</h1>
+        <p class="hero-text">
+          This project now pulls the live Game Pass catalog from Xbox, matches it against HowLongToBeat,
+          and publishes a sortable dataset instead of relying on a frozen 2020 scrape.
+        </p>
+      </div>
+      <div class="hero-card">
+        <div class="metric">
+          <span class="metric-label">Last updated</span>
+          <strong id="last-updated">Loading...</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Xbox catalog titles</span>
+          <strong id="catalog-count">0</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">HLTB matches</span>
+          <strong id="matched-count">0</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Unmatched</span>
+          <strong id="unmatched-count">0</strong>
+        </div>
+      </div>
+    </section>
 
-    <h4>Number of hours playing needed to beat each Xbox Game Pass game (data from <a href="https://howlongtobeat.com/" target="_blank">HWLT</a>)</h4>
+    <section class="toolbar">
+      <label class="search-panel" for="search">
+        <span>Search titles</span>
+        <input id="search" type="search" placeholder="Start typing a game name">
+      </label>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <span class="summary-label">Visible games</span>
+          <strong id="results-count">0 games shown</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Main-story time</span>
+          <strong id="results-hours">0 total main-story hours</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Longest game</span>
+          <strong id="results-max">0h longest main story</strong>
+        </div>
+      </div>
+    </section>
 
-    <div id="contentBody"></div>
+    <section class="table-panel">
+      <table>
+        <thead>
+          <tr>
+            <th><button type="button" data-sort="name" data-label="Game">Game</button></th>
+            <th><button type="button" data-sort="gameplayMain" data-label="Main Story">Main Story</button></th>
+            <th><button type="button" data-sort="gameplayMainExtra" data-label="Main + Extra">Main + Extra</button></th>
+            <th><button type="button" data-sort="gameplayCompletionist" data-label="Completionist">Completionist</button></th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+  </main>
 
-    <div class="footer">Last update on: 09/Dec/2020</div>
-
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="./js/app.js"> </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168111272-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-168111272-1');
-    </script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
