@@ -3,78 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse Xbox Game Pass and PlayStation Plus catalogs by HowLongToBeat completion times.">
-  <meta name="author" content="Xatpy">
-  <title>How Long To Beat Subscription Catalogs</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Browse Xbox Game Pass and PlayStation Plus games by completion time. Find what's beatable this weekend.">
+  <meta property="og:title" content="Beatable">
+  <meta property="og:description" content="Browse Xbox Game Pass and PlayStation Plus games by completion time. Find what's beatable this weekend.">
+  <meta property="og:site_name" content="Beatable">
+  <meta name="theme-color" content="#0f1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Beatable</title>
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon" href="assets/xbox.ico">
 </head>
 <body>
-  <main class="page-shell">
-    <section class="top-panel">
-      <div class="topbar">
-        <div class="hero-copy">
-          <span class="eyebrow">Subscription Catalogs</span>
-          <h1>Find a game worth finishing.</h1>
-          <p class="hero-text">Browse Xbox Game Pass and PlayStation Plus Premium by HowLongToBeat duration.</p>
+  <main class="app-shell">
+    <header class="app-header">
+      <div class="header-copy">
+        <p class="eyebrow">Subscription Catalogs</p>
+        <h1>Beatable</h1>
+        <p class="last-updated">Find your next game. Know the time commitment.</p>
+        <p class="last-updated" id="last-updated" hidden></p>
+      </div>
+    </header>
+
+    <section class="filters-panel" aria-label="Filters">
+      <div class="filters-top">
+        <div class="filter-group filter-group-catalog">
+          <span class="filter-label">Catalog</span>
+          <div class="segmented-control" id="service-pills"></div>
+        </div>
+
+        <div class="filter-group filter-group-search">
+          <label class="filter-label" for="search">Search</label>
+          <input id="search" class="control-input" type="search" placeholder="Search titles...">
+        </div>
+
+        <div class="filter-group filter-group-platform">
+          <label class="filter-label" for="platform-filter">Platform</label>
+          <select id="platform-filter" class="control-input"></select>
         </div>
       </div>
 
-      <div class="filters-panel">
-        <div class="controls-grid">
-          <div class="control-block control-block-primary">
-            <span class="field-label">Choose Catalog</span>
-            <div class="service-pills" id="service-pills"></div>
-          </div>
-          <div class="control-block control-block-secondary">
-            <label class="search-field" for="search">
-              <span class="field-label">Search</span>
-              <input id="search" type="search" placeholder="Search titles...">
-            </label>
-            <label class="field-group" for="platform-filter">
-              <span class="field-label">Platform</span>
-              <select id="platform-filter"></select>
-            </label>
-          </div>
+      <div class="filters-bottom">
+        <div class="filter-group filter-group-time">
+          <span class="filter-label">Completion Time</span>
+          <div class="time-pills" id="time-pills"></div>
         </div>
-        <div class="results-summary">
-          <strong id="results-count">0 games shown</strong>
-          <span>Sorted by completion time</span>
-        </div>
+      </div>
+
+      <div class="results-bar">
+        <strong id="results-count">0 games</strong>
+        <span id="results-context">Sorted by Main</span>
       </div>
     </section>
 
-    <section class="table-panel">
-      <table>
-        <colgroup>
-          <col class="col-game">
-          <col class="col-service">
-          <col class="col-catalog">
-          <col class="col-platform">
-          <col class="col-main">
-          <col class="col-extra">
-          <col class="col-completionist">
-          <col class="col-link">
-        </colgroup>
-        <thead>
-          <tr>
-            <th><button type="button" data-sort="name" data-label="Game">Game</button></th>
-            <th>Service</th>
-            <th>Catalog</th>
-            <th>Platform</th>
-            <th><button type="button" data-sort="gameplayMain" data-label="Main">Main</button></th>
-            <th><button type="button" data-sort="gameplayMainExtra" data-label="Main + Extra">Main + Extra</button></th>
-            <th><button type="button" data-sort="gameplayCompletionist" data-label="Completionist">Completionist</button></th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
+    <section class="sort-panel" aria-label="Sort controls">
+      <div class="sort-tabs" id="sort-tabs">
+        <button type="button" class="sort-tab" data-sort="gameplayMain">Main</button>
+        <button type="button" class="sort-tab" data-sort="gameplayMainExtra">Main + Extra</button>
+        <button type="button" class="sort-tab" data-sort="gameplayCompletionist">Completionist</button>
+        <button type="button" class="sort-tab" data-sort="name">Title</button>
+      </div>
+    </section>
+
+    <section class="results-panel">
+      <div class="results-list" id="results-list"></div>
     </section>
   </main>
 

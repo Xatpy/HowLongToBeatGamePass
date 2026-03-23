@@ -1,6 +1,6 @@
-# How Long To Beat Subscription Catalogs
+# Beatable
 
-How Long To Beat Subscription Catalogs is a lightweight data product and static web app for one practical question:
+Beatable is a lightweight data product and static web app built around a simple promise: find your next game and know the time commitment.
 
 Which games in subscription libraries are actually finishable, and how long do they take?
 

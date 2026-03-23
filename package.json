@@ -1,7 +1,7 @@
 {
-  "name": "how-long-to-beat-game-pass",
+  "name": "beatable",
   "version": "2.0.0",
-  "description": "Live Xbox Game Pass and PlayStation Plus catalogs cross-referenced with HowLongToBeat.",
+  "description": "Browse Xbox Game Pass and PS Plus games by completion time.",
   "main": "main.js",
   "scripts": {
     "start": "node server.js",
