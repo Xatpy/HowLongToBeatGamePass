@@ -19,55 +19,53 @@
 <body>
   <main class="app-shell">
     <header class="app-header">
-      <div class="header-copy">
-        <p class="eyebrow">Subscription Catalogs</p>
-        <h1>Beatable</h1>
-        <p class="last-updated">Find your next game. Know the time commitment.</p>
-        <p class="last-updated" id="last-updated" hidden></p>
-      </div>
+      <p class="last-updated" id="last-updated" hidden></p>
     </header>
 
+    <nav class="service-tabs" id="service-pills" aria-label="Catalog selector"></nav>
+
     <section class="filters-panel" aria-label="Filters">
-      <div class="filters-top">
-        <div class="filter-group filter-group-catalog">
-          <span class="filter-label">Catalog</span>
-          <div class="segmented-control" id="service-pills"></div>
-        </div>
+      <div class="search-row">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search" class="control-input" type="search" placeholder="Search games...">
+      </div>
 
-        <div class="filter-group filter-group-search">
-          <label class="filter-label" for="search">Search</label>
-          <input id="search" class="control-input" type="search" placeholder="Search titles...">
-        </div>
-
+      <div class="filter-row">
         <div class="filter-group filter-group-platform">
-          <label class="filter-label" for="platform-filter">Platform</label>
-          <select id="platform-filter" class="control-input"></select>
+          <div class="platform-pills" id="platform-pills"></div>
+        </div>
+
+        <div class="filter-group filter-group-sort">
+          <span class="filter-label">Sort By:</span>
+          <div class="sort-pills" id="sort-tabs">
+            <button type="button" class="sort-pill" data-sort="gameplayMain">Main Story</button>
+            <button type="button" class="sort-pill" data-sort="gameplayMainExtra">Main + Extra</button>
+            <button type="button" class="sort-pill" data-sort="gameplayCompletionist">Completionist</button>
+          </div>
         </div>
       </div>
 
-      <div class="filters-bottom">
+      <div class="filter-row filter-row-time">
         <div class="filter-group filter-group-time">
-          <span class="filter-label">Completion Time</span>
+          <span class="filter-label">Completion Time:</span>
           <div class="time-pills" id="time-pills"></div>
         </div>
-      </div>
-
-      <div class="results-bar">
-        <strong id="results-count">0 games</strong>
-        <span id="results-context">Sorted by Main</span>
-      </div>
-    </section>
-
-    <section class="sort-panel" aria-label="Sort controls">
-      <div class="sort-tabs" id="sort-tabs">
-        <button type="button" class="sort-tab" data-sort="gameplayMain">Main</button>
-        <button type="button" class="sort-tab" data-sort="gameplayMainExtra">Main + Extra</button>
-        <button type="button" class="sort-tab" data-sort="gameplayCompletionist">Completionist</button>
-        <button type="button" class="sort-tab" data-sort="name">Title</button>
       </div>
     </section>
 
     <section class="results-panel">
+      <div class="results-bar">
+        <strong id="results-count">0 games</strong>
+        <span id="results-context">Sorted by Main Story</span>
+      </div>
+
+      <div class="table-header">
+        <span class="th-title">Game Title</span>
+        <span class="th-platform">Platform</span>
+        <span class="th-main" data-sort="gameplayMain">Main Story</span>
+        <span class="th-extra" data-sort="gameplayMainExtra">Main + Extra</span>
+        <span class="th-comp" data-sort="gameplayCompletionist">Completionist</span>
+      </div>
       <div class="results-list" id="results-list"></div>
     </section>
   </main>
