@@ -1,15 +1,17 @@
 {
   "name": "how-long-to-beat-game-pass",
   "version": "2.0.0",
-  "description": "Live Xbox Game Pass catalog cross-referenced with HowLongToBeat.",
+  "description": "Live Xbox Game Pass and PlayStation Plus catalogs cross-referenced with HowLongToBeat.",
   "main": "main.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
     "update-data": "node main.js",
     "check": "node --check main.js && node --check js/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "howlongtobeat": "^1.8.0"
+    "howlongtobeat-ts": "^1.0.3"
   }
 }

@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse current Xbox Game Pass games by HowLongToBeat completion times.">
+  <meta name="description" content="Browse Xbox Game Pass and PlayStation Plus catalogs by HowLongToBeat completion times.">
   <meta name="author" content="Xatpy">
-  <title>How Long To Beat Game Pass</title>
+  <title>How Long To Beat Subscription Catalogs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -13,65 +16,61 @@
 </head>
 <body>
   <main class="page-shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Xbox Game Pass x HowLongToBeat</p>
-        <h1>Current Game Pass games, ranked by how long they take to finish.</h1>
-        <p class="hero-text">
-          This project now pulls the live Game Pass catalog from Xbox, matches it against HowLongToBeat,
-          and publishes a sortable dataset instead of relying on a frozen 2020 scrape.
-        </p>
-      </div>
-      <div class="hero-card">
-        <div class="metric">
-          <span class="metric-label">Last updated</span>
-          <strong id="last-updated">Loading...</strong>
-        </div>
-        <div class="metric">
-          <span class="metric-label">Xbox catalog titles</span>
-          <strong id="catalog-count">0</strong>
-        </div>
-        <div class="metric">
-          <span class="metric-label">HLTB matches</span>
-          <strong id="matched-count">0</strong>
-        </div>
-        <div class="metric">
-          <span class="metric-label">Unmatched</span>
-          <strong id="unmatched-count">0</strong>
+    <section class="top-panel">
+      <div class="topbar">
+        <div class="hero-copy">
+          <span class="eyebrow">Subscription Catalogs</span>
+          <h1>Find a game worth finishing.</h1>
+          <p class="hero-text">Browse Xbox Game Pass and PlayStation Plus Premium by HowLongToBeat duration.</p>
         </div>
       </div>
-    </section>
 
-    <section class="toolbar">
-      <label class="search-panel" for="search">
-        <span>Search titles</span>
-        <input id="search" type="search" placeholder="Start typing a game name">
-      </label>
-      <div class="summary-grid">
-        <div class="summary-card">
-          <span class="summary-label">Visible games</span>
+      <div class="filters-panel">
+        <div class="controls-grid">
+          <div class="control-block control-block-primary">
+            <span class="field-label">Choose Catalog</span>
+            <div class="service-pills" id="service-pills"></div>
+          </div>
+          <div class="control-block control-block-secondary">
+            <label class="search-field" for="search">
+              <span class="field-label">Search</span>
+              <input id="search" type="search" placeholder="Search titles...">
+            </label>
+            <label class="field-group" for="platform-filter">
+              <span class="field-label">Platform</span>
+              <select id="platform-filter"></select>
+            </label>
+          </div>
+        </div>
+        <div class="results-summary">
           <strong id="results-count">0 games shown</strong>
-        </div>
-        <div class="summary-card">
-          <span class="summary-label">Main-story time</span>
-          <strong id="results-hours">0 total main-story hours</strong>
-        </div>
-        <div class="summary-card">
-          <span class="summary-label">Longest game</span>
-          <strong id="results-max">0h longest main story</strong>
+          <span>Sorted by completion time</span>
         </div>
       </div>
     </section>
 
     <section class="table-panel">
       <table>
+        <colgroup>
+          <col class="col-game">
+          <col class="col-service">
+          <col class="col-catalog">
+          <col class="col-platform">
+          <col class="col-main">
+          <col class="col-extra">
+          <col class="col-completionist">
+          <col class="col-link">
+        </colgroup>
         <thead>
           <tr>
             <th><button type="button" data-sort="name" data-label="Game">Game</button></th>
-            <th><button type="button" data-sort="gameplayMain" data-label="Main Story">Main Story</button></th>
+            <th>Service</th>
+            <th>Catalog</th>
+            <th>Platform</th>
+            <th><button type="button" data-sort="gameplayMain" data-label="Main">Main</button></th>
             <th><button type="button" data-sort="gameplayMainExtra" data-label="Main + Extra">Main + Extra</button></th>
             <th><button type="button" data-sort="gameplayCompletionist" data-label="Completionist">Completionist</button></th>
-            <th>Links</th>
+            <th>Link</th>
           </tr>
         </thead>
         <tbody id="table-body"></tbody>
