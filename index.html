@@ -7,18 +7,44 @@
   <meta property="og:title" content="Beatable">
   <meta property="og:description" content="Browse Xbox Game Pass and PlayStation Plus games by completion time. Find what's beatable this weekend.">
   <meta property="og:site_name" content="Beatable">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xatpy.github.io/HowLongToBeatGamePass/">
+  <meta property="og:image" content="https://xatpy.github.io/HowLongToBeatGamePass/icons/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beatable">
+  <meta name="twitter:description" content="Browse Xbox Game Pass and PlayStation Plus games by completion time. Find what's beatable this weekend.">
+  <meta name="twitter:image" content="https://xatpy.github.io/HowLongToBeatGamePass/icons/icon-512.png">
   <meta name="theme-color" content="#0f1117">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Beatable</title>
+  <title>Beatable — Browse Game Pass & PS Plus Games by Completion Time</title>
+  <link rel="canonical" href="https://xatpy.github.io/HowLongToBeatGamePass/">
   <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="preconnect" href="https://store-images.s-microsoft.com">
+  <link rel="preconnect" href="https://image.api.playstation.com">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 <body>
+  <h1 class="sr-only">Beatable — Game Pass and PS Plus completion times</h1>
   <main class="app-shell">
     <header class="app-header">
+      <div class="brand">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+          <defs>
+            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+              <stop offset="0%" stop-color="#6aa3ff"/>
+              <stop offset="100%" stop-color="#2869cc"/>
+            </linearGradient>
+          </defs>
+          <path d="M9 16l5 6 9-11" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">Beatable</span>
+      </div>
       <p class="last-updated" id="last-updated" hidden></p>
     </header>
 
@@ -62,6 +88,7 @@
       <div class="table-header">
         <span class="th-title">Game Title</span>
         <span class="th-platform">Platform</span>
+        <span class="th-review">Review</span>
         <span class="th-main" data-sort="gameplayMain">Main Story</span>
         <span class="th-extra" data-sort="gameplayMainExtra">Main + Extra</span>
         <span class="th-comp" data-sort="gameplayCompletionist">Completionist</span>
@@ -70,6 +97,6 @@
     </section>
   </main>
 
-  <script src="./js/app.js"></script>
+  <script src="./js/app.js?v=2"></script>
 </body>
 </html>

@@ -15,16 +15,30 @@ const TIME_FILTERS = [
   { value: "under-20", label: "Under 20h", limit: 20 },
 ];
 
+const WINDOW_SIZE = 80;
+
+function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), ms);
+  };
+}
+
 const state = {
   rows: [],
   query: "",
-  service: "xbox-game-pass",
+  service: "playstation-plus",
   platform: "all",
   timeFilter: "any",
   sortBy: "gameplayMain",
   sortDirection: "asc",
   lastDurationSortBy: "gameplayMain",
   metadata: null,
+  // Windowing state
+  filteredRows: [],
+  renderedCount: 0,
+  scrollObserver: null,
 };
 
 function parseCsvLine(line) {
@@ -85,6 +99,11 @@ function splitField(value) {
 function formatHours(value) {
   const hours = Number(value || 0);
   return hours ? `${hours}h` : "—";
+}
+
+function formatReviewScore(value) {
+  const score = Number(value || 0);
+  return score ? `${score}%` : "—";
 }
 
 function getActiveSortLabel() {
@@ -244,14 +263,14 @@ function renderMetadata() {
 function renderServiceToggle() {
   const services = [
     {
-      value: "xbox-game-pass",
-      label: "Xbox Game Pass",
-      icon: '<svg class="service-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.967 0a11.972 11.972 0 00-7.398 2.548A10.867 10.867 0 0110.61 5.4c1.236-1.042 3.033-1.06 4.316-.046a10.871 10.871 0 016.143 2.957A11.956 11.956 0 0012.012 0h-.045zM2.57 4.544a11.977 11.977 0 00-2.316 6.136c-.161 2.37.382 4.67 1.554 6.702 1.34-1.921 3.238-3.41 5.474-4.22.457-.168.995.143 1.15.586.13.376-1.55 1.76-2.58 3.518-1.05 1.782-1.465 3.97-.93 5.405 1.107 1.012 2.45 1.745 3.93 2.115a6.45 6.45 0 01-1.39-4.28c0-3.32 2.695-6.015 6.014-6.015a6.017 6.017 0 016.015 6.015 6.48 6.48 0 01-1.303 4.143v-.004c1.558-.383 2.97-.132 4.14-2.181.565-1.474.126-3.692-.958-5.467-1.05-1.728-2.614-3.04-2.522-3.407.13-.539.814-.52 1.185-.434v-.003c2.28.847 4.186 2.368 5.513 4.31 1.253-2.102 1.777-4.502 1.554-6.953-.306-3.235-1.902-6.133-4.322-8.156A11.751 11.751 0 0018.8 3.54a11.517 11.517 0 00-5.83-2.673c-.097.432-.387.795-1.026.795h-.002c-.63 0-.916-.35-1.018-.767a11.556 11.556 0 00-5.885 2.684v.003c-.09.072-.18.147-.27.222.095-.55.617-1.284.617-1.284A11.898 11.898 0 003.5 2.5a11.884 11.884 0 00-.93 2.044z"/></svg>',
-    },
-    {
       value: "playstation-plus",
       label: "PlayStation Plus",
-      icon: '<svg class="service-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.28 12.394l4.576.01c.219-1.32-.42-1.93-1.636-2.261l-5.619-1.52.002 6.634a3.176 3.176 0 01-2.91 3.488 3.236 3.236 0 01-3.6-3.266c0-1.782 1.4-3.242 3.16-3.242a3.172 3.172 0 011.666.471l1.714-2.222a5.457 5.457 0 00-3.376-1.168 5.418 5.418 0 00-5.467 5.55A5.632 5.632 0 006.591 20.66a5.438 5.438 0 005.474-5.352l.004-9.988 5.385 1.572c2.164.632 4.148 2.016 4.148 3.992l-4.747-.008.005 2.551-.005 13.56-2.57-3.241.002-11.354zM21.6 8.21c-.55-1.424-2.253-2.316-4.58-2.99l-4.755-1.378.002-2.599L18.81 3.16c3.966 1.144 5.378 2.646 5.176 4.496-.037.34-.146.617-.384.802v-.248z"/></svg>',
+      icon: '<svg class="service-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8.984 2.596v17.547l3.915 1.261V6.688c0-.69.304-1.151.794-.991.636.18.76.814.76 1.505v5.875c2.441 1.193 4.362-.002 4.362-3.152 0-3.237-1.126-4.675-4.438-5.827-1.307-.448-3.728-1.186-5.39-1.502zm4.656 16.241l6.296-2.275c.715-.258.826-.625.246-.818-.586-.192-1.637-.139-2.357.123l-4.205 1.5V14.98l.24-.085s1.201-.42 2.913-.615c1.696-.18 3.785.03 5.437.661 1.848.601 2.04 1.472 1.576 2.072-.465.6-1.622 1.036-1.622 1.036l-8.544 3.107V18.86zM1.807 18.6c-1.9-.545-2.214-1.668-1.352-2.32.801-.586 2.16-1.052 2.16-1.052l5.615-2.013v2.313L4.205 17c-.705.271-.825.632-.239.826.586.195 1.637.15 2.343-.12L8.247 17v2.074c-.12.03-.256.044-.39.073-1.939.331-3.996.196-6.038-.479z"/></svg>',
+    },
+    {
+      value: "xbox-game-pass",
+      label: "Xbox Game Pass",
+      icon: '<svg class="service-tab-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>',
     },
   ];
 
@@ -339,45 +358,38 @@ function renderSummary(rows) {
   document.getElementById("results-context").textContent = `${activeService.short} · Sorted by ${getActiveSortLabel()}`;
 }
 
-function renderResults(rows) {
-  const container = document.getElementById("results-list");
+function buildRowHtml(row) {
+  const hltbUrl = getRowHltbUrl(row);
 
-  if (!rows.length) {
-    container.innerHTML = '<div class="empty-state">No titles matched the current filters.</div>';
-    return;
-  }
-
-  container.innerHTML = rows
-    .map((row) => {
-      const hltbUrl = getRowHltbUrl(row);
-      
-      // Render small tags for column
-      const platformTags = splitField(row.platforms)
-        .map((platform) => {
-          const type = platform.toLowerCase().includes('xbox') ? 'xbox' : 
-                       platform.toLowerCase().includes('ps') || platform.toLowerCase().includes('playstation') ? 'ps' : 'pc';
-          return `<span class="badge badge-${type}">${platform}</span>`
-        })
-        .join("");
-
-      return `
-        <article class="game-row" ${hltbUrl ? `data-hltb-url="${hltbUrl}"` : ""}>
-          <div class="game-row-title">
-            <img class="game-art" src="${row.imageUrl}" alt="${row.name}">
-            <span class="game-name">${row.name}</span>
-          </div>
-          <div class="game-row-platforms">
-            ${platformTags}
-          </div>
-          <div class="dur dur-main ${!Number(row.gameplayMain) ? 'dur-none' : ''}">${formatHours(row.gameplayMain)}</div>
-          <div class="dur dur-extra ${!Number(row.gameplayMainExtra) ? 'dur-none' : ''}">${formatHours(row.gameplayMainExtra)}</div>
-          <div class="dur dur-comp ${!Number(row.gameplayCompletionist) ? 'dur-none' : ''}">${formatHours(row.gameplayCompletionist)}</div>
-        </article>
-      `;
+  const platformTags = splitField(row.platforms)
+    .map((platform) => {
+      const type = platform.toLowerCase().includes('xbox') ? 'xbox' :
+                   platform.toLowerCase().includes('ps') || platform.toLowerCase().includes('playstation') ? 'ps' : 'pc';
+      return `<span class="badge badge-${type}">${platform}</span>`;
     })
     .join("");
 
+  return `
+    <article class="game-row" ${hltbUrl ? `data-hltb-url="${hltbUrl}"` : ""}>
+      <div class="game-row-title">
+        <img class="game-art" src="${row.imageUrl}" alt="${row.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <span class="game-name">${row.name}</span>
+      </div>
+      <div class="game-row-platforms">
+        ${platformTags}
+      </div>
+      <div class="review-score ${!Number(row.reviewScore) ? 'review-none' : ''}">${formatReviewScore(row.reviewScore)}</div>
+      <div class="dur dur-main ${!Number(row.gameplayMain) ? 'dur-none' : ''}">${formatHours(row.gameplayMain)}</div>
+      <div class="dur dur-extra ${!Number(row.gameplayMainExtra) ? 'dur-none' : ''}">${formatHours(row.gameplayMainExtra)}</div>
+      <div class="dur dur-comp ${!Number(row.gameplayCompletionist) ? 'dur-none' : ''}">${formatHours(row.gameplayCompletionist)}</div>
+    </article>
+  `;
+}
+
+function attachRowClickHandlers(container) {
   for (const card of container.querySelectorAll("[data-hltb-url]")) {
+    if (card.dataset.clickBound) continue;
+    card.dataset.clickBound = "1";
     card.addEventListener("click", (event) => {
       if (event.target.closest("a, button")) {
         return;
@@ -385,6 +397,88 @@ function renderResults(rows) {
       window.open(card.dataset.hltbUrl, "_blank", "noopener,noreferrer");
     });
   }
+}
+
+function teardownScrollObserver() {
+  if (state.scrollObserver) {
+    state.scrollObserver.disconnect();
+    state.scrollObserver = null;
+  }
+  const oldSentinel = document.getElementById("scroll-sentinel");
+  if (oldSentinel) oldSentinel.remove();
+}
+
+function appendNextWindow() {
+  const container = document.getElementById("results-list");
+  const rows = state.filteredRows;
+  const start = state.renderedCount;
+  const end = Math.min(start + WINDOW_SIZE, rows.length);
+
+  if (start >= rows.length) {
+    teardownScrollObserver();
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+  const temp = document.createElement("div");
+
+  for (let i = start; i < end; i++) {
+    temp.innerHTML = buildRowHtml(rows[i]);
+    fragment.appendChild(temp.firstElementChild);
+  }
+
+  // Remove old sentinel before appending new rows
+  const oldSentinel = document.getElementById("scroll-sentinel");
+  if (oldSentinel) oldSentinel.remove();
+
+  container.appendChild(fragment);
+  state.renderedCount = end;
+
+  attachRowClickHandlers(container);
+
+  // If there are more rows, add a new sentinel
+  if (end < rows.length) {
+    const sentinel = document.createElement("div");
+    sentinel.id = "scroll-sentinel";
+    sentinel.style.height = "1px";
+    container.appendChild(sentinel);
+
+    if (!state.scrollObserver) {
+      state.scrollObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            appendNextWindow();
+          }
+        },
+        { rootMargin: "200px" }
+      );
+    }
+    state.scrollObserver.observe(sentinel);
+  } else {
+    teardownScrollObserver();
+  }
+}
+
+function renderResults(rows) {
+  const container = document.getElementById("results-list");
+
+  // Tear down any prior windowing
+  teardownScrollObserver();
+
+  if (!rows.length) {
+    container.innerHTML = '<div class="empty-state">No titles matched the current filters.</div>';
+    state.filteredRows = [];
+    state.renderedCount = 0;
+    return;
+  }
+
+  // Reset container and windowing state
+  container.innerHTML = "";
+  state.filteredRows = rows;
+  state.renderedCount = 0;
+
+  // Render the first window
+  appendNextWindow();
 }
 
 function render() {
@@ -447,10 +541,13 @@ async function load() {
 
   renderMetadata();
 
-  document.getElementById("search").addEventListener("input", (event) => {
-    state.query = event.target.value;
-    render();
-  });
+  document.getElementById("search").addEventListener(
+    "input",
+    debounce((event) => {
+      state.query = event.target.value;
+      render();
+    }, 120)
+  );
 
   for (const button of document.querySelectorAll("[data-sort]")) {
     button.addEventListener("click", () => setSort(button.dataset.sort));

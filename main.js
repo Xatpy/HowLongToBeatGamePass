@@ -438,6 +438,7 @@ function normalizeHltbResult(entry) {
   return {
     id: entry.id ?? "",
     name: entry.name ?? "",
+    reviewScore: entry.reviewScore ? String(entry.reviewScore) : "",
     gameplayMain: formatHltbHours(entry.mainTime),
     gameplayMainExtra: formatHltbHours(entry.mainExtraTime),
     gameplayCompletionist: formatHltbHours(entry.completionistTime),
@@ -531,6 +532,7 @@ async function searchHowLongToBeat(game, overrides) {
   }
 
   return {
+    reviewScore: best.reviewScore ?? "",
     gameplayMain: best.gameplayMain ?? "",
     gameplayMainExtra: best.gameplayMainExtra ?? "",
     gameplayCompletionist: best.gameplayCompletionist ?? "",
@@ -586,6 +588,7 @@ function buildCachedLookup(rows) {
   for (const row of rows) {
     const cachedRow = {
       name: row.name,
+      reviewScore: row.reviewScore || row.ReviewScore || "",
       gameplayMain: row.gameplayMain || row.Main || "",
       gameplayMainExtra: row.gameplayMainExtra || row["Main Extra"] || "",
       gameplayCompletionist: row.gameplayCompletionist || row.Completionist || "",
@@ -665,6 +668,7 @@ function applyMatchedRow(row, matchedRow) {
 
   return {
     ...row,
+    reviewScore: matchedRow.reviewScore,
     gameplayMain: matchedRow.gameplayMain,
     gameplayMainExtra: matchedRow.gameplayMainExtra,
     gameplayCompletionist: matchedRow.gameplayCompletionist,
@@ -683,6 +687,7 @@ function mergeWithCache(game, liveRow, cachedRow) {
     ? { ...liveRow, matchSource: "live" }
     : cachedRow?.hltbId || cachedRow?.gameplayMain
       ? {
+          reviewScore: cachedRow.reviewScore,
           gameplayMain: cachedRow.gameplayMain,
           gameplayMainExtra: cachedRow.gameplayMainExtra,
           gameplayCompletionist: cachedRow.gameplayCompletionist,
@@ -691,6 +696,7 @@ function mergeWithCache(game, liveRow, cachedRow) {
           matchSource: "cache",
         }
       : {
+          reviewScore: "",
           gameplayMain: "",
           gameplayMainExtra: "",
           gameplayCompletionist: "",
@@ -709,6 +715,7 @@ function mergeWithCache(game, liveRow, cachedRow) {
     releaseDate: game.releaseDate,
     streamingSupported: game.streamingSupported,
     imageUrl: game.imageUrl || cachedRow?.imageUrl || "",
+    reviewScore: hltbData.reviewScore,
     gameplayMain: hltbData.gameplayMain,
     gameplayMainExtra: hltbData.gameplayMainExtra,
     gameplayCompletionist: hltbData.gameplayCompletionist,
@@ -740,6 +747,7 @@ async function writeCsv(rows, filePath) {
     "platforms",
     "releaseDate",
     "streamingSupported",
+    "reviewScore",
     "gameplayMain",
     "gameplayMainExtra",
     "gameplayCompletionist",
