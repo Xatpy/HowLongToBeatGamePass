@@ -75,7 +75,7 @@ button {
 /* ── Shell ─────────────────────────────────────── */
 
 .app-shell {
-  width: min(1120px, calc(100% - 24px));
+  width: min(1300px, calc(100% - 24px));
   margin: 0 auto;
   padding: 20px 0 32px;
 }
@@ -381,7 +381,7 @@ button {
 
 .table-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px 90px 120px 120px 130px;
+  grid-template-columns: minmax(0, 1fr) 150px 100px 140px 150px 160px;
   align-items: center;
   padding: 10px 20px;
   border-top: 1px solid var(--line);
@@ -391,10 +391,10 @@ button {
 
 .table-header span {
   color: var(--muted);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -425,7 +425,7 @@ button {
 .game-row {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px 90px 120px 120px 130px;
+  grid-template-columns: minmax(0, 1fr) 150px 100px 140px 150px 160px;
   align-items: center;
   padding: 12px 20px;
   border-bottom: 1px solid var(--line);
@@ -572,7 +572,7 @@ button {
 
   .table-header,
   .game-row {
-    grid-template-columns: minmax(0, 1fr) 90px 100px 100px 110px;
+    grid-template-columns: minmax(0, 1fr) 90px 120px 120px 140px;
     padding: 10px 14px;
   }
 }

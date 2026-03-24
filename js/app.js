@@ -7,6 +7,7 @@ const SORT_LABELS = {
   gameplayMain: "Main Story",
   gameplayMainExtra: "Main + Extra",
   gameplayCompletionist: "Completionist",
+  reviewScore: "Review",
   name: "Title",
 };
 
@@ -503,7 +504,7 @@ function setSort(column) {
     state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
   } else {
     state.sortBy = column;
-    state.sortDirection = column === "name" ? "asc" : "asc";
+    state.sortDirection = column === "reviewScore" ? "desc" : "asc";
     if (isDurationSortField(column)) {
       state.lastDurationSortBy = column;
     }
