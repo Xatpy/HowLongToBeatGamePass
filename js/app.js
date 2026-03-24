@@ -9,10 +9,10 @@ const SORT_LABELS = {
 };
 
 const TIME_FILTERS = [
-  { value: "any", label: "Any Time", limit: Infinity },
-  { value: "under-5", label: "Under 5h", limit: 5 },
-  { value: "under-10", label: "Under 10h", limit: 10 },
-  { value: "under-20", label: "Under 20h", limit: 20 },
+  { value: "any", label: "Any Time", compactLabel: "Any", limit: Infinity },
+  { value: "under-5", label: "Under 5h", compactLabel: "<5h", limit: 5 },
+  { value: "under-10", label: "Under 10h", compactLabel: "<10h", limit: 10 },
+  { value: "under-20", label: "Under 20h", compactLabel: "<20h", limit: 20 },
 ];
 
 const WINDOW_SIZE = 80;
@@ -108,6 +108,10 @@ function formatReviewScore(value) {
 
 function getActiveSortLabel() {
   return SORT_LABELS[state.sortBy] || "Main Story";
+}
+
+function isCompactMobileLayout() {
+  return window.matchMedia("(max-width: 640px)").matches;
 }
 
 function isDurationSortField(field) {
@@ -305,6 +309,7 @@ function renderServiceToggle() {
 
 function renderTimeFilters() {
   const container = document.getElementById("time-pills");
+  const compactLabels = isCompactMobileLayout();
   container.innerHTML = TIME_FILTERS
     .map(
       (filter) => `
@@ -314,7 +319,7 @@ function renderTimeFilters() {
           data-time-filter="${filter.value}"
           aria-pressed="${state.timeFilter === filter.value ? "true" : "false"}"
         >
-          ${filter.label}
+          ${compactLabels ? filter.compactLabel : filter.label}
         </button>
       `
     )
@@ -552,6 +557,15 @@ async function load() {
   for (const button of document.querySelectorAll("[data-sort]")) {
     button.addEventListener("click", () => setSort(button.dataset.sort));
   }
+
+  let compactLayout = isCompactMobileLayout();
+  window.addEventListener("resize", debounce(() => {
+    const nextCompactLayout = isCompactMobileLayout();
+    if (nextCompactLayout !== compactLayout) {
+      compactLayout = nextCompactLayout;
+      render();
+    }
+  }, 100));
 
   render();
 }

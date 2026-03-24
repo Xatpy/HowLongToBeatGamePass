@@ -173,6 +173,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: var(--shadow);
+  overflow: hidden;
   padding: 20px;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -181,7 +182,13 @@ button {
 
 .search-row {
   position: relative;
+  display: block;
   width: 100%;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-width: 0;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .search-icon {
@@ -195,7 +202,11 @@ button {
 
 .control-input {
   box-sizing: border-box;
+  display: block;
   width: 100%;
+  inline-size: 100%;
+  max-width: 100%;
+  max-inline-size: 100%;
   min-width: 0;
   min-height: 48px;
   padding: 0 14px 0 42px;
@@ -569,18 +580,19 @@ button {
 @media (max-width: 640px) {
   .app-shell {
     width: 100%;
-    padding: 12px 10px 24px;
+    padding: 8px 8px 20px;
   }
 
   .app-header {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 2px;
   }
 
   .last-updated {
-    width: 100%;
     text-align: center;
+    font-size: 1.05rem;
   }
 
   .filters-panel,
@@ -588,31 +600,105 @@ button {
     border-radius: 14px;
   }
 
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .brand-name {
+    font-size: 1.32rem;
+  }
+
   .service-tabs {
     width: 100%;
+    margin: 6px 0 10px;
   }
 
   .service-tab {
     flex: 1;
-    font-size: 1.1rem;
-    padding: 0 6px;
-    min-height: 44px;
+    font-size: 1rem;
+    padding: 0 10px;
+    min-height: 40px;
     gap: 4px;
   }
 
+  .service-tab-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .filters-panel {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .search-row {
+    margin-bottom: 2px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .control-input {
+    min-height: 42px;
+    padding-left: 38px;
+    font-size: 1.12rem;
+  }
+
+  .search-icon {
+    left: 14px;
+  }
+
   .filter-row {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    gap: 8px;
   }
 
   .filter-group {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: center;
     width: 100%;
+    gap: 8px;
+  }
+
+  .filter-group-platform {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .filter-group-sort,
+  .filter-group-time {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
   }
 
   .filter-group-sort {
     margin-left: 0;
+  }
+
+  .filter-label {
+    font-size: 1rem;
+  }
+
+  .platform-pills,
+  .sort-pills,
+  .time-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .platform-pills::-webkit-scrollbar,
+  .sort-pills::-webkit-scrollbar,
+  .time-pills::-webkit-scrollbar {
+    display: none;
   }
 
   .th-comp,
@@ -627,38 +713,101 @@ button {
     gap: 4px;
   }
 
+  .results-panel {
+    margin-top: 10px;
+  }
+
+  .results-bar {
+    padding: 10px 12px 8px;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .results-bar strong {
+    font-size: 1.2rem;
+  }
+
+  .results-bar span {
+    font-size: 1rem;
+  }
+
   .game-name {
-    font-size: 1.3rem;
+    font-size: 1.12rem;
   }
 
   .dur,
   .review-score {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .table-header span {
-    font-size: 0.95rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
   }
 
   .game-art {
-    width: 28px;
-    height: 37px;
-    border-radius: 4px;
+    width: 30px;
+    height: 40px;
+    border-radius: 5px;
   }
 
-  .results-bar {
-    padding: 12px;
-  }
-  
   .sort-pill,
   .time-pill,
   .platform-pill {
     padding: 0 10px;
-    font-size: 1.1rem;
+    min-height: 30px;
+    font-size: 0.96rem;
+    flex: 0 0 auto;
   }
 }
 
 @media (max-width: 420px) {
+  .app-shell {
+    padding-inline: 6px;
+  }
+
+  .brand-name {
+    font-size: 1.22rem;
+  }
+
+  .last-updated {
+    font-size: 1rem;
+  }
+
+  .service-tab {
+    min-height: 38px;
+    padding: 0 8px;
+    font-size: 0.88rem;
+  }
+
+  .filters-panel {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .filter-group {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .filter-group-platform {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .filter-group-sort,
+  .filter-group-time {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .filter-label {
+    font-size: 0.92rem;
+  }
+
+  .control-input {
+    min-height: 40px;
+    font-size: 1.04rem;
+  }
+
   .th-extra,
   .dur-extra {
     display: none !important;
@@ -667,5 +816,40 @@ button {
   .table-header,
   .game-row {
     grid-template-columns: minmax(0, 1fr) 50px 60px;
+  }
+
+  .results-bar {
+    justify-content: space-between;
+  }
+
+  .results-bar strong {
+    font-size: 1.04rem;
+  }
+
+  .results-bar span {
+    max-width: 58%;
+    text-align: right;
+    font-size: 0.9rem;
+  }
+
+  .sort-pill,
+  .time-pill,
+  .platform-pill {
+    min-height: 28px;
+    padding: 0 9px;
+    font-size: 0.9rem;
+  }
+
+  .game-name {
+    font-size: 1.04rem;
+  }
+
+  .dur,
+  .review-score {
+    font-size: 0.92rem;
+  }
+
+  .table-header span {
+    font-size: 0.76rem;
   }
 }

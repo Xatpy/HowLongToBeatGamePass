@@ -1,4 +1,4 @@
-const CACHE_NAME = "beatable-cache-v20260323";
+const CACHE_NAME = "beatable-cache-v20260324b";
 const APP_ASSETS = [
   "/",
   "/index.html",
@@ -7,6 +7,9 @@ const APP_ASSETS = [
   "/css/styles.css",
   "/data/list.csv",
   "/data/metadata.json",
+  "/icons/icon-32.png",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {
