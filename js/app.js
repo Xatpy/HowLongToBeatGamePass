@@ -1,4 +1,6 @@
-const DATA_FILE = "./data/list.csv";
+const DATA_MANIFEST_FILE = "./data/catalog-manifest.json";
+const DATA_JSON_FALLBACK_FILE = "./data/catalog.json";
+const DATA_CSV_FALLBACK_FILE = "./data/list.csv";
 const METADATA_FILE = "./data/metadata.json";
 
 const SORT_LABELS = {
@@ -511,11 +513,43 @@ function setSort(column) {
 }
 
 async function loadCsvData() {
-  const response = await fetch(DATA_FILE);
+  const response = await fetch(DATA_CSV_FALLBACK_FILE);
   if (!response.ok) {
-    throw new Error(`Failed to load ${DATA_FILE}`);
+    throw new Error(`Failed to load ${DATA_CSV_FALLBACK_FILE}`);
   }
   return parseCsv(await response.text());
+}
+
+async function fetchJsonFile(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${url}`);
+  }
+  return response.json();
+}
+
+async function loadCatalogData() {
+  try {
+    const manifest = await fetchJsonFile(DATA_MANIFEST_FILE);
+    const dataset = await fetchJsonFile(manifest.datasetUrl || manifest.currentUrl || DATA_JSON_FALLBACK_FILE);
+    return {
+      rows: Array.isArray(dataset.games) ? dataset.games : [],
+      metadata: manifest,
+    };
+  } catch (manifestError) {
+    try {
+      const dataset = await fetchJsonFile(DATA_JSON_FALLBACK_FILE);
+      return {
+        rows: Array.isArray(dataset.games) ? dataset.games : [],
+        metadata: dataset,
+      };
+    } catch (datasetError) {
+      return {
+        rows: await loadCsvData(),
+        metadata: await loadMetadata(),
+      };
+    }
+  }
 }
 
 async function loadMetadata() {
@@ -541,8 +575,9 @@ function registerServiceWorker() {
 }
 
 async function load() {
-  state.rows = await loadCsvData();
-  state.metadata = await loadMetadata();
+  const dataset = await loadCatalogData();
+  state.rows = dataset.rows;
+  state.metadata = dataset.metadata;
 
   renderMetadata();
 

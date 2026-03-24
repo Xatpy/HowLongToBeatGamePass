@@ -1,13 +1,17 @@
-const CACHE_NAME = "beatable-cache-v20260324b";
+const CACHE_NAME = "beatable-cache-v20260324d";
 const APP_ASSETS = [
   "/",
   "/index.html",
   "/js/app.js",
   "/css/normalize.css",
   "/css/styles.css",
+  "/data/catalog-manifest.json",
+  "/data/catalog.json",
   "/data/list.csv",
   "/data/metadata.json",
   "/icons/icon-32.png",
+  "/icons/icon-64.png",
+  "/icons/icon-128.png",
   "/icons/icon-192.png",
   "/icons/icon-512.png"
 ];
@@ -33,7 +37,13 @@ function isStaticAsset(url) {
 }
 
 function isDataFile(url) {
-  return url.pathname.endsWith("/list.csv") || url.pathname.endsWith("/metadata.json");
+  return (
+    url.pathname.endsWith("/catalog-manifest.json") ||
+    url.pathname.endsWith("/catalog.json") ||
+    url.pathname.includes("/data/catalogs/") ||
+    url.pathname.endsWith("/list.csv") ||
+    url.pathname.endsWith("/metadata.json")
+  );
 }
 
 self.addEventListener("fetch", (event) => {

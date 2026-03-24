@@ -1,6 +1,7 @@
 const { HowLongToBeatService, SearchModifier } = require("howlongtobeat-ts");
 const fs = require("node:fs/promises");
 const path = require("node:path");
+const crypto = require("node:crypto");
 
 const XBOX_CATALOG_URL =
   "https://catalog.gamepass.com/sigls/v3?id=29a81209-df6f-41fd-a528-2ae6b91f719c&language=LANGUAGE&market=MARKET&platformContext=ConsoleGen8;ConsoleGen9;pc&subscriptionContext=cfq7ttc0khs0";
@@ -11,6 +12,9 @@ const PLAYSTATION_LIST_URL =
 
 const OUTPUT_DIR = path.join(__dirname, "data");
 const OUTPUT_CSV = path.join(OUTPUT_DIR, "list.csv");
+const OUTPUT_JSON_CURRENT = path.join(OUTPUT_DIR, "catalog.json");
+const OUTPUT_JSON_MANIFEST = path.join(OUTPUT_DIR, "catalog-manifest.json");
+const OUTPUT_JSON_VERSIONS_DIR = path.join(OUTPUT_DIR, "catalogs");
 const OUTPUT_METADATA = path.join(OUTPUT_DIR, "metadata.json");
 const TITLE_OVERRIDES_FILE = path.join(OUTPUT_DIR, "title-overrides.json");
 const DEFAULT_MARKET = process.env.GP_MARKET || "US";
@@ -557,6 +561,7 @@ async function mapWithConcurrency(items, limit, mapper) {
 
 async function ensureOutputDir() {
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
+  await fs.mkdir(OUTPUT_JSON_VERSIONS_DIR, { recursive: true });
 }
 
 async function delay(ms) {
@@ -768,6 +773,79 @@ async function writeCsv(rows, filePath) {
   await fs.writeFile(filePath, `${lines.join("\n")}\n`, "utf8");
 }
 
+function createDatasetVersion(date) {
+  return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
+}
+
+function buildCatalogPayload(rows, metadata, version) {
+  return {
+    schemaVersion: 1,
+    product: "Beatable",
+    version,
+    generatedAt: metadata.generatedAt,
+    games: rows.map((row) => ({
+      name: row.name,
+      service: row.service,
+      serviceKey: row.serviceKey,
+      catalogTypes: row.catalogTypes,
+      tier: row.tier,
+      platforms: row.platforms,
+      releaseDate: row.releaseDate,
+      streamingSupported: row.streamingSupported,
+      reviewScore: row.reviewScore,
+      gameplayMain: row.gameplayMain,
+      gameplayMainExtra: row.gameplayMainExtra,
+      gameplayCompletionist: row.gameplayCompletionist,
+      imageUrl: row.imageUrl,
+      hltbId: row.hltbId,
+      hltbName: row.hltbName,
+      productId: row.productId,
+      productUrl: row.productUrl,
+    })),
+  };
+}
+
+function createSha256(value) {
+  return crypto.createHash("sha256").update(value).digest("hex");
+}
+
+async function writeCatalogJsonArtifacts(rows, metadata, generatedAt) {
+  const version = createDatasetVersion(generatedAt);
+  const versionedFileName = `catalog-${version}.json`;
+  const versionedPath = path.join(OUTPUT_JSON_VERSIONS_DIR, versionedFileName);
+  const versionedUrl = `/data/catalogs/${versionedFileName}`;
+  const currentUrl = "/data/catalog.json";
+  const manifestUrl = "/data/catalog-manifest.json";
+  const payload = buildCatalogPayload(rows, metadata, version);
+  const serializedPayload = `${JSON.stringify(payload, null, 2)}\n`;
+  const sha256 = createSha256(serializedPayload);
+  const manifest = {
+    schemaVersion: 1,
+    product: "Beatable",
+    version,
+    generatedAt: metadata.generatedAt,
+    datasetUrl: versionedUrl,
+    currentUrl,
+    manifestUrl,
+    sha256,
+    sizeBytes: Buffer.byteLength(serializedPayload, "utf8"),
+    matchedCount: metadata.matchedCount,
+    totalCatalogCount: metadata.totalCatalogCount,
+  };
+
+  await Promise.all([
+    fs.writeFile(versionedPath, serializedPayload, "utf8"),
+    fs.writeFile(OUTPUT_JSON_CURRENT, serializedPayload, "utf8"),
+    fs.writeFile(OUTPUT_JSON_MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`, "utf8"),
+  ]);
+
+  return {
+    version,
+    versionedPath,
+    manifestPath: OUTPUT_JSON_MANIFEST,
+  };
+}
+
 function summarizeByService(rows) {
   return rows.reduce((accumulator, row) => {
     const key = row.serviceKey;
@@ -870,8 +948,9 @@ async function run() {
     });
 
   const missing = finalizedRows.filter((row) => !row.hltbId && !row.gameplayMain && !row.gameplayMainExtra && !row.gameplayCompletionist);
+  const generatedAt = new Date();
   const metadata = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAt.toISOString(),
     market: DEFAULT_MARKET,
     language: DEFAULT_LANGUAGE,
     playstationLocale: PLAYSTATION_LOCALE,
@@ -892,12 +971,16 @@ async function run() {
     durationSeconds: Math.round((Date.now() - startedAt.getTime()) / 1000),
   };
 
+  const jsonArtifacts = await writeCatalogJsonArtifacts(rowsWithData, metadata, generatedAt);
+
   await Promise.all([
     writeCsv(rowsWithData, OUTPUT_CSV),
     fs.writeFile(OUTPUT_METADATA, JSON.stringify(metadata, null, 2), "utf8"),
   ]);
 
   console.log(`Wrote ${rowsWithData.length} matched rows to ${OUTPUT_CSV}`);
+  console.log(`Wrote catalog json version ${jsonArtifacts.version} to ${jsonArtifacts.versionedPath}`);
+  console.log(`Wrote catalog manifest to ${jsonArtifacts.manifestPath}`);
   console.log(`Wrote metadata to ${OUTPUT_METADATA}`);
   console.log(`Unmatched titles: ${missing.length}`);
 }

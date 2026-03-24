@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "product": "Beatable",
+  "version": "20260324T081116Z",
+  "generatedAt": "2026-03-24T08:11:16.333Z",
+  "datasetUrl": "/data/catalogs/catalog-20260324T081116Z.json",
+  "currentUrl": "/data/catalog.json",
+  "manifestUrl": "/data/catalog-manifest.json",
+  "sha256": "b7d63a77a5df2be8e6b79cf5fa6aac105da715e1fbd8e19206a0b4bf7995669c",
+  "sizeBytes": 706770,
+  "matchedCount": 963,
+  "totalCatalogCount": 1174
+}
