@@ -19,6 +19,7 @@ const TIME_FILTERS = [
 ];
 
 const WINDOW_SIZE = 80;
+const REMOTE_MANIFEST_URL = "https://xatpy.github.io/beatable/data/catalog-manifest.json";
 
 function debounce(fn, ms) {
   let timer;
@@ -529,10 +530,35 @@ async function fetchJsonFile(url) {
   return response.json();
 }
 
+function resolveDataUrl(target, base) {
+  if (!target) {
+    return "";
+  }
+
+  try {
+    return new URL(target, base || window.location.href).href;
+  } catch {
+    return target;
+  }
+}
+
 async function loadCatalogData() {
   try {
-    const manifest = await fetchJsonFile(DATA_MANIFEST_FILE);
-    const dataset = await fetchJsonFile(manifest.datasetUrl || manifest.currentUrl || DATA_JSON_FALLBACK_FILE);
+    let manifestUrl = DATA_MANIFEST_FILE;
+    let manifest = null;
+
+    try {
+      manifest = await fetchJsonFile(manifestUrl);
+    } catch {
+      manifestUrl = REMOTE_MANIFEST_URL;
+      manifest = await fetchJsonFile(manifestUrl);
+    }
+
+    const datasetUrl = resolveDataUrl(
+      manifest.datasetUrl || manifest.datasetPath || manifest.currentUrl || manifest.currentPath || DATA_JSON_FALLBACK_FILE,
+      manifest.manifestUrl || manifestUrl
+    );
+    const dataset = await fetchJsonFile(datasetUrl);
     return {
       rows: Array.isArray(dataset.games) ? dataset.games : [],
       metadata: manifest,
@@ -568,7 +594,7 @@ async function loadMetadata() {
 function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
+      navigator.serviceWorker.register("./sw.js").catch(() => {
         // Silent failure is fine for a static app enhancement.
       });
     });

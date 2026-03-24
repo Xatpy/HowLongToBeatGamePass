@@ -17,6 +17,7 @@ const OUTPUT_JSON_MANIFEST = path.join(OUTPUT_DIR, "catalog-manifest.json");
 const OUTPUT_JSON_VERSIONS_DIR = path.join(OUTPUT_DIR, "catalogs");
 const OUTPUT_METADATA = path.join(OUTPUT_DIR, "metadata.json");
 const TITLE_OVERRIDES_FILE = path.join(OUTPUT_DIR, "title-overrides.json");
+const PUBLIC_BASE_URL = normalizeBaseUrl(process.env.PUBLIC_BASE_URL || "https://xatpy.github.io/beatable/");
 const DEFAULT_MARKET = process.env.GP_MARKET || "US";
 const DEFAULT_LANGUAGE = process.env.GP_LANGUAGE || "en-us";
 const PLAYSTATION_LOCALE = process.env.PS_LOCALE || "en-us";
@@ -57,6 +58,11 @@ const PLATFORM_VARIANT_PATTERN =
 const EDITION_VARIANT_PATTERN =
   /\b(standard edition|standard|definitive edition|game of the year edition|complete edition|anniversary edition|premium edition|deluxe edition|collector'?s edition|director'?s cut|remastered|hd remaster|ultimate edition|digital version|game preview|cross gen bundle|cross-gen bundle|free upgrade|landmark edition|enhanced edition|full time edition|game of the year|legacy collection|year-one|year one|goty)\b/gi;
 const TRAILING_NOISE_PATTERN = /\s*[-|:]\s*(standard|ultimate|complete|deluxe|premium|collector|director|cross-gen|cross gen|digital|xbox|ps4|ps5|windows).*/gi;
+
+function normalizeBaseUrl(value) {
+  const url = String(value || "").trim();
+  return url.endsWith("/") ? url : `${url}/`;
+}
 
 function normalizeTitle(value) {
   return value
@@ -813,20 +819,24 @@ async function writeCatalogJsonArtifacts(rows, metadata, generatedAt) {
   const version = createDatasetVersion(generatedAt);
   const versionedFileName = `catalog-${version}.json`;
   const versionedPath = path.join(OUTPUT_JSON_VERSIONS_DIR, versionedFileName);
-  const versionedUrl = `/data/catalogs/${versionedFileName}`;
-  const currentUrl = "/data/catalog.json";
-  const manifestUrl = "/data/catalog-manifest.json";
+  const versionedPathname = `data/catalogs/${versionedFileName}`;
+  const currentPathname = "data/catalog.json";
+  const manifestPathname = "data/catalog-manifest.json";
   const payload = buildCatalogPayload(rows, metadata, version);
   const serializedPayload = `${JSON.stringify(payload, null, 2)}\n`;
   const sha256 = createSha256(serializedPayload);
   const manifest = {
     schemaVersion: 1,
     product: "Beatable",
+    baseUrl: PUBLIC_BASE_URL,
     version,
     generatedAt: metadata.generatedAt,
-    datasetUrl: versionedUrl,
-    currentUrl,
-    manifestUrl,
+    datasetUrl: new URL(versionedPathname, PUBLIC_BASE_URL).href,
+    currentUrl: new URL(currentPathname, PUBLIC_BASE_URL).href,
+    manifestUrl: new URL(manifestPathname, PUBLIC_BASE_URL).href,
+    datasetPath: versionedPathname,
+    currentPath: currentPathname,
+    manifestPath: manifestPathname,
     sha256,
     sizeBytes: Buffer.byteLength(serializedPayload, "utf8"),
     matchedCount: metadata.matchedCount,

@@ -1,19 +1,26 @@
-const CACHE_NAME = "beatable-cache-v20260324d";
+const CACHE_NAME = "beatable-cache-v20260324e";
+const APP_BASE_PATH = new URL("./", self.location.href).pathname;
+const INDEX_FALLBACK = `${APP_BASE_PATH}index.html`;
+
+function scopedPath(relativePath) {
+  return new URL(relativePath, self.location.href).pathname;
+}
+
 const APP_ASSETS = [
-  "/",
-  "/index.html",
-  "/js/app.js",
-  "/css/normalize.css",
-  "/css/styles.css",
-  "/data/catalog-manifest.json",
-  "/data/catalog.json",
-  "/data/list.csv",
-  "/data/metadata.json",
-  "/icons/icon-32.png",
-  "/icons/icon-64.png",
-  "/icons/icon-128.png",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png"
+  APP_BASE_PATH,
+  INDEX_FALLBACK,
+  scopedPath("js/app.js"),
+  scopedPath("css/normalize.css"),
+  scopedPath("css/styles.css"),
+  scopedPath("data/catalog-manifest.json"),
+  scopedPath("data/catalog.json"),
+  scopedPath("data/list.csv"),
+  scopedPath("data/metadata.json"),
+  scopedPath("icons/icon-32.png"),
+  scopedPath("icons/icon-64.png"),
+  scopedPath("icons/icon-128.png"),
+  scopedPath("icons/icon-192.png"),
+  scopedPath("icons/icon-512.png")
 ];
 
 self.addEventListener("install", (event) => {
@@ -82,7 +89,7 @@ self.addEventListener("fetch", (event) => {
           return response;
         })
         .catch(() =>
-          caches.match(event.request).then((cached) => cached || caches.match("/index.html"))
+          caches.match(event.request).then((cached) => cached || caches.match(INDEX_FALLBACK))
         )
     );
     return;
@@ -99,7 +106,7 @@ self.addEventListener("fetch", (event) => {
         return response;
       })
       .catch(() =>
-        caches.match(event.request).then((cached) => cached || caches.match("/index.html"))
+        caches.match(event.request).then((cached) => cached || caches.match(INDEX_FALLBACK))
       )
   );
 });

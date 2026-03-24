@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T08:11:16.333Z",
+  "generatedAt": "2026-03-24T08:53:04.405Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
   "totalCatalogCount": 1174,
   "matchedCount": 963,
-  "freshMatchCount": 931,
-  "cachedMatchCount": 32,
+  "freshMatchCount": 928,
+  "cachedMatchCount": 35,
   "derivedMatchCount": 0,
   "unmatchedCount": 178,
   "serviceCounts": {
@@ -938,5 +938,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 667
+  "durationSeconds": 681
 }

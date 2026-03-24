@@ -2,7 +2,7 @@
   "name": "Beatable",
   "short_name": "Beatable",
   "description": "Browse Game Pass and PS Plus games by how long they take to beat.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0f1117",
   "theme_color": "#0f1117",
