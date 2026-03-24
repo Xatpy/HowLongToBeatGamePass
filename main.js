@@ -51,7 +51,7 @@ let hltbLiveEnabled = true;
 const PLATFORM_VARIANT_PATTERN =
   /\b(xbox series x\|s|xbox one|windows|pc|ps4|ps5|ps4 & ps5|ps4™ & ps5®|ps4® & ps5®|ps4™ \+ ps5™|ps4 \+ ps5|xbox one edition|xbox series x\|s edition|console edition)\b/gi;
 const EDITION_VARIANT_PATTERN =
-  /\b(standard edition|standard|definitive edition|game of the year edition|complete edition|anniversary edition|premium edition|deluxe edition|collector'?s edition|director'?s cut|remastered|hd remaster|ultimate edition|digital version|game preview|cross gen bundle|cross-gen bundle|free upgrade|landmark edition|enhanced edition|full time edition|game of the year|legends of the zone trilogy|legacy collection|year-one|year one|goty)\b/gi;
+  /\b(standard edition|standard|definitive edition|game of the year edition|complete edition|anniversary edition|premium edition|deluxe edition|collector'?s edition|director'?s cut|remastered|hd remaster|ultimate edition|digital version|game preview|cross gen bundle|cross-gen bundle|free upgrade|landmark edition|enhanced edition|full time edition|game of the year|legacy collection|year-one|year one|goty)\b/gi;
 const TRAILING_NOISE_PATTERN = /\s*[-|:]\s*(standard|ultimate|complete|deluxe|premium|collector|director|cross-gen|cross gen|digital|xbox|ps4|ps5|windows).*/gi;
 
 function normalizeTitle(value) {
@@ -87,7 +87,6 @@ function buildNormalizedKeys(...values) {
       raw.replace(/\((19|20)\d{2}\)/g, " "),
       raw.replace(/\(.*?\)/g, " "),
       raw.replace(/\s+-\s+.*$/g, " "),
-      raw.replace(/:.*$/g, " "),
     ];
 
     for (const variant of variants) {
@@ -107,6 +106,8 @@ function stripTitleNoise(value) {
     .replace(EDITION_VARIANT_PATTERN, " ")
     .replace(/\((playstation plus|ps4|ps5|xbox one|windows|xbox series x\|s|19\d{2}|20\d{2}|classic,?\s*20\d{2})\)/gi, " ")
     .replace(TRAILING_NOISE_PATTERN, " ")
+    .replace(/\s+[&+]\s*$/g, " ")
+    .replace(/\s*[:\-|]\s*$/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -121,7 +122,6 @@ function deriveTitleVariants(value, override = {}) {
 
   const stripped = stripTitleNoise(raw);
   const withoutParens = raw.replace(/\(.*?\)/g, " ").replace(/\s+/g, " ").trim();
-  const withoutSubtitle = stripped.replace(/:.*$/g, " ").replace(/\s+/g, " ").trim();
   const withoutDash = stripped.replace(/\s+-\s+.*$/g, " ").replace(/\s+/g, " ").trim();
   const base = stripTitleNoise(withoutParens);
 
@@ -129,7 +129,6 @@ function deriveTitleVariants(value, override = {}) {
     raw,
     stripped,
     withoutParens,
-    withoutSubtitle,
     withoutDash,
     base,
     ...(override.aliases || []),
@@ -464,7 +463,6 @@ function curateSearchTerms(title) {
 
   const stripped = normalized
     .replace(/\(.*?\)/g, " ")
-    .replace(/:.*$/g, " ")
     .replace(/-.*$/g, " ")
     .replace(/\s+/g, " ")
     .trim();
