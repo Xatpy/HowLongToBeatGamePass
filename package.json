@@ -7,11 +7,27 @@
     "start": "node server.js",
     "dev": "node server.js",
     "update-data": "node main.js",
-    "check": "node --check main.js && node --check js/app.js"
+    "check": "node --check main.js && node --check js/app.js",
+    "version:mobile": "node scripts/bump-mobile-version.js",
+    "cap:prepare": "node scripts/prepare-capacitor-web.js",
+    "cap:copy": "npm run cap:prepare && npx cap copy",
+    "cap:sync": "npm run cap:prepare && npx cap sync && npm run cap:ios:sync-branding && npm run cap:android:sync-branding",
+    "cap:add:ios": "npx cap add ios && npm run cap:ios:sync-branding",
+    "cap:add:android": "npx cap add android && npm run cap:android:sync-branding",
+    "cap:open:ios": "npx cap open ios",
+    "cap:open:android": "npx cap open android",
+    "cap:ios:sync-branding": "node scripts/sync-ios-branding.js",
+    "cap:android:sync-branding": "node scripts/sync-android-branding.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "@capacitor/ios": "^8.2.0",
     "howlongtobeat-ts": "^1.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.2.0"
   }
 }

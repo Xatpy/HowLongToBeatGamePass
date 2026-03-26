@@ -1,0 +1,10 @@
+{
+  "appId": "com.xatpy.beatable",
+  "appName": "Beatable",
+  "webDir": "capacitor-www",
+  "bundledWebRuntime": false,
+  "xatpyNative": {
+    "iosAppId": "com.chapiware.beatable",
+    "androidAppId": "com.xatpy.beatable"
+  }
+}
