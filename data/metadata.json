@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-03-24T08:53:04.405Z",
+  "generatedAt": "2026-03-26T13:15:07.023Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1174,
-  "matchedCount": 963,
-  "freshMatchCount": 928,
-  "cachedMatchCount": 35,
+  "totalCatalogCount": 1176,
+  "matchedCount": 965,
+  "freshMatchCount": 927,
+  "cachedMatchCount": 38,
   "derivedMatchCount": 0,
   "unmatchedCount": 178,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 541,
-      "matchedTitles": 436
+      "totalTitles": 543,
+      "matchedTitles": 438
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 947,
-      "matchedTitles": 794
+      "totalTitles": 949,
+      "matchedTitles": 796
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -938,5 +938,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 681
+  "durationSeconds": 495
 }
