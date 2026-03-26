@@ -126,6 +126,15 @@ a {
     background-color: var(--bg-alt);
 }
 
+.btn-store-disabled {
+    color: var(--text-secondary);
+    background-color: var(--bg-alt);
+    border-color: var(--border);
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+}
+
 .store-icon {
     margin-right: 8px;
     font-size: 1.1em;
@@ -136,6 +145,8 @@ a {
     font-size: 0.875rem;
     color: var(--text-tertiary);
     font-weight: 500;
+    max-width: 560px;
+    margin: 0 auto;
 }
 
 /* Screenshots Scroller */
@@ -275,6 +286,12 @@ a {
 
 .btn-text:hover {
     text-decoration: underline;
+}
+
+.btn-text-disabled {
+    color: var(--text-tertiary);
+    cursor: default;
+    pointer-events: none;
 }
 
 /* Footer */
