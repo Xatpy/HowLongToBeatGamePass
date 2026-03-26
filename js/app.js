@@ -1411,6 +1411,35 @@ function validateDatasetPayload(dataset, manifest) {
   );
 }
 
+function compareCatalogVersions(left, right) {
+  const a = String(left || "").trim();
+  const b = String(right || "").trim();
+
+  if (!a && !b) return 0;
+  if (!a) return -1;
+  if (!b) return 1;
+
+  const timestampPattern = /^\d{8}T\d{6}Z$/;
+  if (timestampPattern.test(a) && timestampPattern.test(b)) {
+    return a.localeCompare(b);
+  }
+
+  const semverPattern = /^(\d+)\.(\d+)(?:\.(\d+))?$/;
+  const aMatch = a.match(semverPattern);
+  const bMatch = b.match(semverPattern);
+  if (aMatch && bMatch) {
+    for (let index = 1; index <= 3; index += 1) {
+      const diff = Number(aMatch[index] || 0) - Number(bMatch[index] || 0);
+      if (diff !== 0) {
+        return diff;
+      }
+    }
+    return 0;
+  }
+
+  return a.localeCompare(b);
+}
+
 async function fetchManifestDataset(manifestUrl) {
   const manifest = await fetchJsonFile(manifestUrl);
   const datasetUrl = resolveDataUrl(
@@ -1459,7 +1488,7 @@ async function loadInitialCatalogData() {
 
       const bundledVersion = bundled.version || "";
       const cachedVersion = cached.version || "";
-      if (!cachedVersion || (bundledVersion && bundledVersion > cachedVersion)) {
+      if (!cachedVersion || compareCatalogVersions(bundledVersion, cachedVersion) > 0) {
         writeCachedCatalogData(bundled.metadata || {}, { version: bundled.version, games: bundled.rows });
         return bundled;
       }
@@ -1506,12 +1535,18 @@ async function refreshCatalogInBackground() {
       const { manifest, dataset } = await fetchManifestDataset(manifestUrl);
       const version = manifest.version || dataset.version || "";
 
-      if (cached && cached.version && version && cached.version === version) {
+      const versionDiff = compareCatalogVersions(version, cached?.version || "");
+
+      if (cached && cached.version && versionDiff === 0) {
         state.metadata = manifest;
         state.catalogStatus = "";
         renderMetadata();
         render();
         return;
+      }
+
+      if (cached && cached.version && versionDiff < 0) {
+        continue;
       }
 
       state.catalogStatus = "Updating catalog...";
