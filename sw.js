@@ -1,4 +1,4 @@
-const CACHE_NAME = "beatable-cache-v20260324e";
+const CACHE_NAME = "beatable-cache-v20260325b";
 const APP_BASE_PATH = new URL("./", self.location.href).pathname;
 const INDEX_FALLBACK = `${APP_BASE_PATH}index.html`;
 
@@ -60,19 +60,18 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(event.request.url);
 
-  // Static assets: cache-first
+  // Static assets: network-first, then cache fallback.
   if (isStaticAsset(url)) {
     event.respondWith(
-      caches.match(event.request).then((cached) => {
-        if (cached) return cached;
-        return fetch(event.request).then((response) => {
+      fetch(event.request)
+        .then((response) => {
           if (response.ok) {
             const clone = response.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
           }
           return response;
-        });
-      })
+        })
+        .catch(() => caches.match(event.request))
     );
     return;
   }

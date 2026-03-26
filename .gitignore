@@ -26,3 +26,21 @@ tmp/
 # Build/test output if added later
 coverage/
 dist/
+capacitor-www/
+.capacitor/
+
+# Native mobile local/build artifacts
+android/.gradle/
+android/local.properties
+android/keystore.properties
+android/**/build/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Xcode user-specific state
+ios/**/*.xcuserstate
+ios/**/*.xcuserdata/
+ios/**/*.pbxuser
+ios/**/DerivedData/
