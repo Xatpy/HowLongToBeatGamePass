@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-03-27T13:04:49.769Z",
+  "generatedAt": "2026-03-28T01:55:55.217Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
   "totalCatalogCount": 1176,
-  "matchedCount": 965,
-  "freshMatchCount": 932,
-  "cachedMatchCount": 33,
+  "matchedCount": 967,
+  "freshMatchCount": 0,
+  "cachedMatchCount": 967,
   "derivedMatchCount": 0,
-  "unmatchedCount": 178,
+  "unmatchedCount": 209,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
       "totalTitles": 543,
-      "matchedTitles": 438
+      "matchedTitles": 439
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
       "totalTitles": 633,
-      "matchedTitles": 527
+      "matchedTitles": 528
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
       "totalTitles": 949,
-      "matchedTitles": 796
+      "matchedTitles": 798
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -54,7 +54,17 @@
     },
     {
       "service": "PlayStation Plus",
+      "title": "A-Train Express",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Alienation™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Among Us",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -95,6 +105,16 @@
     {
       "service": "Xbox Game Pass",
       "title": "Avatar: Frontiers of Pandora™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Baldur's Gate and Baldur's Gate II: Enhanced Editions",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Battlefield™ 2042 Xbox Series X|S",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -153,6 +173,16 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Chivalry 2",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Chivalry 2 PS4 & PS5",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Concrete Genie Digital Deluxe Edition",
       "catalogTypes": "Game Catalog"
@@ -184,6 +214,16 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Dead by Daylight",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Dead by Daylight PS4® & PS5®",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Dead Space™ 2",
       "catalogTypes": "Game Catalog"
     },
@@ -193,8 +233,18 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Dead Static Drive",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Death end reQuest",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Descenders Next (Game Preview)",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -313,6 +363,16 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Enlisted",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Enlisted Xbox One",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "FantaVision™",
       "catalogTypes": "Classics Catalog"
@@ -325,6 +385,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Football Manager 26 Console",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "FragPunk",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -364,12 +429,22 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Hunt: Showdown 1896",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Immortals of Aveum™",
       "catalogTypes": "Game Catalog"
     },
     {
       "service": "PlayStation Plus",
       "title": "Insurgency: Sandstorm [PS4 & PS5]",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "It Takes Two - Digital Version",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -473,6 +548,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "MORDHAU",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Mortal Kombat™ 1",
       "catalogTypes": "Game Catalog"
@@ -490,6 +570,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Mystic Pillars X Kantara",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "NARAKA: BLADEPOINT",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -543,6 +628,16 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "One Lonely Outpost",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Overthrown",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "PaRappa The Rapper 2™",
       "catalogTypes": "Classics Catalog"
@@ -569,7 +664,17 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Plants vs. Zombies Garden Warfare",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Plants vs. Zombies™ Garden Warfare 2",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Poker Club PS4 & PS5",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -623,6 +728,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Roadside Research (Game Preview)",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Rogue Galaxy™",
       "catalogTypes": "Classics Catalog"
@@ -663,6 +773,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "SMITE 2 (Game Preview)",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Sniper Elite 5 PS4™ & PS5™",
       "catalogTypes": "Game Catalog"
@@ -690,6 +805,11 @@
     {
       "service": "PlayStation Plus",
       "title": "South Park™: The Stick of Truth™",
+      "catalogTypes": "Ubisoft+ Classics"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Space Junkies",
       "catalogTypes": "Ubisoft+ Classics"
     },
     {
@@ -728,6 +848,16 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Starsand Island",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Stick Fight: The Game",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Summoner PS2 Emulation (2000)",
       "catalogTypes": "Classics Catalog"
@@ -735,6 +865,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Super Mega Baseball™ 4",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Superball",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -776,6 +911,11 @@
       "service": "PlayStation Plus",
       "title": "The Elder Scrolls Online Collection: Gold Road",
       "catalogTypes": "Monthly Games"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "THE FINALS",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "PlayStation Plus",
@@ -863,6 +1003,16 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Ultimate Chicken Horse",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Ultimate Sheep Raccoon",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "UNCHARTED 4: A Thief’s End",
       "catalogTypes": "Game Catalog"
@@ -880,6 +1030,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Until Dawn™ 2015",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Warhammer 40,000: Darktide",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -938,5 +1093,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 363
+  "durationSeconds": 136
 }
