@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-03-30T02:10:08.575Z",
+  "generatedAt": "2026-03-31T07:46:24.698Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1177,
-  "matchedCount": 968,
+  "totalCatalogCount": 1179,
+  "matchedCount": 969,
   "freshMatchCount": 0,
-  "cachedMatchCount": 968,
+  "cachedMatchCount": 969,
   "derivedMatchCount": 0,
-  "unmatchedCount": 209,
+  "unmatchedCount": 210,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 544,
-      "matchedTitles": 440
+      "totalTitles": 546,
+      "matchedTitles": 441
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 950,
-      "matchedTitles": 799
+      "totalTitles": 952,
+      "matchedTitles": 800
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -135,11 +135,6 @@
     {
       "service": "Xbox Game Pass",
       "title": "Call of Duty®: Black Ops 6 - Cross-Gen Bundle",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "Call of Duty®: Black Ops 6 - Standard Edition (Windows)",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -465,6 +460,16 @@
     {
       "service": "Xbox Game Pass",
       "title": "KILL IT WITH FIRE! 2",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Killer Instinct 2 Classic",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Killer Instinct Classic",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1093,5 +1098,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 162
+  "durationSeconds": 161
 }
