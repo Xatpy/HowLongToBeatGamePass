@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-31T07:46:24.698Z",
+  "generatedAt": "2026-04-01T07:55:32.917Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1179,
+  "totalCatalogCount": 1180,
   "matchedCount": 969,
   "freshMatchCount": 0,
   "cachedMatchCount": 969,
   "derivedMatchCount": 0,
-  "unmatchedCount": 210,
+  "unmatchedCount": 211,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 546,
+      "totalTitles": 547,
       "matchedTitles": 441
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 952,
+      "totalTitles": 953,
       "matchedTitles": 800
     },
     "Classics Catalog": {
@@ -869,6 +869,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Super Meat Boy 3D",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Super Mega Baseball™ 4",
       "catalogTypes": "Game Catalog"
     },
@@ -1098,5 +1103,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 161
+  "durationSeconds": 137
 }
