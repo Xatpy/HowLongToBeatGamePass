@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-04-01T07:55:32.917Z",
+  "generatedAt": "2026-04-03T07:38:53.577Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1180,
-  "matchedCount": 969,
+  "totalCatalogCount": 1179,
+  "matchedCount": 967,
   "freshMatchCount": 0,
-  "cachedMatchCount": 969,
+  "cachedMatchCount": 967,
   "derivedMatchCount": 0,
-  "unmatchedCount": 211,
+  "unmatchedCount": 212,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 547,
-      "matchedTitles": 441
+      "totalTitles": 546,
+      "matchedTitles": 439
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 953,
-      "matchedTitles": 800
+      "totalTitles": 952,
+      "matchedTitles": 798
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -110,6 +110,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Baldur's Gate and Baldur's Gate II: Enhanced Editions",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Barbie™ Horse Trails",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1103,5 +1108,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 137
+  "durationSeconds": 125
 }
