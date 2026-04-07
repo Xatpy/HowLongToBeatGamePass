@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-05T07:24:01.477Z",
+  "generatedAt": "2026-04-07T07:50:51.664Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1181,
+  "totalCatalogCount": 1182,
   "matchedCount": 967,
   "freshMatchCount": 0,
   "cachedMatchCount": 967,
   "derivedMatchCount": 0,
-  "unmatchedCount": 214,
+  "unmatchedCount": 215,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 548,
+      "totalTitles": 549,
       "matchedTitles": 439
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 954,
+      "totalTitles": 955,
       "matchedTitles": 798
     },
     "Classics Catalog": {
@@ -381,6 +381,11 @@
       "service": "PlayStation Plus",
       "title": "FAR CRY®6 Standard Edition PS4 & PS5",
       "catalogTypes": "Ubisoft+ Classics"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "FINAL FANTASY IV",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1118,5 +1123,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 134
+  "durationSeconds": 120
 }
