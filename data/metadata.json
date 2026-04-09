@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-04-07T07:50:51.664Z",
+  "generatedAt": "2026-04-09T07:56:42.092Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
   "totalCatalogCount": 1182,
-  "matchedCount": 967,
+  "matchedCount": 965,
   "freshMatchCount": 0,
-  "cachedMatchCount": 967,
+  "cachedMatchCount": 965,
   "derivedMatchCount": 0,
-  "unmatchedCount": 215,
+  "unmatchedCount": 217,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 549,
-      "matchedTitles": 439
+      "totalTitles": 550,
+      "matchedTitles": 440
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 633,
-      "matchedTitles": 528
+      "totalTitles": 632,
+      "matchedTitles": 525
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 955,
-      "matchedTitles": 798
+      "totalTitles": 956,
+      "matchedTitles": 799
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -42,8 +42,8 @@
     },
     "Monthly Games": {
       "catalogType": "Monthly Games",
-      "totalTitles": 4,
-      "matchedTitles": 3
+      "totalTitles": 3,
+      "matchedTitles": 0
     }
   },
   "unmatchedTitles": [
@@ -538,6 +538,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Lords of the Fallen",
+      "catalogTypes": "Monthly Games"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Mass Effect™ Legendary Edition",
       "catalogTypes": "Game Catalog"
@@ -903,6 +908,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "SWORD ART ONLINE Fractured Daydream",
+      "catalogTypes": "Monthly Games"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Symphonia 𝄞",
       "catalogTypes": "Game Catalog"
@@ -936,11 +946,6 @@
       "service": "Xbox Game Pass",
       "title": "The Casting of Frank Stone™",
       "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "PlayStation Plus",
-      "title": "The Elder Scrolls Online Collection: Gold Road",
-      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -981,6 +986,11 @@
       "service": "PlayStation Plus",
       "title": "Tom Clancy’s The Division 2",
       "catalogTypes": "Ubisoft+ Classics"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Tomb Raider I-III Remastered Starring Lara Croft",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -1123,5 +1133,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 120
+  "durationSeconds": 151
 }
