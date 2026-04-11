@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-09T07:56:42.092Z",
+  "generatedAt": "2026-04-11T07:18:11.056Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1182,
+  "totalCatalogCount": 1181,
   "matchedCount": 965,
   "freshMatchCount": 0,
   "cachedMatchCount": 965,
   "derivedMatchCount": 0,
-  "unmatchedCount": 217,
+  "unmatchedCount": 216,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 550,
+      "totalTitles": 549,
       "matchedTitles": 440
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 956,
+      "totalTitles": 955,
       "matchedTitles": 799
     },
     "Classics Catalog": {
@@ -154,17 +154,7 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Call of Duty®: Modern Warfare® II - Standard Edition (Windows)",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
       "title": "Call of Duty®: Modern Warfare® III - Cross-Gen Bundle",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "Call of Duty®: Modern Warfare® III - Standard Edition (Windows)",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -784,7 +774,7 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Sea of Thieves: 2025 Edition",
+      "title": "Sea of Thieves: 2026 Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -974,6 +964,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Tiny Bookshop",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Tom Clancy's Rainbow Six® Siege - Elite Edition",
       "catalogTypes": "Game Catalog"
     },
@@ -1133,5 +1128,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 151
+  "durationSeconds": 132
 }
