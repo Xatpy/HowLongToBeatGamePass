@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-13T08:24:03.650Z",
+  "generatedAt": "2026-04-15T08:05:57.639Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1181,
+  "totalCatalogCount": 1184,
   "matchedCount": 965,
   "freshMatchCount": 0,
   "cachedMatchCount": 965,
   "derivedMatchCount": 0,
-  "unmatchedCount": 216,
+  "unmatchedCount": 219,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 549,
+      "totalTitles": 552,
       "matchedTitles": 440
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 955,
+      "totalTitles": 958,
       "matchedTitles": 799
     },
     "Classics Catalog": {
@@ -403,6 +403,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Hades II",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Hogwarts Legacy PS4 Version",
       "catalogTypes": "Game Catalog"
@@ -719,6 +724,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "REPLACED",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "RESIDENT EVIL 3 for Xbox",
       "catalogTypes": "Game Catalog"
     },
@@ -964,6 +974,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "The Thaumaturge",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Tiny Bookshop",
       "catalogTypes": "Game Catalog"
     },
@@ -1128,5 +1143,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 139
+  "durationSeconds": 143
 }
