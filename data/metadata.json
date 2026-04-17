@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-04-15T08:05:57.639Z",
+  "generatedAt": "2026-04-17T08:05:19.592Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1184,
-  "matchedCount": 965,
+  "totalCatalogCount": 1180,
+  "matchedCount": 960,
   "freshMatchCount": 0,
-  "cachedMatchCount": 965,
+  "cachedMatchCount": 960,
   "derivedMatchCount": 0,
-  "unmatchedCount": 219,
+  "unmatchedCount": 220,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 552,
-      "matchedTitles": 440
+      "totalTitles": 548,
+      "matchedTitles": 435
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 958,
-      "matchedTitles": 799
+      "totalTitles": 954,
+      "matchedTitles": 794
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -639,6 +639,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "NHL® 26 Xbox Series X|S",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "catalogTypes": "Game Catalog"
     },
@@ -1143,5 +1148,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 143
+  "durationSeconds": 128
 }
