@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-17T08:05:19.592Z",
+  "generatedAt": "2026-04-19T07:47:11.173Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1180,
+  "totalCatalogCount": 1181,
   "matchedCount": 960,
   "freshMatchCount": 0,
   "cachedMatchCount": 960,
   "derivedMatchCount": 0,
-  "unmatchedCount": 220,
+  "unmatchedCount": 221,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 548,
+      "totalTitles": 549,
       "matchedTitles": 435
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 954,
+      "totalTitles": 955,
       "matchedTitles": 794
     },
     "Classics Catalog": {
@@ -145,6 +145,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Call of Duty®: Black Ops 7 - Cross-Gen Bundle",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Call of Duty®: Modern Warfare® - Digital Standard Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1148,5 +1153,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 128
+  "durationSeconds": 146
 }
