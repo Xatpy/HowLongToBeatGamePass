@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-04-21T08:09:52.430Z",
+  "generatedAt": "2026-04-23T08:11:31.011Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1181,
-  "matchedCount": 960,
+  "totalCatalogCount": 1186,
+  "matchedCount": 955,
   "freshMatchCount": 0,
-  "cachedMatchCount": 960,
+  "cachedMatchCount": 955,
   "derivedMatchCount": 0,
-  "unmatchedCount": 221,
+  "unmatchedCount": 231,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 549,
-      "matchedTitles": 435
+      "totalTitles": 551,
+      "matchedTitles": 434
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 632,
-      "matchedTitles": 525
+      "totalTitles": 635,
+      "matchedTitles": 521
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 955,
-      "matchedTitles": 794
+      "totalTitles": 959,
+      "matchedTitles": 789
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
-      "totalTitles": 164,
+      "totalTitles": 165,
       "matchedTitles": 119
     },
     "Ubisoft+ Classics": {
@@ -55,6 +55,11 @@
     {
       "service": "PlayStation Plus",
       "title": "A-Train Express",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Albion Online",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -343,11 +348,6 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "EA SPORTS™ PGA TOUR™",
-      "catalogTypes": "Game Catalog"
-    },
-    {
       "service": "Xbox Game Pass",
       "title": "EA SPORTS™ WRC",
       "catalogTypes": "Game Catalog"
@@ -384,6 +384,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Football Manager 26 Console",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Football Manager 26 Console",
       "catalogTypes": "Game Catalog"
     },
@@ -425,6 +430,16 @@
     {
       "service": "Xbox Game Pass",
       "title": "Hogwarts Legacy Xbox One Version",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Horizon Zero Dawn: Complete Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Horizon Zero Dawn™ Remastered",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -498,6 +513,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Kulebra and the Souls of Limbo: Closure Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Kurushi™ Final: Mental Blocks",
       "catalogTypes": "Classics Catalog"
@@ -565,6 +585,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Monster Jam™ Showdown PS4 & PS5",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Monster Train",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -863,6 +888,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Squirrel with a Gun",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "STAR WARS™ Battlefront™ II",
       "catalogTypes": "Game Catalog"
@@ -954,6 +984,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "The Casting of Frank Stone™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "The Casting of Frank Stone™",
       "catalogTypes": "Game Catalog"
     },
@@ -1094,7 +1129,17 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Vampire Crawlers: The Turbo Wildcard from Vampire Survivors",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Warhammer 40,000: Darktide",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "WARRIORS: Abyss",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1110,6 +1155,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Wild Arms™ 3",
+      "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Wild Arms™ 4",
       "catalogTypes": "Classics Catalog"
     },
     {
@@ -1153,5 +1203,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 157
+  "durationSeconds": 138
 }
