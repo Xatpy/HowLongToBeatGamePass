@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-23T08:11:31.011Z",
+  "generatedAt": "2026-04-25T07:47:06.772Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1186,
+  "totalCatalogCount": 1187,
   "matchedCount": 955,
   "freshMatchCount": 0,
   "cachedMatchCount": 955,
   "derivedMatchCount": 0,
-  "unmatchedCount": 231,
+  "unmatchedCount": 232,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 551,
+      "totalTitles": 552,
       "matchedTitles": 434
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 959,
+      "totalTitles": 960,
       "matchedTitles": 789
     },
     "Classics Catalog": {
@@ -500,6 +500,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Killzone Shadow Fall™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Kiln",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1203,5 +1208,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 138
+  "durationSeconds": 140
 }
