@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-04-27T08:42:13.274Z",
+  "generatedAt": "2026-04-29T08:34:27.700Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1187,
-  "matchedCount": 955,
+  "totalCatalogCount": 1188,
+  "matchedCount": 954,
   "freshMatchCount": 0,
-  "cachedMatchCount": 955,
+  "cachedMatchCount": 954,
   "derivedMatchCount": 0,
-  "unmatchedCount": 232,
+  "unmatchedCount": 234,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 552,
-      "matchedTitles": 434
+      "totalTitles": 553,
+      "matchedTitles": 433
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 960,
-      "matchedTitles": 789
+      "totalTitles": 961,
+      "matchedTitles": 788
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -86,6 +86,11 @@
       "service": "PlayStation Plus",
       "title": "Ape Escape™ 2",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Aphelion",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "PlayStation Plus",
@@ -1073,6 +1078,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Trepang2",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Trials Fusion™",
       "catalogTypes": "Ubisoft+ Classics"
@@ -1208,5 +1218,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 108
+  "durationSeconds": 140
 }
