@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-04-29T08:34:27.700Z",
+  "generatedAt": "2026-05-01T08:26:31.361Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1188,
-  "matchedCount": 954,
+  "totalCatalogCount": 1183,
+  "matchedCount": 949,
   "freshMatchCount": 0,
-  "cachedMatchCount": 954,
+  "cachedMatchCount": 949,
   "derivedMatchCount": 0,
   "unmatchedCount": 234,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 553,
-      "matchedTitles": 433
+      "totalTitles": 548,
+      "matchedTitles": 428
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 961,
-      "matchedTitles": 788
+      "totalTitles": 956,
+      "matchedTitles": 783
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -454,12 +454,12 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Hunt: Showdown 1896",
+      "title": "Immortals of Aveum™",
       "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Immortals of Aveum™",
+      "title": "inKONBINI: One Store. Many Stories",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -664,16 +664,6 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "NHL® 24 Xbox One",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "NHL® 24 Xbox Series X|S",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
       "title": "NHL® 25 Xbox Series X|S",
       "catalogTypes": "Game Catalog"
     },
@@ -830,6 +820,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Sea of Thieves: 2026 Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Sledding Game",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -990,6 +985,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Terraria – PlayStation®4 Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "TerraTech Legion",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1218,5 +1218,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 140
+  "durationSeconds": 138
 }
