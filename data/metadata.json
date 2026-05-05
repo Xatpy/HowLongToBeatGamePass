@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-03T08:17:29.980Z",
+  "generatedAt": "2026-05-05T08:29:00.966Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1183,
+  "totalCatalogCount": 1185,
   "matchedCount": 949,
   "freshMatchCount": 0,
   "cachedMatchCount": 949,
   "derivedMatchCount": 0,
-  "unmatchedCount": 234,
+  "unmatchedCount": 236,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 548,
+      "totalTitles": 550,
       "matchedTitles": 428
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 956,
+      "totalTitles": 958,
       "matchedTitles": 783
     },
     "Classics Catalog": {
@@ -385,6 +385,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "FINAL FANTASY IV",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "FINAL FANTASY V",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1193,6 +1198,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "World of Warships: Legends",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Worms [PS1 Emulation]",
       "catalogTypes": "Classics Catalog"
@@ -1218,5 +1228,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 141
+  "durationSeconds": 127
 }
