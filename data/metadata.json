@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-05-05T08:29:00.966Z",
+  "generatedAt": "2026-05-07T08:49:21.816Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1185,
-  "matchedCount": 949,
+  "totalCatalogCount": 1188,
+  "matchedCount": 952,
   "freshMatchCount": 0,
-  "cachedMatchCount": 949,
+  "cachedMatchCount": 952,
   "derivedMatchCount": 0,
   "unmatchedCount": 236,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 550,
-      "matchedTitles": 428
+      "totalTitles": 553,
+      "matchedTitles": 429
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
       "totalTitles": 635,
-      "matchedTitles": 521
+      "matchedTitles": 523
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 958,
-      "matchedTitles": 783
+      "totalTitles": 961,
+      "matchedTitles": 784
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -43,7 +43,7 @@
     "Monthly Games": {
       "catalogType": "Monthly Games",
       "totalTitles": 3,
-      "matchedTitles": 0
+      "matchedTitles": 2
     }
   },
   "unmatchedTitles": [
@@ -328,6 +328,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "EA SPORTS FC™ 26 Standard Edition PS4 & PS5",
+      "catalogTypes": "Monthly Games"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "EA SPORTS™ College Football 25",
       "catalogTypes": "Game Catalog"
@@ -573,11 +578,6 @@
       "catalogTypes": "Classics Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "Lords of the Fallen",
-      "catalogTypes": "Monthly Games"
-    },
-    {
       "service": "Xbox Game Pass",
       "title": "Mass Effect™ Legendary Edition",
       "catalogTypes": "Game Catalog"
@@ -625,6 +625,11 @@
     {
       "service": "PlayStation Plus",
       "title": "MotoGP™25",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "MOTORSLICE",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -958,11 +963,6 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "SWORD ART ONLINE Fractured Daydream",
-      "catalogTypes": "Monthly Games"
-    },
-    {
       "service": "Xbox Game Pass",
       "title": "Symphonia 𝄞",
       "catalogTypes": "Game Catalog"
@@ -1056,11 +1056,6 @@
       "service": "PlayStation Plus",
       "title": "Tom Clancy’s The Division 2",
       "catalogTypes": "Ubisoft+ Classics"
-    },
-    {
-      "service": "PlayStation Plus",
-      "title": "Tomb Raider I-III Remastered Starring Lara Croft",
-      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -1189,6 +1184,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Wildgate",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Wolfenstein® II: The New Colossus™",
       "catalogTypes": "Game Catalog"
     },
@@ -1228,5 +1228,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 127
+  "durationSeconds": 126
 }
