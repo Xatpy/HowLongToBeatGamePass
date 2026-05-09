@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-05-07T08:49:21.816Z",
+  "generatedAt": "2026-05-09T08:12:14.523Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1188,
+  "totalCatalogCount": 1190,
   "matchedCount": 952,
   "freshMatchCount": 0,
   "cachedMatchCount": 952,
   "derivedMatchCount": 0,
-  "unmatchedCount": 236,
+  "unmatchedCount": 238,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 553,
+      "totalTitles": 554,
       "matchedTitles": 429
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 635,
+      "totalTitles": 636,
       "matchedTitles": 523
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 961,
+      "totalTitles": 962,
       "matchedTitles": 784
     },
     "Classics Catalog": {
@@ -42,7 +42,7 @@
     },
     "Monthly Games": {
       "catalogType": "Monthly Games",
-      "totalTitles": 3,
+      "totalTitles": 4,
       "matchedTitles": 2
     }
   },
@@ -598,6 +598,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Mixtape",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Monster Jam™ Showdown PS4 & PS5",
       "catalogTypes": "Game Catalog"
@@ -741,6 +746,11 @@
       "service": "Xbox Game Pass",
       "title": "Plants vs. Zombies™ Garden Warfare 2",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "PlayStation®Plus ICONS Pack",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "PlayStation Plus",
@@ -1228,5 +1238,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 126
+  "durationSeconds": 140
 }
