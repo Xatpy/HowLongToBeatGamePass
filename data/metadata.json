@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-15T09:25:38.022Z",
+  "generatedAt": "2026-05-17T08:33:41.515Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1196,
-  "matchedCount": 953,
+  "totalCatalogCount": 1191,
+  "matchedCount": 950,
   "freshMatchCount": 0,
-  "cachedMatchCount": 953,
+  "cachedMatchCount": 950,
   "derivedMatchCount": 0,
-  "unmatchedCount": 243,
+  "unmatchedCount": 241,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 559,
-      "matchedTitles": 430
+      "totalTitles": 554,
+      "matchedTitles": 427
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 968,
-      "matchedTitles": 785
+      "totalTitles": 963,
+      "matchedTitles": 782
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -543,11 +543,6 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "Xbox Game Pass",
-      "title": "Kulebra and the Souls of Limbo: Closure Edition",
-      "catalogTypes": "Game Catalog"
-    },
-    {
       "service": "PlayStation Plus",
       "title": "Kurushi™ Final: Mental Blocks",
       "catalogTypes": "Classics Catalog"
@@ -736,11 +731,6 @@
       "service": "PlayStation Plus",
       "title": "Patapon™ Remastered",
       "catalogTypes": "Classics Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "PAW Patrol™ Rescue Wheels™: Championship",
-      "catalogTypes": "Game Catalog"
     },
     {
       "service": "PlayStation Plus",
@@ -1263,5 +1253,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 123
+  "durationSeconds": 128
 }
