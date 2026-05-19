@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-17T08:33:41.515Z",
+  "generatedAt": "2026-05-19T10:07:05.767Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1191,
+  "totalCatalogCount": 1193,
   "matchedCount": 950,
   "freshMatchCount": 0,
   "cachedMatchCount": 950,
   "derivedMatchCount": 0,
-  "unmatchedCount": 241,
+  "unmatchedCount": 243,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 554,
+      "totalTitles": 556,
       "matchedTitles": 427
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 963,
+      "totalTitles": 965,
       "matchedTitles": 782
     },
     "Classics Catalog": {
@@ -415,6 +415,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Football Manager 26 Console",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Forza Horizon 6",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -909,6 +914,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "SPLITGATE: Arena Reloaded",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "SpongeBob SquarePants™: The Patrick Star Game",
       "catalogTypes": "Game Catalog"
     },
@@ -1253,5 +1263,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 128
+  "durationSeconds": 136
 }
