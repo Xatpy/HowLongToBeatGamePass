@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-05-19T10:07:05.767Z",
+  "generatedAt": "2026-05-21T10:03:41.185Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1193,
-  "matchedCount": 950,
+  "totalCatalogCount": 1195,
+  "matchedCount": 945,
   "freshMatchCount": 0,
-  "cachedMatchCount": 950,
+  "cachedMatchCount": 945,
   "derivedMatchCount": 0,
-  "unmatchedCount": 243,
+  "unmatchedCount": 250,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 556,
-      "matchedTitles": 427
+      "totalTitles": 559,
+      "matchedTitles": 428
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 637,
-      "matchedTitles": 523
+      "totalTitles": 636,
+      "matchedTitles": 517
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 965,
-      "matchedTitles": 782
+      "totalTitles": 966,
+      "matchedTitles": 777
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
-      "totalTitles": 165,
+      "totalTitles": 166,
       "matchedTitles": 119
     },
     "Ubisoft+ Classics": {
@@ -148,8 +148,18 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Bramble: The Mountain King",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Broken Age",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Broken Sword - Shadow of the Templars: Reforged",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -389,6 +399,11 @@
     },
     {
       "service": "PlayStation Plus",
+      "title": "Enotria: The Last Song Standard Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "FantaVision™",
       "catalogTypes": "Classics Catalog"
     },
@@ -408,6 +423,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Flintlock: The Siege of Dawn",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Football Manager 26 Console",
       "catalogTypes": "Game Catalog"
@@ -420,6 +440,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Forza Horizon 6",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Forza Horizon 6 Standard Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -638,11 +663,6 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "MotoGP™25",
-      "catalogTypes": "Game Catalog"
-    },
-    {
       "service": "Xbox Game Pass",
       "title": "MOTORSLICE",
       "catalogTypes": "Game Catalog"
@@ -785,6 +805,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Rapala Fishing: Pro Series",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Remnant II® - Standard Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1073,6 +1098,16 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "The Thaumaturge",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "TIME CRISIS PS4 & PS5",
+      "catalogTypes": "Classics Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Tiny Bookshop",
       "catalogTypes": "Game Catalog"
@@ -1263,5 +1298,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 136
+  "durationSeconds": 133
 }
