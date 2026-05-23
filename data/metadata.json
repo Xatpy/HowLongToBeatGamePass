@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T10:03:41.185Z",
+  "generatedAt": "2026-05-23T08:32:20.710Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
@@ -439,11 +439,6 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Forza Horizon 6",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
       "title": "Forza Horizon 6 Standard Edition",
       "catalogTypes": "Game Catalog"
     },
@@ -611,6 +606,11 @@
       "service": "PlayStation Plus",
       "title": "LocoRoco™ Remastered",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Luna Abyss",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1298,5 +1298,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 133
+  "durationSeconds": 107
 }
