@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-25T10:48:25.355Z",
+  "generatedAt": "2026-05-27T10:20:30.613Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1195,
+  "totalCatalogCount": 1198,
   "matchedCount": 945,
   "freshMatchCount": 0,
   "cachedMatchCount": 945,
   "derivedMatchCount": 0,
-  "unmatchedCount": 250,
+  "unmatchedCount": 253,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 559,
+      "totalTitles": 562,
       "matchedTitles": 428
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 966,
+      "totalTitles": 969,
       "matchedTitles": 777
     },
     "Classics Catalog": {
@@ -400,6 +400,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Enotria: The Last Song Standard Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Escape Simulator",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1079,6 +1084,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "The Outer Worlds: Spacer's Choice Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "The Rogue Prince of Persia™",
       "catalogTypes": "Game Catalog"
     },
@@ -1269,6 +1279,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "World of Tanks: HEAT",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "World of Warships: Legends",
       "catalogTypes": "Game Catalog"
     },
@@ -1298,5 +1313,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 133
+  "durationSeconds": 130
 }
