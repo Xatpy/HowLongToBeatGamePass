@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-27T10:20:30.613Z",
+  "generatedAt": "2026-05-29T10:15:01.219Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1198,
+  "totalCatalogCount": 1202,
   "matchedCount": 945,
   "freshMatchCount": 0,
   "cachedMatchCount": 945,
   "derivedMatchCount": 0,
-  "unmatchedCount": 253,
+  "unmatchedCount": 257,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 562,
+      "totalTitles": 566,
       "matchedTitles": 428
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 969,
+      "totalTitles": 973,
       "matchedTitles": 777
     },
     "Classics Catalog": {
@@ -224,6 +224,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Crashout Crew",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Crimson Skies®: High Road to Revenge™",
       "catalogTypes": "Game Catalog"
     },
@@ -383,6 +388,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Echo Generation 2",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "ENDLESS™ Dungeon - Definitive Edition PS4 & PS5",
       "catalogTypes": "Game Catalog"
@@ -405,6 +415,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Escape Simulator",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Escape the Backrooms",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -526,6 +541,11 @@
       "service": "PlayStation Plus",
       "title": "Jak and Daxter™: The Precursor Legacy",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Kabuto Park",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1313,5 +1333,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 130
+  "durationSeconds": 128
 }
