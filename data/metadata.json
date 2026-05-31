@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-29T10:15:01.219Z",
+  "generatedAt": "2026-05-31T09:24:21.925Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1202,
-  "matchedCount": 945,
+  "totalCatalogCount": 1201,
+  "matchedCount": 944,
   "freshMatchCount": 0,
-  "cachedMatchCount": 945,
+  "cachedMatchCount": 944,
   "derivedMatchCount": 0,
   "unmatchedCount": 257,
   "serviceCounts": {
@@ -20,15 +20,15 @@
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 636,
-      "matchedTitles": 517
+      "totalTitles": 635,
+      "matchedTitles": 516
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 973,
-      "matchedTitles": 777
+      "totalTitles": 972,
+      "matchedTitles": 776
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -1333,5 +1333,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 128
+  "durationSeconds": 105
 }
