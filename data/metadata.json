@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-01T12:10:07.941Z",
+  "generatedAt": "2026-06-03T11:23:49.960Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1196,
+  "totalCatalogCount": 1199,
   "matchedCount": 939,
   "freshMatchCount": 0,
   "cachedMatchCount": 939,
   "derivedMatchCount": 0,
-  "unmatchedCount": 257,
+  "unmatchedCount": 260,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 561,
+      "totalTitles": 563,
       "matchedTitles": 423
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 635,
+      "totalTitles": 636,
       "matchedTitles": 516
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 967,
+      "totalTitles": 969,
       "matchedTitles": 771
     },
     "Classics Catalog": {
@@ -42,7 +42,7 @@
     },
     "Monthly Games": {
       "catalogType": "Monthly Games",
-      "totalTitles": 4,
+      "totalTitles": 5,
       "matchedTitles": 2
     }
   },
@@ -443,6 +443,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "FINAL FANTASY VI",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Flintlock: The Siege of Dawn",
       "catalogTypes": "Game Catalog"
@@ -541,6 +546,11 @@
       "service": "PlayStation Plus",
       "title": "Jak and Daxter™: The Precursor Legacy",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Jurassic World Evolution 3",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1251,6 +1261,11 @@
       "service": "Xbox Game Pass",
       "title": "Warhammer 40,000: Darktide",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Warhammer 40,000: Darktide",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "PlayStation Plus",
