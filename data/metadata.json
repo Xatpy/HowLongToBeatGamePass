@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-03T11:23:49.960Z",
+  "generatedAt": "2026-06-05T10:16:24.403Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1199,
+  "totalCatalogCount": 1200,
   "matchedCount": 939,
   "freshMatchCount": 0,
   "cachedMatchCount": 939,
   "derivedMatchCount": 0,
-  "unmatchedCount": 260,
+  "unmatchedCount": 261,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 563,
+      "totalTitles": 564,
       "matchedTitles": 423
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 969,
+      "totalTitles": 970,
       "matchedTitles": 771
     },
     "Classics Catalog": {
@@ -480,6 +480,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Gloomhaven Mercenaries Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "GOALS",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1348,5 +1353,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 135
+  "durationSeconds": 131
 }
