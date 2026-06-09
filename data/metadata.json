@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-06-07T09:35:29.697Z",
+  "generatedAt": "2026-06-09T10:03:41.384Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1200,
-  "matchedCount": 939,
+  "totalCatalogCount": 1205,
+  "matchedCount": 940,
   "freshMatchCount": 0,
-  "cachedMatchCount": 939,
+  "cachedMatchCount": 940,
   "derivedMatchCount": 0,
-  "unmatchedCount": 261,
+  "unmatchedCount": 265,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 564,
-      "matchedTitles": 423
+      "totalTitles": 569,
+      "matchedTitles": 424
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 970,
-      "matchedTitles": 771
+      "totalTitles": 975,
+      "matchedTitles": 772
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -498,6 +498,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Hellblade II: Senua's Saga",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Hogwarts Legacy PS4 Version",
       "catalogTypes": "Game Catalog"
@@ -949,6 +954,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Solarpunk",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "SOPA - Tale of the Stolen Potato",
       "catalogTypes": "Game Catalog"
     },
@@ -1248,6 +1258,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Undisputed",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Until Dawn™",
       "catalogTypes": "Game Catalog"
@@ -1286,6 +1301,11 @@
       "service": "PlayStation Plus",
       "title": "Werewolves Within™",
       "catalogTypes": "Ubisoft+ Classics"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Where Winds Meet",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "PlayStation Plus",
@@ -1353,5 +1373,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 108
+  "durationSeconds": 138
 }
