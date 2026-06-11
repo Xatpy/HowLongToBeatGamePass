@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-09T10:03:41.384Z",
+  "generatedAt": "2026-06-11T10:59:12.499Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1205,
+  "totalCatalogCount": 1206,
   "matchedCount": 940,
   "freshMatchCount": 0,
   "cachedMatchCount": 940,
   "derivedMatchCount": 0,
-  "unmatchedCount": 265,
+  "unmatchedCount": 266,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
       "totalTitles": 569,
-      "matchedTitles": 424
+      "matchedTitles": 423
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 636,
-      "matchedTitles": 516
+      "totalTitles": 637,
+      "matchedTitles": 517
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 975,
+      "totalTitles": 976,
       "matchedTitles": 772
     },
     "Classics Catalog": {
@@ -130,6 +130,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Battlefield™ 2042 Xbox Series X|S",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Beatdown City Survivors",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1373,5 +1378,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 138
+  "durationSeconds": 136
 }
