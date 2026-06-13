@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-11T10:59:12.499Z",
+  "generatedAt": "2026-06-13T09:34:42.429Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1206,
+  "totalCatalogCount": 1210,
   "matchedCount": 940,
   "freshMatchCount": 0,
   "cachedMatchCount": 940,
   "derivedMatchCount": 0,
-  "unmatchedCount": 266,
+  "unmatchedCount": 270,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 569,
-      "matchedTitles": 423
+      "totalTitles": 573,
+      "matchedTitles": 424
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
       "totalTitles": 637,
-      "matchedTitles": 517
+      "matchedTitles": 516
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 976,
+      "totalTitles": 980,
       "matchedTitles": 772
     },
     "Classics Catalog": {
@@ -130,6 +130,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Battlefield™ 2042 Xbox Series X|S",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Beastro",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -475,6 +480,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "FragPunk",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Frog Sqwad",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -963,6 +973,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "SONIC X SHADOW GENERATIONS PS4 & PS5",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "SOPA - Tale of the Stolen Potato",
       "catalogTypes": "Game Catalog"
@@ -1040,6 +1055,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Starsand Island",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "STARSEEKER: Astroneer Expeditions (Game Preview)",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1378,5 +1398,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 136
+  "durationSeconds": 140
 }
