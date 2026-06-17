@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-06-15T12:43:06.166Z",
+  "generatedAt": "2026-06-17T11:17:42.227Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1210,
-  "matchedCount": 940,
+  "totalCatalogCount": 1207,
+  "matchedCount": 936,
   "freshMatchCount": 0,
-  "cachedMatchCount": 940,
+  "cachedMatchCount": 936,
   "derivedMatchCount": 0,
-  "unmatchedCount": 270,
+  "unmatchedCount": 271,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 573,
-      "matchedTitles": 424
+      "totalTitles": 570,
+      "matchedTitles": 420
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 980,
-      "matchedTitles": 772
+      "totalTitles": 977,
+      "matchedTitles": 768
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -571,6 +571,11 @@
       "service": "PlayStation Plus",
       "title": "Jak and Daxter™: The Precursor Legacy",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Junkster",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1398,5 +1403,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 129
+  "durationSeconds": 107
 }
