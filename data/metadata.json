@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-06-17T11:17:42.227Z",
+  "generatedAt": "2026-06-19T10:57:46.455Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1207,
-  "matchedCount": 936,
+  "totalCatalogCount": 1213,
+  "matchedCount": 938,
   "freshMatchCount": 0,
-  "cachedMatchCount": 936,
+  "cachedMatchCount": 938,
   "derivedMatchCount": 0,
-  "unmatchedCount": 271,
+  "unmatchedCount": 275,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 570,
+      "totalTitles": 572,
       "matchedTitles": 420
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 637,
-      "matchedTitles": 516
+      "totalTitles": 641,
+      "matchedTitles": 518
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 977,
-      "matchedTitles": 768
+      "totalTitles": 1042,
+      "matchedTitles": 817
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
-      "totalTitles": 166,
+      "totalTitles": 167,
       "matchedTitles": 119
     },
     "Ubisoft+ Classics": {
@@ -42,7 +42,7 @@
     },
     "Monthly Games": {
       "catalogType": "Monthly Games",
-      "totalTitles": 5,
+      "totalTitles": 3,
       "matchedTitles": 2
     }
   },
@@ -80,7 +80,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Anno 1800™ Console Edition - Standard",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "PlayStation Plus",
@@ -100,7 +100,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Assassin’s Creed® IV Black Flag™",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "PlayStation Plus",
@@ -363,9 +363,14 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "EA SPORTS FC™ 26 Standard Edition PS4 & PS5",
-      "catalogTypes": "Monthly Games"
+      "service": "Xbox Game Pass",
+      "title": "EA SPORTS FC™ 26 Xbox One",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "EA SPORTS FC™ 26 Xbox Series X|S",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -440,7 +445,7 @@
     {
       "service": "PlayStation Plus",
       "title": "FAR CRY®6 Standard Edition PS4 & PS5",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -455,6 +460,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "FINAL FANTASY VI",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "FINAL FANTASY XVI",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -490,6 +500,11 @@
     {
       "service": "PlayStation Plus",
       "title": "GAROU: MARK OF THE WOLVES™",
+      "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Gitaroo-Man",
       "catalogTypes": "Classics Catalog"
     },
     {
@@ -773,6 +788,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "NEW MONOPOLY®",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "NHL® 25 Xbox Series X|S",
       "catalogTypes": "Game Catalog"
@@ -844,11 +864,6 @@
     },
     {
       "service": "PlayStation Plus",
-      "title": "PlayStation®Plus ICONS Pack",
-      "catalogTypes": "Monthly Games"
-    },
-    {
-      "service": "PlayStation Plus",
       "title": "Poker Club PS4 & PS5",
       "catalogTypes": "Game Catalog"
     },
@@ -864,6 +879,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Rabbids®: Party of Legends",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Rabbids®: Party of Legends",
       "catalogTypes": "Game Catalog"
     },
@@ -905,7 +925,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Riders Republic™ PS4 & PS5",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "PlayStation Plus",
@@ -995,7 +1015,7 @@
     {
       "service": "PlayStation Plus",
       "title": "South Park™: The Fractured but Whole™",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1005,12 +1025,12 @@
     {
       "service": "PlayStation Plus",
       "title": "South Park™: The Stick of Truth™",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "PlayStation Plus",
       "title": "Space Junkies",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1050,7 +1070,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Starlink: Battle For Atlas Digital Edition",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1203,6 +1223,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Tom Clancy's Rainbow Six® Siege - Elite Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Tom Clancy’s The Division 2",
       "catalogTypes": "Game Catalog"
@@ -1210,7 +1235,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Tom Clancy’s The Division 2",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1240,7 +1265,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Trials Fusion™",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "PlayStation Plus",
@@ -1324,13 +1349,8 @@
     },
     {
       "service": "PlayStation Plus",
-      "title": "We Love Katamari REROLL+ Royal Reverie PS4 & PS5",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "PlayStation Plus",
       "title": "Werewolves Within™",
-      "catalogTypes": "Ubisoft+ Classics"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1403,5 +1423,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 107
+  "durationSeconds": 130
 }
