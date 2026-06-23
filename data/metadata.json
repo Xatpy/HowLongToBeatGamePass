@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T10:06:00.499Z",
+  "generatedAt": "2026-06-23T10:02:46.632Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
@@ -409,7 +409,7 @@
     },
     {
       "service": "PlayStation Plus",
-      "title": "ENDLESS™ Dungeon - Definitive Edition PS4 & PS5",
+      "title": "ENDLESS Dungeon™ - Definitive Edition PS4 & PS5",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1423,5 +1423,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 139
+  "durationSeconds": 122
 }
