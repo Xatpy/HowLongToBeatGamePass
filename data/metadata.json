@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-23T10:02:46.632Z",
+  "generatedAt": "2026-06-25T09:44:45.954Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1213,
+  "totalCatalogCount": 1215,
   "matchedCount": 938,
   "freshMatchCount": 0,
   "cachedMatchCount": 938,
   "derivedMatchCount": 0,
-  "unmatchedCount": 275,
+  "unmatchedCount": 277,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
       "totalTitles": 572,
-      "matchedTitles": 420
+      "matchedTitles": 419
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 641,
-      "matchedTitles": 518
+      "totalTitles": 643,
+      "matchedTitles": 519
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1042,
+      "totalTitles": 1044,
       "matchedTitles": 817
     },
     "Classics Catalog": {
@@ -443,8 +443,13 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "FARCRY 6",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
-      "title": "FAR CRY®6 Standard Edition PS4 & PS5",
+      "title": "FARCRY 6",
       "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
@@ -675,6 +680,11 @@
     {
       "service": "PlayStation Plus",
       "title": "LEGO® The Hobbit™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Life is Strange: Double Exposure",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1423,5 +1433,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 122
+  "durationSeconds": 134
 }
