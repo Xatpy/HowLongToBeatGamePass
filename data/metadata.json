@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-25T09:44:45.954Z",
+  "generatedAt": "2026-06-27T08:50:50.274Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1215,
+  "totalCatalogCount": 1216,
   "matchedCount": 938,
   "freshMatchCount": 0,
   "cachedMatchCount": 938,
   "derivedMatchCount": 0,
-  "unmatchedCount": 277,
+  "unmatchedCount": 278,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 572,
+      "totalTitles": 573,
       "matchedTitles": 419
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1044,
+      "totalTitles": 1045,
       "matchedTitles": 817
     },
     "Classics Catalog": {
@@ -55,6 +55,11 @@
     {
       "service": "PlayStation Plus",
       "title": "A-Train Express",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Abyssus",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1229,7 +1234,7 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Tom Clancy's Rainbow Six® Siege - Elite Edition",
+      "title": "Tom Clancy's Rainbow Six Siege - Elite Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1433,5 +1438,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 134
+  "durationSeconds": 142
 }
