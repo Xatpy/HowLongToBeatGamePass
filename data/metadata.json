@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T08:50:50.274Z",
+  "generatedAt": "2026-06-29T11:24:04.864Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
@@ -1239,7 +1239,7 @@
     },
     {
       "service": "PlayStation Plus",
-      "title": "Tom Clancy's Rainbow Six® Siege - Elite Edition",
+      "title": "Tom Clancy's Rainbow Six Siege - Elite Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1438,5 +1438,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 142
+  "durationSeconds": 130
 }
