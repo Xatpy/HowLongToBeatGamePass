@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-06-29T11:24:04.864Z",
+  "generatedAt": "2026-07-01T10:12:29.625Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1216,
-  "matchedCount": 938,
+  "totalCatalogCount": 1210,
+  "matchedCount": 932,
   "freshMatchCount": 0,
-  "cachedMatchCount": 938,
+  "cachedMatchCount": 932,
   "derivedMatchCount": 0,
   "unmatchedCount": 278,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 573,
-      "matchedTitles": 419
+      "totalTitles": 567,
+      "matchedTitles": 413
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1045,
-      "matchedTitles": 817
+      "totalTitles": 1039,
+      "matchedTitles": 811
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -968,6 +968,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "RV There Yet?",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Scott Pilgrim vs. The World™: The Game – Complete Edition",
       "catalogTypes": "Ubisoft+ Classics"
@@ -1309,11 +1314,6 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Ultimate Chicken Horse",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
       "title": "Ultimate Sheep Raccoon",
       "catalogTypes": "Game Catalog"
     },
@@ -1438,5 +1438,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 130
+  "durationSeconds": 133
 }
