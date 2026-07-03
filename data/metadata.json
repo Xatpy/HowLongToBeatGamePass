@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-07-01T10:12:29.625Z",
+  "generatedAt": "2026-07-03T09:35:17.550Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1210,
-  "matchedCount": 932,
+  "totalCatalogCount": 1211,
+  "matchedCount": 931,
   "freshMatchCount": 0,
-  "cachedMatchCount": 932,
+  "cachedMatchCount": 931,
   "derivedMatchCount": 0,
-  "unmatchedCount": 278,
+  "unmatchedCount": 280,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
       "totalTitles": 567,
-      "matchedTitles": 413
+      "matchedTitles": 412
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 643,
+      "totalTitles": 644,
       "matchedTitles": 519
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1039,
-      "matchedTitles": 811
+      "totalTitles": 1040,
+      "matchedTitles": 810
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -159,6 +159,11 @@
     },
     {
       "service": "PlayStation Plus",
+      "title": "Blades of Fire",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Bloodborne™",
       "catalogTypes": "Game Catalog"
     },
@@ -200,6 +205,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Call of Duty®: Modern Warfare® III - Cross-Gen Bundle",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Call of Duty®: Vanguard - Standard Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1438,5 +1448,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 133
+  "durationSeconds": 141
 }
