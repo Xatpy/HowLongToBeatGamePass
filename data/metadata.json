@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-05T09:23:06.112Z",
+  "generatedAt": "2026-07-07T10:00:51.750Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1211,
+  "totalCatalogCount": 1212,
   "matchedCount": 931,
   "freshMatchCount": 0,
   "cachedMatchCount": 931,
   "derivedMatchCount": 0,
-  "unmatchedCount": 280,
+  "unmatchedCount": 281,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 567,
+      "totalTitles": 568,
       "matchedTitles": 412
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1040,
+      "totalTitles": 1041,
       "matchedTitles": 810
     },
     "Classics Catalog": {
@@ -1404,6 +1404,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Winds of Arcana: Ruination",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Wolfenstein® II: The New Colossus™",
       "catalogTypes": "Game Catalog"
     },
@@ -1448,5 +1453,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 139
+  "durationSeconds": 134
 }
