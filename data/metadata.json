@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-07T10:00:51.750Z",
+  "generatedAt": "2026-07-09T10:02:23.776Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1212,
+  "totalCatalogCount": 1215,
   "matchedCount": 931,
   "freshMatchCount": 0,
   "cachedMatchCount": 931,
   "derivedMatchCount": 0,
-  "unmatchedCount": 281,
+  "unmatchedCount": 284,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 568,
+      "totalTitles": 571,
       "matchedTitles": 412
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1041,
+      "totalTitles": 1044,
       "matchedTitles": 810
     },
     "Classics Catalog": {
@@ -184,6 +184,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Buckshot Roulette",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Call of Duty®: Black Ops 6 - Cross-Gen Bundle",
       "catalogTypes": "Game Catalog"
     },
@@ -206,6 +211,11 @@
       "service": "Xbox Game Pass",
       "title": "Call of Duty®: Modern Warfare® III - Cross-Gen Bundle",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Call of Duty®: Modern Warfare® III - Cross-Gen Bundle",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -1158,6 +1168,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Tamashika",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "Tearaway™ Unfolded",
       "catalogTypes": "Game Catalog"
@@ -1364,11 +1379,6 @@
     },
     {
       "service": "PlayStation Plus",
-      "title": "Warhammer 40,000: Darktide",
-      "catalogTypes": "Monthly Games"
-    },
-    {
-      "service": "PlayStation Plus",
       "title": "WARRIORS: Abyss",
       "catalogTypes": "Game Catalog"
     },
@@ -1419,6 +1429,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "World of Tanks Modern Armor",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "World of Tanks: HEAT",
       "catalogTypes": "Game Catalog"
     },
@@ -1453,5 +1468,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 134
+  "durationSeconds": 128
 }
