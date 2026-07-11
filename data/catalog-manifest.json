@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "product": "Beatable",
   "baseUrl": "https://xatpy.github.io/beatable/",
-  "version": "20260709T100223Z",
-  "generatedAt": "2026-07-09T10:02:23.776Z",
-  "datasetUrl": "https://xatpy.github.io/beatable/data/catalogs/catalog-20260709T100223Z.json",
+  "version": "20260711T081505Z",
+  "generatedAt": "2026-07-11T08:15:05.637Z",
+  "datasetUrl": "https://xatpy.github.io/beatable/data/catalogs/catalog-20260711T081505Z.json",
   "currentUrl": "https://xatpy.github.io/beatable/data/catalog.json",
   "manifestUrl": "https://xatpy.github.io/beatable/data/catalog-manifest.json",
-  "datasetPath": "data/catalogs/catalog-20260709T100223Z.json",
+  "datasetPath": "data/catalogs/catalog-20260711T081505Z.json",
   "currentPath": "data/catalog.json",
   "manifestPath": "data/catalog-manifest.json",
-  "sha256": "cdc4c4190cf84908383f4b9babf49e5526c37bc3c9f8928a84d6ae00a54b9c58",
-  "sizeBytes": 686116,
+  "sha256": "9fb348b5b403f6fbb003216e2f169e721d201fb323d04a26a0648ca821125f5f",
+  "sizeBytes": 686076,
   "matchedCount": 931,
-  "totalCatalogCount": 1215
+  "totalCatalogCount": 1216
 }

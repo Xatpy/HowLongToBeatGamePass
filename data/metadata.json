@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-09T10:02:23.776Z",
+  "generatedAt": "2026-07-11T08:15:05.637Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1215,
+  "totalCatalogCount": 1216,
   "matchedCount": 931,
   "freshMatchCount": 0,
   "cachedMatchCount": 931,
   "derivedMatchCount": 0,
-  "unmatchedCount": 284,
+  "unmatchedCount": 285,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 571,
+      "totalTitles": 572,
       "matchedTitles": 412
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1044,
+      "totalTitles": 1045,
       "matchedTitles": 810
     },
     "Classics Catalog": {
@@ -1466,7 +1466,12 @@
       "service": "PlayStation Plus",
       "title": "WRC Generations – The FIA WRC Official Game",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Wuthering Waves",
+      "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 128
+  "durationSeconds": 135
 }
