@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-07-15T08:35:57.461Z",
+  "generatedAt": "2026-07-17T08:27:27.469Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1218,
-  "matchedCount": 931,
+  "totalCatalogCount": 1212,
+  "matchedCount": 923,
   "freshMatchCount": 0,
-  "cachedMatchCount": 931,
+  "cachedMatchCount": 923,
   "derivedMatchCount": 0,
-  "unmatchedCount": 287,
+  "unmatchedCount": 289,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 574,
-      "matchedTitles": 412
+      "totalTitles": 567,
+      "matchedTitles": 404
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 644,
+      "totalTitles": 645,
       "matchedTitles": 519
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1047,
-      "matchedTitles": 810
+      "totalTitles": 1041,
+      "matchedTitles": 802
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -314,6 +314,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Denshattack!",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Descenders Next (Game Preview)",
       "catalogTypes": "Game Catalog"
     },
@@ -370,16 +375,6 @@
     {
       "service": "Xbox Game Pass",
       "title": "DreamWorks Gabby’s Dollhouse: Ready to Party",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "EA SPORTS FC™ 24 Xbox One",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "EA SPORTS FC™ 24 Xbox Series X|S",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -500,6 +495,11 @@
     {
       "service": "PlayStation Plus",
       "title": "FINAL FANTASY XVI",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "FixForce",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -743,6 +743,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "MAVRIX by Matt Jones",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "MediEvil Resurrection™",
       "catalogTypes": "Classics Catalog"
@@ -918,6 +923,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Quarantine Zone: The Last Check",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "R4 RIDGE RACER TYPE 4® PS4 & PS5",
       "catalogTypes": "Classics Catalog"
@@ -976,6 +986,11 @@
       "service": "PlayStation Plus",
       "title": "Rise of the Kasai™",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Rise of the Ronin™",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1081,11 +1096,6 @@
       "service": "PlayStation Plus",
       "title": "Space Junkies",
       "catalogTypes": "Game Catalog | Ubisoft+ Classics"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "SPLITGATE: Arena Reloaded",
-      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1483,5 +1493,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 140
+  "durationSeconds": 106
 }
