@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-19T08:34:00.935Z",
+  "generatedAt": "2026-07-21T08:44:09.904Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1212,
+  "totalCatalogCount": 1213,
   "matchedCount": 923,
   "freshMatchCount": 0,
   "cachedMatchCount": 923,
   "derivedMatchCount": 0,
-  "unmatchedCount": 289,
+  "unmatchedCount": 290,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 567,
+      "totalTitles": 568,
       "matchedTitles": 404
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1041,
+      "totalTitles": 1042,
       "matchedTitles": 802
     },
     "Classics Catalog": {
@@ -1249,6 +1249,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "The Planet Crafter",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "The Rogue Prince of Persia™",
       "catalogTypes": "Game Catalog"
     },
@@ -1493,5 +1498,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 138
+  "durationSeconds": 139
 }
