@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-07-21T08:44:09.904Z",
+  "generatedAt": "2026-07-23T08:45:00.617Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1213,
-  "matchedCount": 923,
+  "totalCatalogCount": 1212,
+  "matchedCount": 916,
   "freshMatchCount": 0,
-  "cachedMatchCount": 923,
+  "cachedMatchCount": 916,
   "derivedMatchCount": 0,
-  "unmatchedCount": 290,
+  "unmatchedCount": 296,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 568,
+      "totalTitles": 570,
       "matchedTitles": 404
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 645,
-      "matchedTitles": 519
+      "totalTitles": 642,
+      "matchedTitles": 512
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1042,
-      "matchedTitles": 802
+      "totalTitles": 1038,
+      "matchedTitles": 794
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
-      "totalTitles": 167,
+      "totalTitles": 169,
       "matchedTitles": 119
     },
     "Ubisoft+ Classics": {
@@ -124,6 +124,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Avatar: Frontiers of Pandora™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Avatar: Frontiers of Pandora™",
       "catalogTypes": "Game Catalog"
     },
@@ -250,6 +255,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Concrete Genie Digital Deluxe Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Conker: Live and Reloaded",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -498,6 +508,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Firefighting Simulator: Ignite",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "FixForce",
       "catalogTypes": "Game Catalog"
@@ -601,6 +616,11 @@
       "service": "Xbox Game Pass",
       "title": "Immortals of Aveum™",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "INDIGO PROPHECY",
+      "catalogTypes": "Classics Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -923,6 +943,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Psi-Ops: The Mindgate Conspiracy",
+      "catalogTypes": "Classics Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Quarantine Zone: The Last Check",
       "catalogTypes": "Game Catalog"
@@ -1025,6 +1050,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Sea of Thieves: 2026 Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Shift At Midnight",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1498,5 +1528,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 139
+  "durationSeconds": 138
 }
