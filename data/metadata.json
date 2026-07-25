@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-07-23T08:45:00.617Z",
+  "generatedAt": "2026-07-25T08:24:03.757Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1212,
-  "matchedCount": 916,
+  "totalCatalogCount": 1211,
+  "matchedCount": 915,
   "freshMatchCount": 0,
-  "cachedMatchCount": 916,
+  "cachedMatchCount": 915,
   "derivedMatchCount": 0,
   "unmatchedCount": 296,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 570,
+      "totalTitles": 571,
       "matchedTitles": 404
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 642,
-      "matchedTitles": 512
+      "totalTitles": 640,
+      "matchedTitles": 511
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1038,
+      "totalTitles": 1039,
       "matchedTitles": 794
     },
     "Classics Catalog": {
@@ -37,8 +37,8 @@
     },
     "Ubisoft+ Classics": {
       "catalogType": "Ubisoft+ Classics",
-      "totalTitles": 59,
-      "matchedTitles": 47
+      "totalTitles": 68,
+      "matchedTitles": 53
     },
     "Monthly Games": {
       "catalogType": "Monthly Games",
@@ -130,7 +130,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Avatar: Frontiers of Pandora™",
-      "catalogTypes": "Game Catalog"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -579,6 +579,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Hell is Us",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Hellblade II: Senua's Saga",
       "catalogTypes": "Game Catalog"
     },
@@ -855,7 +860,7 @@
     {
       "service": "PlayStation Plus",
       "title": "NEW MONOPOLY®",
-      "catalogTypes": "Game Catalog"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -965,7 +970,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Rabbids®: Party of Legends",
-      "catalogTypes": "Game Catalog"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "PlayStation Plus",
@@ -1041,11 +1046,6 @@
       "service": "Xbox Game Pass",
       "title": "RV There Yet?",
       "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "PlayStation Plus",
-      "title": "Scott Pilgrim vs. The World™: The Game – Complete Edition",
-      "catalogTypes": "Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1325,7 +1325,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Tom Clancy's Rainbow Six Siege - Elite Edition",
-      "catalogTypes": "Game Catalog"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1528,5 +1528,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 138
+  "durationSeconds": 137
 }
