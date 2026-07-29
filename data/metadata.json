@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-07-27T10:08:10.760Z",
+  "generatedAt": "2026-07-29T09:07:46.765Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1211,
+  "totalCatalogCount": 1216,
   "matchedCount": 915,
   "freshMatchCount": 0,
   "cachedMatchCount": 915,
   "derivedMatchCount": 0,
-  "unmatchedCount": 296,
+  "unmatchedCount": 301,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 571,
+      "totalTitles": 572,
       "matchedTitles": 404
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 640,
+      "totalTitles": 644,
       "matchedTitles": 511
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1039,
+      "totalTitles": 1044,
       "matchedTitles": 794
     },
     "Classics Catalog": {
@@ -254,6 +254,11 @@
     },
     {
       "service": "PlayStation Plus",
+      "title": "Citizen Sleeper 2: Starward Vector",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Concrete Genie Digital Deluxe Edition",
       "catalogTypes": "Game Catalog"
     },
@@ -385,6 +390,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "DreamWorks Gabby’s Dollhouse: Ready to Party",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Dying Light",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -575,6 +585,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Hades II",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Halo: Campaign Evolved - Standard Edition",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -780,6 +795,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Microsoft Flight Simulator (2020) Standard 40th Anniversary Edition",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Mighty Morphin Power Rangers: Rita's Rewind",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1085,6 +1105,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Sniper Elite 5 PS4™ & PS5™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Snow Bros. Wonderland",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1528,5 +1553,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 116
+  "durationSeconds": 107
 }
