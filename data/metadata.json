@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-29T09:07:46.765Z",
+  "generatedAt": "2026-07-31T09:16:14.623Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1216,
+  "totalCatalogCount": 1217,
   "matchedCount": 915,
   "freshMatchCount": 0,
   "cachedMatchCount": 915,
   "derivedMatchCount": 0,
-  "unmatchedCount": 301,
+  "unmatchedCount": 302,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 572,
+      "totalTitles": 573,
       "matchedTitles": 404
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1044,
+      "totalTitles": 1045,
       "matchedTitles": 794
     },
     "Classics Catalog": {
@@ -804,6 +804,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Mistfall Hunter",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Mixtape",
       "catalogTypes": "Game Catalog"
     },
@@ -1553,5 +1558,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 107
+  "durationSeconds": 133
 }
