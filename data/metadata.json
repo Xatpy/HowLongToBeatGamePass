@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-01T08:33:55.039Z",
+  "generatedAt": "2026-08-03T10:05:25.716Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1210,
+  "totalCatalogCount": 1209,
   "matchedCount": 908,
   "freshMatchCount": 0,
   "cachedMatchCount": 908,
   "derivedMatchCount": 0,
-  "unmatchedCount": 302,
+  "unmatchedCount": 301,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
@@ -20,14 +20,14 @@
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 644,
+      "totalTitles": 643,
       "matchedTitles": 511
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1038,
+      "totalTitles": 1037,
       "matchedTitles": 787
     },
     "Classics Catalog": {
@@ -1168,11 +1168,6 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "Squirrel with a Gun",
-      "catalogTypes": "Game Catalog"
-    },
-    {
       "service": "Xbox Game Pass",
       "title": "STAR WARS™ Battlefront™ II",
       "catalogTypes": "Game Catalog"
@@ -1558,5 +1553,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 107
+  "durationSeconds": 141
 }
