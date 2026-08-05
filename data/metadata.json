@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-03T10:05:25.716Z",
+  "generatedAt": "2026-08-05T08:51:43.939Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1209,
+  "totalCatalogCount": 1210,
   "matchedCount": 908,
   "freshMatchCount": 0,
   "cachedMatchCount": 908,
   "derivedMatchCount": 0,
-  "unmatchedCount": 301,
+  "unmatchedCount": 302,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 566,
+      "totalTitles": 567,
       "matchedTitles": 397
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1037,
+      "totalTitles": 1038,
       "matchedTitles": 787
     },
     "Classics Catalog": {
@@ -145,6 +145,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Battlefield™ 2042 Xbox Series X|S",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Beast of Reincarnation",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1553,5 +1558,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 141
+  "durationSeconds": 134
 }
