@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-08-05T08:51:43.939Z",
+  "generatedAt": "2026-08-07T07:40:40.157Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1210,
-  "matchedCount": 908,
+  "totalCatalogCount": 1211,
+  "matchedCount": 906,
   "freshMatchCount": 0,
-  "cachedMatchCount": 908,
+  "cachedMatchCount": 906,
   "derivedMatchCount": 0,
-  "unmatchedCount": 302,
+  "unmatchedCount": 305,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 567,
+      "totalTitles": 568,
       "matchedTitles": 397
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
       "totalTitles": 643,
-      "matchedTitles": 511
+      "matchedTitles": 509
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1038,
+      "totalTitles": 1039,
       "matchedTitles": 787
     },
     "Classics Catalog": {
@@ -43,7 +43,7 @@
     "Monthly Games": {
       "catalogType": "Monthly Games",
       "totalTitles": 3,
-      "matchedTitles": 2
+      "matchedTitles": 0
     }
   },
   "unmatchedTitles": [
@@ -168,6 +168,11 @@
       "catalogTypes": "Classics Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Big Walk",
+      "catalogTypes": "Monthly Games"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Black Jacket",
       "catalogTypes": "Game Catalog"
@@ -226,11 +231,6 @@
       "service": "Xbox Game Pass",
       "title": "Call of Duty®: Modern Warfare® III - Cross-Gen Bundle",
       "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "PlayStation Plus",
-      "title": "Call of Duty®: Modern Warfare® III - Cross-Gen Bundle",
-      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -401,6 +401,11 @@
       "service": "PlayStation Plus",
       "title": "Dying Light",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Dying Light 2 Stay Human PS4&PS5",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -828,6 +833,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "Xbox Game Pass",
+      "title": "Monsters are Coming!",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "PlayStation Plus",
       "title": "MORDHAU",
       "catalogTypes": "Game Catalog"
@@ -1086,6 +1096,11 @@
       "service": "Xbox Game Pass",
       "title": "Shift At Midnight",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "SIGNALIS",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -1558,5 +1573,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 134
+  "durationSeconds": 117
 }
