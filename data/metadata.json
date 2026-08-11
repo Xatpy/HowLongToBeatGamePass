@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-09T07:15:58.756Z",
+  "generatedAt": "2026-08-11T07:35:45.939Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1211,
+  "totalCatalogCount": 1212,
   "matchedCount": 906,
   "freshMatchCount": 0,
   "cachedMatchCount": 906,
   "derivedMatchCount": 0,
-  "unmatchedCount": 305,
+  "unmatchedCount": 306,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 568,
+      "totalTitles": 569,
       "matchedTitles": 397
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1039,
+      "totalTitles": 1040,
       "matchedTitles": 787
     },
     "Classics Catalog": {
@@ -301,6 +301,11 @@
       "service": "PlayStation Plus",
       "title": "Dark Cloud™ 2",
       "catalogTypes": "Classics Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Date Everything!",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1573,5 +1578,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 138
+  "durationSeconds": 140
 }
