@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-11T07:35:45.939Z",
+  "generatedAt": "2026-08-13T07:52:09.135Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1212,
+  "totalCatalogCount": 1214,
   "matchedCount": 906,
   "freshMatchCount": 0,
   "cachedMatchCount": 906,
   "derivedMatchCount": 0,
-  "unmatchedCount": 306,
+  "unmatchedCount": 308,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 569,
+      "totalTitles": 571,
       "matchedTitles": 397
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1040,
+      "totalTitles": 1042,
       "matchedTitles": 787
     },
     "Classics Catalog": {
@@ -285,6 +285,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Crashout Crew",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Cricket 26 - The Official Game of the Ashes",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1524,6 +1529,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Wolfenstein 3D",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Wolfenstein® II: The New Colossus™",
       "catalogTypes": "Game Catalog"
     },
@@ -1578,5 +1588,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 140
+  "durationSeconds": 131
 }
