@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T07:52:09.135Z",
+  "generatedAt": "2026-08-15T06:57:23.851Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
@@ -624,6 +624,11 @@
     },
     {
       "service": "PlayStation Plus",
+      "title": "HELLDIVERS™ 2",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Hogwarts Legacy PS4 Version",
       "catalogTypes": "Game Catalog"
     },
@@ -1021,11 +1026,6 @@
       "service": "PlayStation Plus",
       "title": "Rabbids®: Party of Legends",
       "catalogTypes": "Game Catalog | Ubisoft+ Classics"
-    },
-    {
-      "service": "PlayStation Plus",
-      "title": "Rapala Fishing: Pro Series",
-      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1588,5 +1588,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 131
+  "durationSeconds": 129
 }
