@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-17T07:15:32.820Z",
+  "generatedAt": "2026-08-19T07:04:48.962Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1211,
+  "totalCatalogCount": 1212,
   "matchedCount": 903,
   "freshMatchCount": 0,
   "cachedMatchCount": 903,
   "derivedMatchCount": 0,
-  "unmatchedCount": 308,
+  "unmatchedCount": 309,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 568,
+      "totalTitles": 569,
       "matchedTitles": 394
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1039,
+      "totalTitles": 1040,
       "matchedTitles": 784
     },
     "Classics Catalog": {
@@ -1484,6 +1484,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Vapor World: Over The Mind (Game Preview)",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "Warhammer 40,000: Darktide",
       "catalogTypes": "Game Catalog"
     },
@@ -1588,5 +1593,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 133
+  "durationSeconds": 131
 }
