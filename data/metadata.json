@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-19T07:04:48.962Z",
+  "generatedAt": "2026-08-21T07:06:58.085Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1212,
-  "matchedCount": 903,
+  "totalCatalogCount": 1207,
+  "matchedCount": 896,
   "freshMatchCount": 0,
-  "cachedMatchCount": 903,
+  "cachedMatchCount": 896,
   "derivedMatchCount": 0,
-  "unmatchedCount": 309,
+  "unmatchedCount": 311,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
@@ -20,19 +20,19 @@
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 643,
-      "matchedTitles": 509
+      "totalTitles": 638,
+      "matchedTitles": 502
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1040,
-      "matchedTitles": 784
+      "totalTitles": 1033,
+      "matchedTitles": 777
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
-      "totalTitles": 169,
+      "totalTitles": 171,
       "matchedTitles": 119
     },
     "Ubisoft+ Classics": {
@@ -356,6 +356,11 @@
       "service": "Xbox Game Pass",
       "title": "Diablo® II: Resurrected™",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Disney's Atlantis: The Lost Empire",
+      "catalogTypes": "Classics Catalog"
     },
     {
       "service": "PlayStation Plus",
@@ -946,6 +951,11 @@
       "service": "Xbox Game Pass",
       "title": "One Lonely Outpost",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Onimusha: Dawn of Dreams",
+      "catalogTypes": "Classics Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1593,5 +1603,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 131
+  "durationSeconds": 129
 }
