@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-21T07:06:58.085Z",
+  "generatedAt": "2026-08-23T07:00:03.362Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1207,
-  "matchedCount": 896,
+  "totalCatalogCount": 1206,
+  "matchedCount": 895,
   "freshMatchCount": 0,
-  "cachedMatchCount": 896,
+  "cachedMatchCount": 895,
   "derivedMatchCount": 0,
   "unmatchedCount": 311,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 569,
-      "matchedTitles": 394
+      "totalTitles": 568,
+      "matchedTitles": 393
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1033,
-      "matchedTitles": 777
+      "totalTitles": 1032,
+      "matchedTitles": 776
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -37,7 +37,7 @@
     },
     "Ubisoft+ Classics": {
       "catalogType": "Ubisoft+ Classics",
-      "totalTitles": 68,
+      "totalTitles": 69,
       "matchedTitles": 53
     },
     "Monthly Games": {
@@ -1355,7 +1355,7 @@
     {
       "service": "PlayStation Plus",
       "title": "The Rogue Prince of Persia™",
-      "catalogTypes": "Game Catalog"
+      "catalogTypes": "Game Catalog | Ubisoft+ Classics"
     },
     {
       "service": "Xbox Game Pass",
@@ -1603,5 +1603,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 129
+  "durationSeconds": 105
 }
