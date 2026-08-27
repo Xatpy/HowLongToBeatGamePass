@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-08-25T07:08:05.238Z",
+  "generatedAt": "2026-08-27T17:38:40.889Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1206,
-  "matchedCount": 895,
+  "totalCatalogCount": 1213,
+  "matchedCount": 896,
   "freshMatchCount": 0,
-  "cachedMatchCount": 895,
+  "cachedMatchCount": 896,
   "derivedMatchCount": 0,
-  "unmatchedCount": 311,
+  "unmatchedCount": 317,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 568,
+      "totalTitles": 571,
       "matchedTitles": 393
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 638,
-      "matchedTitles": 502
+      "totalTitles": 642,
+      "matchedTitles": 503
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1032,
-      "matchedTitles": 776
+      "totalTitles": 1039,
+      "matchedTitles": 777
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -180,6 +180,11 @@
     {
       "service": "PlayStation Plus",
       "title": "Blades of Fire",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Blood Dungeon",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -623,6 +628,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Hell is Us",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "Hellblade II: Senua's Saga",
       "catalogTypes": "Game Catalog"
@@ -949,6 +959,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "Once Human",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "One Lonely Outpost",
       "catalogTypes": "Game Catalog"
     },
@@ -1060,6 +1075,11 @@
     {
       "service": "PlayStation Plus",
       "title": "RESOGUN™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Resonance: A Plague Tale Legacy",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1453,6 +1473,11 @@
       "catalogTypes": "Game Catalog"
     },
     {
+      "service": "PlayStation Plus",
+      "title": "Two Point Museum",
+      "catalogTypes": "Game Catalog"
+    },
+    {
       "service": "Xbox Game Pass",
       "title": "UFC® 5",
       "catalogTypes": "Game Catalog"
@@ -1460,6 +1485,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Ultimate Sheep Raccoon",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Umamusume: Pretty Derby – Party Dash",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1603,5 +1633,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 131
+  "durationSeconds": 141
 }
