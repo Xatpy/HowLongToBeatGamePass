@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T17:38:40.889Z",
+  "generatedAt": "2026-08-29T12:40:54.264Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
@@ -1633,5 +1633,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 141
+  "durationSeconds": 110
 }
