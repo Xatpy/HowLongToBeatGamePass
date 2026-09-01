@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-31T13:44:35.699Z",
+  "generatedAt": "2026-09-01T11:37:16.826Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1213,
-  "matchedCount": 896,
+  "totalCatalogCount": 1208,
+  "matchedCount": 892,
   "freshMatchCount": 0,
-  "cachedMatchCount": 896,
+  "cachedMatchCount": 892,
   "derivedMatchCount": 0,
-  "unmatchedCount": 317,
+  "unmatchedCount": 316,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 571,
-      "matchedTitles": 393
+      "totalTitles": 566,
+      "matchedTitles": 389
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
@@ -27,8 +27,8 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1039,
-      "matchedTitles": 777
+      "totalTitles": 1034,
+      "matchedTitles": 773
     },
     "Classics Catalog": {
       "catalogType": "Classics Catalog",
@@ -963,11 +963,6 @@
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "Xbox Game Pass",
-      "title": "One Lonely Outpost",
-      "catalogTypes": "Game Catalog"
-    },
-    {
       "service": "PlayStation Plus",
       "title": "Onimusha: Dawn of Dreams",
       "catalogTypes": "Classics Catalog"
@@ -1633,5 +1628,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 125
+  "durationSeconds": 109
 }
