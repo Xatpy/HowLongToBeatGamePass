@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-09-01T11:37:16.826Z",
+  "generatedAt": "2026-09-03T11:11:22.419Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1208,
-  "matchedCount": 892,
+  "totalCatalogCount": 1213,
+  "matchedCount": 893,
   "freshMatchCount": 0,
-  "cachedMatchCount": 892,
+  "cachedMatchCount": 893,
   "derivedMatchCount": 0,
-  "unmatchedCount": 316,
+  "unmatchedCount": 320,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 566,
+      "totalTitles": 568,
       "matchedTitles": 389
     },
     "playstation-plus": {
       "service": "PlayStation Plus",
       "serviceKey": "playstation-plus",
-      "totalTitles": 642,
-      "matchedTitles": 503
+      "totalTitles": 645,
+      "matchedTitles": 504
     }
   },
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1034,
+      "totalTitles": 1037,
       "matchedTitles": 773
     },
     "Classics Catalog": {
@@ -42,8 +42,8 @@
     },
     "Monthly Games": {
       "catalogType": "Monthly Games",
-      "totalTitles": 3,
-      "matchedTitles": 0
+      "totalTitles": 5,
+      "matchedTitles": 1
     }
   },
   "unmatchedTitles": [
@@ -168,11 +168,6 @@
       "catalogTypes": "Classics Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "Big Walk",
-      "catalogTypes": "Monthly Games"
-    },
-    {
       "service": "Xbox Game Pass",
       "title": "Black Jacket",
       "catalogTypes": "Game Catalog"
@@ -251,6 +246,11 @@
       "service": "Xbox Game Pass",
       "title": "Call of the Elder Gods",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Chained Echoes",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "Xbox Game Pass",
@@ -425,7 +425,7 @@
     {
       "service": "PlayStation Plus",
       "title": "Dying Light 2 Stay Human PS4&PS5",
-      "catalogTypes": "Monthly Games"
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -854,6 +854,16 @@
     },
     {
       "service": "PlayStation Plus",
+      "title": "MLB® The Show™ 26",
+      "catalogTypes": "Monthly Games"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "MLB® The Show™ 26 Jump Start Bundle",
+      "catalogTypes": "Monthly Games"
+    },
+    {
+      "service": "PlayStation Plus",
       "title": "Monster Jam™ Showdown PS4 & PS5",
       "catalogTypes": "Game Catalog"
     },
@@ -865,6 +875,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Monsters are Coming!",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Moonlighter 2: The Endless Vault",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1129,13 +1144,13 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "Shift At Midnight",
+      "title": "Shelldiver",
       "catalogTypes": "Game Catalog"
     },
     {
-      "service": "PlayStation Plus",
-      "title": "SIGNALIS",
-      "catalogTypes": "Monthly Games"
+      "service": "Xbox Game Pass",
+      "title": "Shift At Midnight",
+      "catalogTypes": "Game Catalog"
     },
     {
       "service": "Xbox Game Pass",
@@ -1166,6 +1181,11 @@
       "service": "PlayStation Plus",
       "title": "Sniper Elite 5 PS4™ & PS5™",
       "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "PlayStation Plus",
+      "title": "Sniper Elite: Resistance PS4™ & PS5™",
+      "catalogTypes": "Monthly Games"
     },
     {
       "service": "PlayStation Plus",
@@ -1628,5 +1648,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 109
+  "durationSeconds": 127
 }
