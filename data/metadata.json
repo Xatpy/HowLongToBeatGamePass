@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-03T11:11:22.419Z",
+  "generatedAt": "2026-09-05T10:32:44.830Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1213,
+  "totalCatalogCount": 1215,
   "matchedCount": 893,
   "freshMatchCount": 0,
   "cachedMatchCount": 893,
   "derivedMatchCount": 0,
-  "unmatchedCount": 320,
+  "unmatchedCount": 322,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 568,
+      "totalTitles": 570,
       "matchedTitles": 389
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1037,
+      "totalTitles": 1039,
       "matchedTitles": 773
     },
     "Classics Catalog": {
@@ -360,6 +360,11 @@
     {
       "service": "Xbox Game Pass",
       "title": "Diablo® II: Resurrected™",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
+      "title": "Dice A Million",
       "catalogTypes": "Game Catalog"
     },
     {
@@ -1234,6 +1239,11 @@
     },
     {
       "service": "Xbox Game Pass",
+      "title": "SpeedRunners 2: King of Speed",
+      "catalogTypes": "Game Catalog"
+    },
+    {
+      "service": "Xbox Game Pass",
       "title": "SpongeBob SquarePants™: The Patrick Star Game",
       "catalogTypes": "Game Catalog"
     },
@@ -1648,5 +1658,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 127
+  "durationSeconds": 104
 }
