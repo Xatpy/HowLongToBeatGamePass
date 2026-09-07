@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-05T10:32:44.830Z",
+  "generatedAt": "2026-09-07T12:27:07.821Z",
   "market": "US",
   "language": "en-us",
   "playstationLocale": "en-us",
   "hltbLiveEnabled": true,
-  "totalCatalogCount": 1215,
+  "totalCatalogCount": 1213,
   "matchedCount": 893,
   "freshMatchCount": 0,
   "cachedMatchCount": 893,
   "derivedMatchCount": 0,
-  "unmatchedCount": 322,
+  "unmatchedCount": 320,
   "serviceCounts": {
     "xbox-game-pass": {
       "service": "Xbox Game Pass",
       "serviceKey": "xbox-game-pass",
-      "totalTitles": 570,
+      "totalTitles": 568,
       "matchedTitles": 389
     },
     "playstation-plus": {
@@ -27,7 +27,7 @@
   "catalogTypeCounts": {
     "Game Catalog": {
       "catalogType": "Game Catalog",
-      "totalTitles": 1039,
+      "totalTitles": 1037,
       "matchedTitles": 773
     },
     "Classics Catalog": {
@@ -919,16 +919,6 @@
     },
     {
       "service": "Xbox Game Pass",
-      "title": "NBA 2K26 for Xbox One",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
-      "title": "NBA 2K26 for Xbox Series X|S",
-      "catalogTypes": "Game Catalog"
-    },
-    {
-      "service": "Xbox Game Pass",
       "title": "Need for Speed™ Heat",
       "catalogTypes": "Game Catalog"
     },
@@ -1658,5 +1648,5 @@
       "catalogTypes": "Game Catalog"
     }
   ],
-  "durationSeconds": 104
+  "durationSeconds": 126
 }
